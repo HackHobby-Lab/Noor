@@ -17,6 +17,8 @@ Please note: these mappings are **provisional** and may be updated based on hard
 | DIN         | GPIO8  | Data input                           |
 | GAIN        | GPIO9  | Configures amplifier gain            |
 
+
+Connections Test Successful
 ---
 
 ## SD Card (SPI Mode)
@@ -40,6 +42,7 @@ Please note: these mappings are **provisional** and may be updated based on hard
 
 *(Additional encoders can be mapped similarly in future revisions.)*
 
+Connections Test Successful
 ---
 
 ## Pushbuttons
