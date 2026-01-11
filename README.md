@@ -30,6 +30,7 @@ Connections Test Successful
 | SCK    | GPIO12 | Clock                        |
 | MISO   | GPIO13 | Master in, slave out         |
 
+Connections Test Successful
 ---
 
 ## Rotary Encoders
