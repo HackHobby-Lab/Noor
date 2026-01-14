@@ -10,12 +10,12 @@ Please note: these mappings are **provisional** and may be updated based on hard
 
 ## I2S Audio (MAX98357 Amplifier)
 
-| Signal      | GPIO   | Notes                                |
-|-------------|--------|--------------------------------------|
-| BCLK        | GPIO6  | Bit clock                            |
-| LRCLK / WS  | GPIO7  | Word select (left/right clock)       |
-| DIN         | GPIO8  | Data input                           |
-| GAIN        | GPIO9  | Configures amplifier gain            |
+| Signal      | GPIO    | Notes                                   |
+|-------------|---------|-----------------------------------------|
+| BCLK        | GPIO18  | Bit clock                               |
+| LRCLK / WS  | GPIO17  | Word select (left/right clock)          |
+| DIN         | GPIO16  | Data input                              |
+| GAIN        | GPIO9   | Configures amplifier gain(not used yet) |
 
 
 Connections Test Successful
@@ -39,7 +39,7 @@ Connections Test Successful
 |-----------|--------|--------|
 | Encoder 1 | CLK    | GPIO1  |
 | Encoder 1 | DT     | GPIO2  |
-| Encoder 1 | SW     | GPIO4  |
+| Encoder 1 | SW     | GPIO19 |
 
 *(Additional encoders can be mapped similarly in future revisions.)*
 
@@ -52,21 +52,21 @@ Connections Test Successful
 |--------------|--------|
 | Play / Pause | GPIO14 |
 | Back / Home  | GPIO15 |
-| Volume +     | GPIO16 |
-| Volume –     | GPIO17 |
+| Volume +     | GPIO4  |
+| Volume –     | GPIO5  |
 
 ---
 
 ## Reserved Pins (Do Not Use)
 
-| Pin Group     | GPIOs                        | Reason                                  |
-|---------------|------------------------------|-----------------------------------------|
-| Strapping     | GPIO0, GPIO3, GPIO45, GPIO46 | Affect boot mode and startup config      |
-| PSRAM (Octal) | GPIO35, GPIO36, GPIO37       | Connected to embedded PSRAM              |
-| Debug UART    | GPIO43, GPIO44               | Default UART for debugging               |
-| USB           | GPIO19, GPIO20               | Dedicated to USB‑OTG functionality       |
+| Pin Group     | GPIOs                          | Reason                                  |
+|---------------|--------------------------------|-----------------------------------------|
+| Strapping     | GPIO0, GPIO3, GPIO45, GPIO46   | Affect boot mode and startup config      |
+| PSRAM (Octal) | GPIO35, GPIO36, GPIO37         | Connected to embedded PSRAM              |
+| Debug UART    | GPIO43, GPIO44                 | Default UART for debugging               |
+| USB           | GPIO20                         | Dedicated to USB‑OTG functionality       |
 | JTAG          | GPIO39, GPIO40, GPIO41, GPIO42 | Reserved for JTAG debugging            |
-| RGB LED       | GPIO47                       | On‑module RGB LED                        |
+| RGB LED       | GPIO47                         | On‑module RGB LED                        |
 
 ---
 
