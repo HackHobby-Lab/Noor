@@ -55,6 +55,7 @@ Connections Test Successful
 | Volume +     | GPIO4  |
 | Volume –     | GPIO5  |
 
+Connections Test Successful
 ---
 
 ## Reserved Pins (Do Not Use)
