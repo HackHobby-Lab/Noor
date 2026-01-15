@@ -1,0 +1,9 @@
+
+
+# Load bootloader symbols
+set confirm off
+    add-symbol-file C:/Users/Mutahar/workspace/nor/build/bootloader/bootloader.elf
+set confirm on
+
+# Load application symbols
+file C:/Users/Mutahar/workspace/nor/build/sd_card_test.elf
