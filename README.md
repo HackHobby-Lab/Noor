@@ -39,7 +39,7 @@ Connections Test Successful
 |-----------|--------|--------|
 | Encoder 1 | CLK    | GPIO1  |
 | Encoder 1 | DT     | GPIO2  |
-| Encoder 1 | SW     | GPIO19 |
+| Encoder 1 | SW     | GPIO21 |
 
 *(Additional encoders can be mapped similarly in future revisions.)*
 
@@ -65,7 +65,7 @@ Connections Test Successful
 | Strapping     | GPIO0, GPIO3, GPIO45, GPIO46   | Affect boot mode and startup config      |
 | PSRAM (Octal) | GPIO35, GPIO36, GPIO37         | Connected to embedded PSRAM              |
 | Debug UART    | GPIO43, GPIO44                 | Default UART for debugging               |
-| USB           | GPIO20                         | Dedicated to USB‑OTG functionality       |
+| USB           | GPIO19, GPIO20                 | Dedicated to USB‑OTG functionality       |
 | JTAG          | GPIO39, GPIO40, GPIO41, GPIO42 | Reserved for JTAG debugging            |
 | RGB LED       | GPIO47                         | On‑module RGB LED                        |
 
