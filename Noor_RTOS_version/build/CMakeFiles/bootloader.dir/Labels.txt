@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+C:/Users/Mutahar/workspace/nor/build/CMakeFiles/bootloader
+C:/Users/Mutahar/workspace/nor/build/CMakeFiles/bootloader.rule
+C:/Users/Mutahar/workspace/nor/build/CMakeFiles/bootloader-complete.rule
+C:/Users/Mutahar/workspace/nor/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+C:/Users/Mutahar/workspace/nor/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/Users/Mutahar/workspace/nor/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/Users/Mutahar/workspace/nor/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/Users/Mutahar/workspace/nor/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/Users/Mutahar/workspace/nor/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/Users/Mutahar/workspace/nor/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
