@@ -58,6 +58,17 @@ Connections Test Successful
 Connections Test Successful
 ---
 
+## Audio Jack
+
+| Connection | Pin Description |
+|------------|-----------------|
+| Speaker + | SW (switch second pin from left when jack face is away) |
+| Speaker - | MAX OUT - |
+| MAX OUT + | TIP (most left pin from back when jack face is away) |
+| GND | SLEEVE of audio jack (single pin of audio jack) |
+
+Connections Test Successful
+---
 ## Reserved Pins (Do Not Use)
 
 | Pin Group     | GPIOs                          | Reason                                  |
