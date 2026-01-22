@@ -60,13 +60,12 @@ Connections Test Successful
 
 ## Audio Jack
 
-|--------------|------------------------------------------------------|
-| Speaker +    | SW (switch pin from left when jack face is away)     |
-| Speaker -    | MAX OUT -                                            |
-| MAX OUT +    | TIP (most left pin from back when jack face is away) |
-| GND          | SLEEVE of audio jack (single pin of audio jack)      |
-
----
+| Connection | Pin Description |
+|------------|-----------------|
+| Speaker + | SW (switch pin from left when jack face is away) |
+| Speaker - | MAX OUT - |
+| MAX OUT + | TIP (most left pin from back when jack face is away) |
+| GND | SLEEVE of audio jack (single pin of audio jack) |
 
 ## Reserved Pins (Do Not Use)
 
