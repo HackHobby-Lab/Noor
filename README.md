@@ -67,6 +67,8 @@ Connections Test Successful
 | MAX OUT + | TIP (most left pin from back when jack face is away) |
 | GND | SLEEVE of audio jack (single pin of audio jack) |
 
+Connections Test Successful
+---
 ## Reserved Pins (Do Not Use)
 
 | Pin Group     | GPIOs                          | Reason                                  |
