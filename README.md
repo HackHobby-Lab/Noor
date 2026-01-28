@@ -51,7 +51,7 @@ Connections Test Successful
 | Function     | GPIO   |
 |--------------|--------|
 | Play / Pause | GPIO14 |
-| Back / Home  | GPIO38 |
+| Back / Home  | GPIO15 |
 | Volume +     | GPIO4  |
 | Volume –     | GPIO5  |
 
