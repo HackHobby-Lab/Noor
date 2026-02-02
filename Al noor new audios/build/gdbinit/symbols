@@ -1,0 +1,9 @@
+
+
+# Load bootloader symbols
+set confirm off
+    add-symbol-file C:/Users/Mutahar/workspace/Al noor/build/bootloader/bootloader.elf
+set confirm on
+
+# Load application symbols
+file C:/Users/Mutahar/workspace/Al noor/build/app-template.elf
