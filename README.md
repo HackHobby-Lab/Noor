@@ -66,6 +66,7 @@ Connections Test Successful
 | Speaker - | MAX OUT - |
 | MAX OUT + | TIP (most left pin from back when jack face is away) |
 | GND | SLEEVE of audio jack (single pin of audio jack) |
+| GPIO 48 | jack switch to detect headphones|
 
 Connections Test Successful
 ---
