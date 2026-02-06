@@ -114,12 +114,12 @@ Simple guide to organize your SD card for the Noor Audio Player.
 /sdcard/
 │
 ├──  SYSTEM AUDIO
-│   ├── welcome.wav                          # Plays at boot
+│   ├── welcome.wav   # Plays at boot
 │   └── ROTATE.wav    # Home screen message
 │
 ├──  FOLDER ANNOUNCEMENTS
 │   ├── STORIES.wav               # Announces "Stories of Prophets" folder
-│   └── TA.wav                               # Announces "TAWID" folder
+│   └── TA.wav                    # Announces "TAWID" folder
 │
 ├──  PROPHET ANNOUNCEMENTS
 │   ├── ADAM.wav
@@ -167,20 +167,20 @@ Simple guide to organize your SD card for the Noor Audio Player.
 
 
 
-## 📝 File Naming Rules
+##  File Naming Rules
 
-### ✅ **DO:**
-- Use **no spaces**: `StoriesofProphets` ✓
-- Use **no underscores**: `HazratMuhammad` ✓  
+###  **DO:**
+- Use **no spaces**: `StoriesofProphets` 
+- Use **no underscores**: `HazratMuhammad`  
 - Keep names **short and clear**
 
-### ❌ **DON'T:**
-- Use spaces: `Stories of Prophets` ✗
-- Use underscores: `Stories_of_Prophets` ✗
+###  **DON'T:**
+- Use spaces: `Stories of Prophets` 
+- Use underscores: `Stories_of_Prophets` 
 
 ---
 
-## 🎵 Audio Requirements
+##  Audio Requirements
 
 | Property | Value |
 |----------|-------|
@@ -192,7 +192,7 @@ Simple guide to organize your SD card for the Noor Audio Player.
 ---
 
 
-## ➕ Adding New Content
+##  Adding New Content
 
 ### **Add New Prophet:**
 
