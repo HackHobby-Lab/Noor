@@ -185,10 +185,6 @@ Simple guide to organize your SD card for the Noor Audio Player.
 | Property | Value |
 |----------|-------|
 | Format | WAV |
-| Bit Rate | 16-bit |
-| Sample Rate | 44.1 kHz |
-| Channels | Mono |
-
 ---
 
 
