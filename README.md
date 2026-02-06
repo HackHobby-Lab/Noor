@@ -89,3 +89,141 @@ Connections Test Successful
 - I2S and SPI pins are routed through the ESP32‑S3 GPIO matrix and can be reassigned if conflicts arise.  
 - Reserved pins listed above must not be used for general I/O.  
 - These assignments are **initial** and may change during integration and testing. Always refer to the latest revision of this README for updates.
+
+
+
+
+#  SD Card Structure 
+
+Simple guide to organize your SD card for the Noor Audio Player.
+
+---
+
+##  Quick Overview
+
+ SD card has **two types of files**:
+
+1. ** Announcement files** (in root) - Tell user what they're selecting
+2. ** Story folders** - Contain the actual audio content
+
+---
+
+##  Complete File Structure
+
+```
+/sdcard/
+│
+├──  SYSTEM AUDIO
+│   ├── welcome.wav                          # Plays at boot
+│   └── ROTATE.wav    # Home screen message
+│
+├──  FOLDER ANNOUNCEMENTS
+│   ├── STORIES.wav               # Announces "Stories of Prophets" folder
+│   └── TA.wav                               # Announces "TAWID" folder
+│
+├──  PROPHET ANNOUNCEMENTS
+│   ├── ADAM.wav
+│   ├── MUHAMMAD.wav
+│   ├── NUH.wav
+│   └── ... (more prophets)
+│
+├──  STORY ANNOUNCEMENTS (for StoriesofProphets)
+│   ├── INSMUH.wav
+│   ├── mstoryone.wav
+│   ├── mstorytwo.wav
+│   └── ... (up to mstoryseven.wav)
+│
+├──  TAWID ANNOUNCEMENTS
+│   ├── TT1.wav                              # Announces t1.wav
+│   ├── TT2.wav                              # Announces t2.wav
+│   └── TT3.wav                              # Announces t3.wav
+│
+├──  FOLDERS
+│   │
+│   ├── StoriesofProphets/
+|   |   |── ADAM
+|   |   |── DOUD
+|   |   |── IBRAHIM
+|   |   |── ISMAEEL
+|   |   |── ISSA
+│   │   └── MUHAMMAD/
+│   │   |    ├── m1.wav
+│   │   |    ├── m2.wav
+|   |   |    |   .
+|   |   |    |   .
+|   |   |    |   .
+│   │   |    └── m7.wav
+|   |   |── NUH
+|   |   |── YAQOOB
+|   |   |── YOSUF
+│   │
+│   └── TAWID/
+│       ├── t1.wav
+│       ├── t2.wav
+│       └── t3.wav
+```
+
+---
+
+
+
+## 📝 File Naming Rules
+
+### ✅ **DO:**
+- Use **no spaces**: `StoriesofProphets` ✓
+- Use **no underscores**: `HazratMuhammad` ✓  
+- Keep names **short and clear**
+
+### ❌ **DON'T:**
+- Use spaces: `Stories of Prophets` ✗
+- Use underscores: `Stories_of_Prophets` ✗
+
+---
+
+## 🎵 Audio Requirements
+
+| Property | Value |
+|----------|-------|
+| Format | WAV |
+| Bit Rate | 16-bit |
+| Sample Rate | 44.1 kHz |
+| Channels | Mono |
+
+---
+
+
+## ➕ Adding New Content
+
+### **Add New Prophet:**
+
+**Step 1:** Create announcement
+```
+Yousuf.wav  ← Record "Prophet Yusuf"
+```
+
+**Step 2:** Create folder
+```
+STORIES/YOUSUF/
+```
+
+**Step 3:** Add stories
+```
+HazratYusuf/
+├── y1.wav
+├── y2.wav
+└── y3.wav
+
+Simmilarly for other prophets
+```
+
+### **Add More Tawid Lessons:**
+
+**Step 1:** Create announcement
+```
+TT4.wav  ← Record "Lesson Four"
+```
+
+**Step 2:** Add story file
+```
+TAWID/t4.wav
+```
