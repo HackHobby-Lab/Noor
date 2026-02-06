@@ -208,7 +208,7 @@ STORIES/YOUSUF/
 
 **Step 3:** Add stories
 ```
-HazratYusuf/
+Tousuf/
 ├── y1.wav
 ├── y2.wav
 └── y3.wav
