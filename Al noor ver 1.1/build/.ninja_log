@@ -1495,3 +1495,74 @@
 18545	18959	7920796001239318	C:/Users/Mutahar/workspace/Al noor new audios/build/.bin_timestamp	f963b01e1d38a89b
 18959	19102	7920796001325026	esp-idf/esptool_py/CMakeFiles/app_check_size	646a07459e6f0d1e
 18959	19102	7920796001325026	C:/Users/Mutahar/workspace/Al noor new audios/build/esp-idf/esptool_py/CMakeFiles/app_check_size	646a07459e6f0d1e
+447	804	7922615334768163	bootloader-prefix/src/bootloader-stamp/bootloader-build	5e7ce6f576e01269
+447	804	7922615334768163	bootloader/bootloader.elf	5e7ce6f576e01269
+447	804	7922615334768163	bootloader/bootloader.bin	5e7ce6f576e01269
+447	804	7922615334768163	bootloader/bootloader.map	5e7ce6f576e01269
+447	804	7922615334768163	C:/Users/Mutahar/workspace/Al noor new audios/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	5e7ce6f576e01269
+447	804	7922615334768163	C:/Users/Mutahar/workspace/Al noor new audios/build/bootloader/bootloader.elf	5e7ce6f576e01269
+447	804	7922615334768163	C:/Users/Mutahar/workspace/Al noor new audios/build/bootloader/bootloader.bin	5e7ce6f576e01269
+447	804	7922615334768163	C:/Users/Mutahar/workspace/Al noor new audios/build/bootloader/bootloader.map	5e7ce6f576e01269
+805	851	7922615338347497	bootloader-prefix/src/bootloader-stamp/bootloader-install	f0f1ab7e026e1d94
+805	851	7922615338347497	C:/Users/Mutahar/workspace/Al noor new audios/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	f0f1ab7e026e1d94
+851	950	7922615339723763	CMakeFiles/bootloader-complete	dac0e6737dff90dd
+851	950	7922615339723763	bootloader-prefix/src/bootloader-stamp/bootloader-done	dac0e6737dff90dd
+851	950	7922615339723763	C:/Users/Mutahar/workspace/Al noor new audios/build/CMakeFiles/bootloader-complete	dac0e6737dff90dd
+851	950	7922615339723763	C:/Users/Mutahar/workspace/Al noor new audios/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	dac0e6737dff90dd
+431	5088	7922615334555544	esp-idf/main/CMakeFiles/__idf_main.dir/headphone_detect.c.obj	4b83dde610f59dd
+5089	5650	7922615381116503	esp-idf/main/libmain.a	219090aacfe9fe3a
+5650	25534	7922615584979479	esp-idf/esp_system/ld/sections.ld	17fd742b0480c92b
+5650	25534	7922615584979479	C:/Users/Mutahar/workspace/Al noor new audios/build/esp-idf/esp_system/ld/sections.ld	17fd742b0480c92b
+25535	28266	7922615585645632	app-template.elf	8514fa06e66113e4
+28267	28715	7922615617371917	.bin_timestamp	f963b01e1d38a89b
+28267	28715	7922615617371917	C:/Users/Mutahar/workspace/Al noor new audios/build/.bin_timestamp	f963b01e1d38a89b
+28715	28865	7922615617439740	esp-idf/esptool_py/CMakeFiles/app_check_size	646a07459e6f0d1e
+28715	28865	7922615617439740	C:/Users/Mutahar/workspace/Al noor new audios/build/esp-idf/esptool_py/CMakeFiles/app_check_size	646a07459e6f0d1e
+288	517	7922617033360888	esp-idf/esptool_py/CMakeFiles/app_check_size	646a07459e6f0d1e
+288	517	7922617033360888	C:/Users/Mutahar/workspace/Al noor new audios/build/esp-idf/esptool_py/CMakeFiles/app_check_size	646a07459e6f0d1e
+276	616	7922617033249194	bootloader-prefix/src/bootloader-stamp/bootloader-build	5e7ce6f576e01269
+276	616	7922617033249194	bootloader/bootloader.elf	5e7ce6f576e01269
+276	616	7922617033249194	bootloader/bootloader.bin	5e7ce6f576e01269
+276	616	7922617033249194	bootloader/bootloader.map	5e7ce6f576e01269
+276	616	7922617033249194	C:/Users/Mutahar/workspace/Al noor new audios/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	5e7ce6f576e01269
+276	616	7922617033249194	C:/Users/Mutahar/workspace/Al noor new audios/build/bootloader/bootloader.elf	5e7ce6f576e01269
+276	616	7922617033249194	C:/Users/Mutahar/workspace/Al noor new audios/build/bootloader/bootloader.bin	5e7ce6f576e01269
+276	616	7922617033249194	C:/Users/Mutahar/workspace/Al noor new audios/build/bootloader/bootloader.map	5e7ce6f576e01269
+616	662	7922617036622749	bootloader-prefix/src/bootloader-stamp/bootloader-install	f0f1ab7e026e1d94
+616	662	7922617036622749	C:/Users/Mutahar/workspace/Al noor new audios/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	f0f1ab7e026e1d94
+663	791	7922617038309059	CMakeFiles/bootloader-complete	dac0e6737dff90dd
+663	791	7922617038309059	bootloader-prefix/src/bootloader-stamp/bootloader-done	dac0e6737dff90dd
+663	791	7922617038309059	C:/Users/Mutahar/workspace/Al noor new audios/build/CMakeFiles/bootloader-complete	dac0e6737dff90dd
+663	791	7922617038309059	C:/Users/Mutahar/workspace/Al noor new audios/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	dac0e6737dff90dd
+147	271	7922619143852678	esp-idf/esptool_py/CMakeFiles/app_check_size	646a07459e6f0d1e
+147	271	7922619143852678	C:/Users/Mutahar/workspace/Al noor new audios/build/esp-idf/esptool_py/CMakeFiles/app_check_size	646a07459e6f0d1e
+138	352	7922619143770011	bootloader-prefix/src/bootloader-stamp/bootloader-build	5e7ce6f576e01269
+138	352	7922619143770011	bootloader/bootloader.elf	5e7ce6f576e01269
+138	352	7922619143770011	bootloader/bootloader.bin	5e7ce6f576e01269
+138	352	7922619143770011	bootloader/bootloader.map	5e7ce6f576e01269
+138	352	7922619143770011	C:/Users/Mutahar/workspace/Al noor new audios/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	5e7ce6f576e01269
+138	352	7922619143770011	C:/Users/Mutahar/workspace/Al noor new audios/build/bootloader/bootloader.elf	5e7ce6f576e01269
+138	352	7922619143770011	C:/Users/Mutahar/workspace/Al noor new audios/build/bootloader/bootloader.bin	5e7ce6f576e01269
+138	352	7922619143770011	C:/Users/Mutahar/workspace/Al noor new audios/build/bootloader/bootloader.map	5e7ce6f576e01269
+353	397	7922619145920860	bootloader-prefix/src/bootloader-stamp/bootloader-install	f0f1ab7e026e1d94
+353	397	7922619145920860	C:/Users/Mutahar/workspace/Al noor new audios/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	f0f1ab7e026e1d94
+397	491	7922619147218630	CMakeFiles/bootloader-complete	dac0e6737dff90dd
+397	491	7922619147218630	bootloader-prefix/src/bootloader-stamp/bootloader-done	dac0e6737dff90dd
+397	491	7922619147218630	C:/Users/Mutahar/workspace/Al noor new audios/build/CMakeFiles/bootloader-complete	dac0e6737dff90dd
+397	491	7922619147218630	C:/Users/Mutahar/workspace/Al noor new audios/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	dac0e6737dff90dd
+156	289	7922621999252848	esp-idf/esptool_py/CMakeFiles/app_check_size	646a07459e6f0d1e
+156	289	7922621999252848	C:/Users/Mutahar/workspace/Al noor new audios/build/esp-idf/esptool_py/CMakeFiles/app_check_size	646a07459e6f0d1e
+146	366	7922621999117144	bootloader-prefix/src/bootloader-stamp/bootloader-build	5e7ce6f576e01269
+146	366	7922621999117144	bootloader/bootloader.elf	5e7ce6f576e01269
+146	366	7922621999117144	bootloader/bootloader.bin	5e7ce6f576e01269
+146	366	7922621999117144	bootloader/bootloader.map	5e7ce6f576e01269
+146	366	7922621999117144	C:/Users/Mutahar/workspace/Al noor new audios/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	5e7ce6f576e01269
+146	366	7922621999117144	C:/Users/Mutahar/workspace/Al noor new audios/build/bootloader/bootloader.elf	5e7ce6f576e01269
+146	366	7922621999117144	C:/Users/Mutahar/workspace/Al noor new audios/build/bootloader/bootloader.bin	5e7ce6f576e01269
+146	366	7922621999117144	C:/Users/Mutahar/workspace/Al noor new audios/build/bootloader/bootloader.map	5e7ce6f576e01269
+367	411	7922622001357157	bootloader-prefix/src/bootloader-stamp/bootloader-install	f0f1ab7e026e1d94
+367	411	7922622001357157	C:/Users/Mutahar/workspace/Al noor new audios/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	f0f1ab7e026e1d94
+411	508	7922622002693322	CMakeFiles/bootloader-complete	dac0e6737dff90dd
+411	508	7922622002693322	bootloader-prefix/src/bootloader-stamp/bootloader-done	dac0e6737dff90dd
+411	508	7922622002693322	C:/Users/Mutahar/workspace/Al noor new audios/build/CMakeFiles/bootloader-complete	dac0e6737dff90dd
+411	508	7922622002693322	C:/Users/Mutahar/workspace/Al noor new audios/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	dac0e6737dff90dd
