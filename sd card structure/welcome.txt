@@ -1,6 +1,0 @@
-welcome
-there is one folder "stories of prophets"
-entered inside stories of prophet folder now there are folders choose any prophet folder by rorating the knob 
-after entering the specific prophet folder for eg prophet Muhammad saww
-audio will play you have entered in prophet Muhammad stories folder rotate the knob to select story
-There are 7 audios for every audio there is an announcement audio m_story_one,m_story_two ,..... m_story_seven
