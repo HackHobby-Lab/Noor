@@ -1,0 +1,74 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- esp-idf-monitor 1.9.0 on \\.\COM3 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40377e8c: [0;33mspi_flash_disable_interrupts_caches_and_other_cpu[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/cache_utils.c[0m[0m:[1;31m201[0m
+[0m--- 0x40377eb4: [0;33mspi_flash_op_block_func[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/cache_utils.c[0m[0m:[1;31m115[0m
+[0m--- 0x4037b9c0: [0;33msystimer_ticks_to_us[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/esp_hw_support/port/esp32s3/systimer.c[0m[0m:[1;31m15[0m
+[0m--- 0x400570e8: [0;33mmemset[0m[0m in [0;32mROM[0m
+[0m--- 0x400570f3: [0;33mmemset[0m[0m in [0;32mROM[0m
+[0m--- 0x40377e89: [0;33mspi_flash_disable_interrupts_caches_and_other_cpu[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/cache_utils.c[0m[0m:[1;31m199[0m
+[0m--- 0x40378c8b: [0;33mcache_disable[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/spi_flash_os_func_app.c[0m[0m:[1;31m70[0m
+[0m--- 0x40378c95: [0;33mspi1_start[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/spi_flash_os_func_app.c[0m[0m:[1;31m122[0m
+[0m--- 0x40379f63: [0;33mspiflash_start_default[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/esp_flash_api.c[0m[0m:[1;31m191[0m
+[0m--- 0x4037851a: [0;33mesp_flash_erase_region[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/esp_flash_api.c[0m[0m:[1;31m671[0m
+[0m--- 0x42018e65: [0;33mesp_partition_erase_range[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/esp_partition/partition_target.c[0m[0m:[1;31m143[0m
+[0m--- 0x42018617: [0;33mesp_ota_begin[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/app_update/esp_ota_ops.c[0m[0m:[1;31m174[0m
+[0m--- 0x4200ddec: [0;33mcheck_sd_ota_update[0m[0m at [0;32mC:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/SD_CARD_OTA.c[0m[0m:[1;31m37[0m
+[0m--- 0x4200b510: [0;33mapp_main[0m[0m at [0;32mC:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/main.c[0m[0m:[1;31m542[0m
+[0m--- 0x420348b7: [0;33mmain_task[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m208[0m
+[0m--- 0x4037cd35: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40375b90: [0;33mesp_restart_noos[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c[0m[0m:[1;31m162[0m
+[0m--- 0x40377e8c: [0;33mspi_flash_disable_interrupts_caches_and_other_cpu[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/cache_utils.c[0m[0m:[1;31m201[0m
+[0m--- 0x40377eb4: [0;33mspi_flash_op_block_func[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/cache_utils.c[0m[0m:[1;31m115[0m
+[0m--- 0x4037b9c0: [0;33msystimer_ticks_to_us[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/esp_hw_support/port/esp32s3/systimer.c[0m[0m:[1;31m15[0m
+[0m--- 0x400570e8: [0;33mmemset[0m[0m in [0;32mROM[0m
+[0m--- 0x400570f3: [0;33mmemset[0m[0m in [0;32mROM[0m
+[0m--- 0x40377e89: [0;33mspi_flash_disable_interrupts_caches_and_other_cpu[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/cache_utils.c[0m[0m:[1;31m199[0m
+[0m--- 0x40378c8b: [0;33mcache_disable[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/spi_flash_os_func_app.c[0m[0m:[1;31m70[0m
+[0m--- 0x40378c95: [0;33mspi1_start[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/spi_flash_os_func_app.c[0m[0m:[1;31m122[0m
+[0m--- 0x40379f63: [0;33mspiflash_start_default[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/esp_flash_api.c[0m[0m:[1;31m191[0m
+[0m--- 0x4037851a: [0;33mesp_flash_erase_region[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/esp_flash_api.c[0m[0m:[1;31m671[0m
+[0m--- 0x42018e65: [0;33mesp_partition_erase_range[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/esp_partition/partition_target.c[0m[0m:[1;31m143[0m
+[0m--- 0x42018617: [0;33mesp_ota_begin[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/app_update/esp_ota_ops.c[0m[0m:[1;31m174[0m
+[0m--- 0x4200ddec: [0;33mcheck_sd_ota_update[0m[0m at [0;32mC:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/SD_CARD_OTA.c[0m[0m:[1;31m37[0m
+[0m--- 0x4200b510: [0;33mapp_main[0m[0m at [0;32mC:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/main.c[0m[0m:[1;31m542[0m
+[0m--- 0x420348b7: [0;33mmain_task[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m208[0m
+[0m--- 0x4037cd35: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40375b90: [0;33mesp_restart_noos[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c[0m[0m:[1;31m162[0m
+[0m--- 0x40377e8c: [0;33mspi_flash_disable_interrupts_caches_and_other_cpu[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/cache_utils.c[0m[0m:[1;31m201[0m
+[0m--- 0x40377eb4: [0;33mspi_flash_op_block_func[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/cache_utils.c[0m[0m:[1;31m115[0m
+[0m--- 0x4037b9c0: [0;33msystimer_ticks_to_us[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/esp_hw_support/port/esp32s3/systimer.c[0m[0m:[1;31m15[0m
+[0m--- 0x400570e8: [0;33mmemset[0m[0m in [0;32mROM[0m
+[0m--- 0x400570f3: [0;33mmemset[0m[0m in [0;32mROM[0m
+[0m--- 0x40377e89: [0;33mspi_flash_disable_interrupts_caches_and_other_cpu[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/cache_utils.c[0m[0m:[1;31m199[0m
+[0m--- 0x40378c8b: [0;33mcache_disable[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/spi_flash_os_func_app.c[0m[0m:[1;31m70[0m
+[0m--- 0x40378c95: [0;33mspi1_start[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/spi_flash_os_func_app.c[0m[0m:[1;31m122[0m
+[0m--- 0x40379f63: [0;33mspiflash_start_default[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/esp_flash_api.c[0m[0m:[1;31m191[0m
+[0m--- 0x4037851a: [0;33mesp_flash_erase_region[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/esp_flash_api.c[0m[0m:[1;31m671[0m
+[0m--- 0x42018e65: [0;33mesp_partition_erase_range[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/esp_partition/partition_target.c[0m[0m:[1;31m143[0m
+[0m--- 0x42018617: [0;33mesp_ota_begin[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/app_update/esp_ota_ops.c[0m[0m:[1;31m174[0m
+[0m--- 0x4200ddec: [0;33mcheck_sd_ota_update[0m[0m at [0;32mC:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/SD_CARD_OTA.c[0m[0m:[1;31m37[0m
+[0m--- 0x4200b510: [0;33mapp_main[0m[0m at [0;32mC:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/main.c[0m[0m:[1;31m542[0m
+[0m--- 0x420348b7: [0;33mmain_task[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m208[0m
+[0m--- 0x4037cd35: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40375b90: [0;33mesp_restart_noos[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c[0m[0m:[1;31m162[0m
+[0m--- 0x40377e8c: [0;33mspi_flash_disable_interrupts_caches_and_other_cpu[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/cache_utils.c[0m[0m:[1;31m201[0m
+[0m--- 0x40377eb4: [0;33mspi_flash_op_block_func[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/cache_utils.c[0m[0m:[1;31m115[0m
+[0m--- 0x4037b9c0: [0;33msystimer_ticks_to_us[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/esp_hw_support/port/esp32s3/systimer.c[0m[0m:[1;31m15[0m
+[0m--- 0x400570e8: [0;33mmemset[0m[0m in [0;32mROM[0m
+[0m--- 0x400570f3: [0;33mmemset[0m[0m in [0;32mROM[0m
+[0m--- 0x40377e89: [0;33mspi_flash_disable_interrupts_caches_and_other_cpu[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/cache_utils.c[0m[0m:[1;31m199[0m
+[0m--- 0x40378c8b: [0;33mcache_disable[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/spi_flash_os_func_app.c[0m[0m:[1;31m70[0m
+[0m--- 0x40378c95: [0;33mspi1_start[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/spi_flash_os_func_app.c[0m[0m:[1;31m122[0m
+[0m--- 0x40379f63: [0;33mspiflash_start_default[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/esp_flash_api.c[0m[0m:[1;31m191[0m
+[0m--- 0x4037851a: [0;33mesp_flash_erase_region[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/spi_flash/esp_flash_api.c[0m[0m:[1;31m671[0m
+[0m--- 0x42018e65: [0;33mesp_partition_erase_range[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/esp_partition/partition_target.c[0m[0m:[1;31m143[0m
+[0m--- 0x42018617: [0;33mesp_ota_begin[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/app_update/esp_ota_ops.c[0m[0m:[1;31m174[0m
+[0m--- 0x4200ddec: [0;33mcheck_sd_ota_update[0m[0m at [0;32mC:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/SD_CARD_OTA.c[0m[0m:[1;31m37[0m
+[0m--- 0x4200b510: [0;33mapp_main[0m[0m at [0;32mC:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/main.c[0m[0m:[1;31m542[0m
+[0m--- 0x420348b7: [0;33mmain_task[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m208[0m
+[0m--- 0x4037cd35: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40375b90: [0;33mesp_restart_noos[0m[0m at [0;32mC:/Users/HP/esp/v5.4.3/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c[0m[0m:[1;31m162[0m
+[1;31m--- Error: GetOverlappedResult failed (PermissionError(13, 'Access is denied.', None, 5))[0m
+[0;33m--- Waiting for the device to reconnect[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m[0m

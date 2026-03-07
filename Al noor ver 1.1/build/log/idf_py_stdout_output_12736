@@ -1,0 +1,158 @@
+[1/14] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\HP\Documents\GitHub\Noor2\Al noor ver 1.1\build\bootloader\esp-idf\esptool_py" && C:\Users\HP\.espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Users/HP/esp/v5.4.3/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin""
+Bootloader binary size 0x51c0 bytes. 0x2e40 bytes (36%) free.
+[2/14] No install step for 'bootloader'
+[3/14] Completed 'bootloader'
+[4/14] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/navigation.c.obj
+[5/14] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/headphone_detect.c.obj
+In file included from C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/headphone_detect.c:6:
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/headphone_detect.h:17:9: warning: "HEADPHONE_DETECT_PIN" redefined
+   17 | #define HEADPHONE_DETECT_PIN  -1   // Jack detect pin (LOW = headphone inserted)
+      |         ^~~~~~~~~~~~~~~~~~~~
+In file included from C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/headphone_detect.h:13:
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/config.h:76:9: note: this is the location of the previous definition
+   76 | #define HEADPHONE_DETECT_PIN   48
+      |         ^~~~~~~~~~~~~~~~~~~~
+In file included from C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/headphone_detect.c:11:
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/audio.h:25:9: warning: "VOLUME_MAX" redefined
+   25 | #define VOLUME_MAX      100
+      |         ^~~~~~~~~~
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/config.h:97:9: note: this is the location of the previous definition
+   97 | #define VOLUME_MAX             200
+      |         ^~~~~~~~~~
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/headphone_detect.c: In function 'headphone_detect_init':
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/headphone_detect.c:68:31: warning: left shift count is negative [-Wshift-count-negative]
+   68 |         .pin_bit_mask = (1ULL << HEADPHONE_DETECT_PIN)
+      |                               ^~
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/headphone_detect.c:85:35: warning: left shift count is negative [-Wshift-count-negative]
+   85 |             .pin_bit_mask = (1ULL << SPEAKER_ENABLE_PIN)
+      |                                   ^~
+[6/14] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/announcements.c.obj
+In file included from C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/audio.h:14,
+                 from C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/announcements.c:29:
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/config.h:105:9: warning: "ANNOUNCE_PATH_MAX" redefined
+  105 | #define ANNOUNCE_PATH_MAX      512
+      |         ^~~~~~~~~~~~~~~~~
+In file included from C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/announcements.c:28:
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/announcements.h:14:9: note: this is the location of the previous definition
+   14 | #define ANNOUNCE_PATH_MAX   256
+      |         ^~~~~~~~~~~~~~~~~
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/config.h:110:9: warning: "NOTIFY_ANNOUNCE_BIT" redefined
+  110 | #define NOTIFY_ANNOUNCE_BIT    (1u << 31)
+      |         ^~~~~~~~~~~~~~~~~~~
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/announcements.h:17:9: note: this is the location of the previous definition
+   17 | #define NOTIFY_ANNOUNCE_BIT  (1UL << 0)
+      |         ^~~~~~~~~~~~~~~~~~~
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/audio.h:25:9: warning: "VOLUME_MAX" redefined
+   25 | #define VOLUME_MAX      100
+      |         ^~~~~~~~~~
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/config.h:97:9: note: this is the location of the previous definition
+   97 | #define VOLUME_MAX             200
+      |         ^~~~~~~~~~
+[7/14] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/audio.c.obj
+In file included from C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/audio.c:6:
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/audio.h:25:9: warning: "VOLUME_MAX" redefined
+   25 | #define VOLUME_MAX      100
+      |         ^~~~~~~~~~
+In file included from C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/audio.h:14:
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/config.h:97:9: note: this is the location of the previous definition
+   97 | #define VOLUME_MAX             200
+      |         ^~~~~~~~~~
+In file included from C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/audio.c:11:
+C:/Users/HP/esp/v5.4.3/esp-idf/components/driver/deprecated/driver/i2s.h:27:2: warning: #warning "This set of I2S APIs has been deprecated, please include 'driver/i2s_std.h', 'driver/i2s_pdm.h' or 'driver/i2s_tdm.h' instead. if you want to keep using the old APIs and ignore this warning, you can enable 'Suppress legacy driver deprecated warning' option under 'I2S Configuration' menu in Kconfig" [-Wcpp]
+   27 | #warning "This set of I2S APIs has been deprecated, \
+      |  ^~~~~~~
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/audio.c: In function 'audio_play_file':
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/audio.c:142:9: warning: 'I2S_COMM_FORMAT_I2S' is deprecated [-Wdeprecated-declarations]
+  142 |         .communication_format = I2S_COMM_FORMAT_I2S,
+      |         ^
+In file included from C:/Users/HP/esp/v5.4.3/esp-idf/components/driver/deprecated/driver/i2s.h:20:
+C:/Users/HP/esp/v5.4.3/esp-idf/components/driver/deprecated/driver/i2s_types_legacy.h:88:5: note: declared here
+   88 |     I2S_COMM_FORMAT_I2S       __attribute__((deprecated)) = 0x01, /*!< I2S communication format I2S, correspond to `I2S_COMM_FORMAT_STAND_I2S`*/
+      |     ^~~~~~~~~~~~~~~~~~~
+[8/14] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/main.c:22:
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/audio.h:25:9: warning: "VOLUME_MAX" redefined
+   25 | #define VOLUME_MAX      100
+      |         ^~~~~~~~~~
+In file included from C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/main.c:20:
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/config.h:97:9: note: this is the location of the previous definition
+   97 | #define VOLUME_MAX             200
+      |         ^~~~~~~~~~
+In file included from C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/main.c:26:
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/announcements.h:14:9: warning: "ANNOUNCE_PATH_MAX" redefined
+   14 | #define ANNOUNCE_PATH_MAX   256
+      |         ^~~~~~~~~~~~~~~~~
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/config.h:105:9: note: this is the location of the previous definition
+  105 | #define ANNOUNCE_PATH_MAX      512
+      |         ^~~~~~~~~~~~~~~~~
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/announcements.h:17:9: warning: "NOTIFY_ANNOUNCE_BIT" redefined
+   17 | #define NOTIFY_ANNOUNCE_BIT  (1UL << 0)
+      |         ^~~~~~~~~~~~~~~~~~~
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/config.h:110:9: note: this is the location of the previous definition
+  110 | #define NOTIFY_ANNOUNCE_BIT    (1u << 31)
+      |         ^~~~~~~~~~~~~~~~~~~
+In file included from C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/main.c:27:
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/headphone_detect.h:17:9: warning: "HEADPHONE_DETECT_PIN" redefined
+   17 | #define HEADPHONE_DETECT_PIN  -1   // Jack detect pin (LOW = headphone inserted)
+      |         ^~~~~~~~~~~~~~~~~~~~
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/config.h:76:9: note: this is the location of the previous definition
+   76 | #define HEADPHONE_DETECT_PIN   48
+      |         ^~~~~~~~~~~~~~~~~~~~
+[9/14] Linking C static library esp-idf\main\libmain.a
+[10/14] Generating ld/sections.ld
+[11/14] Linking CXX executable app-template.elf
+[12/14] Generating binary image from built executable
+esptool.py v4.11.0
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/app-template.bin
+[13/14] C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\HP\Documents\GitHub\Noor2\Al noor ver 1.1\build\esp-idf\esptool_py" && C:\Users\HP\.espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Users/HP/esp/v5.4.3/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/partition_table/partition-table.bin" "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/app-template.bin""
+app-template.bin binary size 0x5aae0 bytes. Smallest app partition is 0x100000 bytes. 0xa5520 bytes (65%) free.
+[13/14] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\HP\esp\v5.4.3\esp-idf\components\esptool_py && C:\Users\HP\.espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Users/HP/esp/v5.4.3/esp-idf -D SERIAL_TOOL=C:/Users/HP/.espressif/python_env/idf5.4_py3.11_env/Scripts/python.exe;;C:/Users/HP/esp/v5.4.3/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D "WORKING_DIRECTORY=C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build" -P C:/Users/HP/esp/v5.4.3/esp-idf/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32s3 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 app-template.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.11.0
+Serial port COM3
+Connecting....
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: dc:b4:d9:0b:26:58
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x0006afff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 20928 bytes to 13319...
+Writing at 0x00000000... (100 %)
+Wrote 20928 bytes (13319 compressed) at 0x00000000 in 0.7 seconds (effective 248.7 kbit/s)...
+Hash of data verified.
+Compressed 371424 bytes to 201525...
+Writing at 0x00010000... (7 %)
+Writing at 0x0001d88f... (15 %)
+Writing at 0x00028332... (23 %)
+Writing at 0x0002e03a... (30 %)
+Writing at 0x000340cf... (38 %)
+Writing at 0x0003a983... (46 %)
+Writing at 0x0004073e... (53 %)
+Writing at 0x000467c7... (61 %)
+Writing at 0x0004cdc2... (69 %)
+Writing at 0x000533da... (76 %)
+Writing at 0x0005a311... (84 %)
+Writing at 0x00062084... (92 %)
+Writing at 0x00068907... (100 %)
+Wrote 371424 bytes (201525 compressed) at 0x00010000 in 5.0 seconds (effective 600.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 395.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

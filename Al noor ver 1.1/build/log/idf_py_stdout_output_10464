@@ -1,0 +1,1041 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x2b (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x1564
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd24
+load:0x403cb700,len:0x2ed4
+entry 0x403c8928
+[0;32mI (27) boot: ESP-IDF v5.4.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar  5 2026 11:50:28[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c040020 size=133d8h ( 78808) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=00023400 vaddr=3fc95400 size=02f3ch ( 12092) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=00026344 vaddr=40374000 size=09cd4h ( 40148) load[0m
+[0;32mI (115) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=32f34h (208692) map[0m
+[0;32mI (152) esp_image: segment 4: paddr=00062f5c vaddr=4037dcd4 size=07634h ( 30260) load[0m
+[0;32mI (159) esp_image: segment 5: paddr=0006a598 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (166) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (166) boot: Disabling RNG early entropy source...[0m
+[0;32mI (177) cpu_start: Multicore app[0m
+[0;32mI (187) cpu_start: Pro cpu start user code[0m
+[0;32mI (187) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (187) app_init: Application information:[0m
+[0;32mI (187) app_init: Project name:     app-template[0m
+[0;32mI (191) app_init: App version:      c2a023c-dirty[0m
+[0;32mI (195) app_init: Compile time:     Mar  5 2026 11:49:57[0m
+[0;32mI (200) app_init: ELF file SHA256:  4de7485da...[0m
+[0;32mI (205) app_init: ESP-IDF:          v5.4.3[0m
+[0;32mI (209) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (212) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (216) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (220) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (227) heap_init: At 3FC99450 len 000502C0 (320 KiB): RAM[0m
+[0;32mI (232) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (237) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (248) spi_flash: detected chip: boya[0m
+[0;32mI (251) spi_flash: flash io: dio[0m
+[0;33mW (254) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (266) i2s(legacy): legacy i2s driver is deprecated, please migrate to use driver/i2s_std.h, driver/i2s_pdm.h or driver/i2s_tdm.h[0m
+[0;32mI (278) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (284) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (291) main_task: Started on CPU0[0m
+[0;32mI (301) main_task: Calling app_main()[0m
+[0;32mI (301) MAIN: === Noor Audio Player (4-Level Navigation) ===[0m
+[0;32mI (301) MAIN: Initializing modules...[0m
+[0;32mI (301) AUDIO: ================================[0m
+[0;32mI (311) AUDIO: Audio System Initialization[0m
+[0;32mI (311) AUDIO: Default Volume: 60% (60/100)[0m
+[0;32mI (321) AUDIO: I2S Pins: BCLK=18, WS=17, DIN=16[0m
+[0;32mI (321) AUDIO: ================================[0m
+[0;32mI (331) AUDIO: Audio system initialized (volume=60%)[0m
+[0;32mI (331) BUTTONS: Initializing buttons...[0m
+[0;32mI (331) gpio: GPIO[4]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (341) gpio: GPIO[5]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (351) gpio: GPIO[14]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (361) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (371) BUTTONS: Buttons initialized: Play=14, Home=15, Vol+=4, Vol-=5[0m
+[0;32mI (371) NAVIGATION: Navigation initialized at HOME[0m
+[0;32mI (381) ANNOUNCE: Announcements system initialized[0m
+[0;32mI (381) HP_DETECT: Headphone detection disabled (detect pin not configured)[0m
+[0;32mI (391) MAIN: Attempting USB MSC initialization...[0m
+[0;32mI (391) USB_MSC: ========================================[0m
+[0;32mI (401) USB_MSC: Initializing USB MSC (Mass Storage Class)[0m
+[0;32mI (401) USB_MSC: ========================================[0m
+[0;33mW (411) tusb_desc: No Device descriptor provided, using default.[0m
+[0;33mW (411) tusb_desc: No FullSpeed configuration descriptor provided, using default.[0m
+[0;33mW (421) tusb_desc: No String descriptors provided, using default.[0m
+[0;32mI (431) tusb_desc: [0m
+┌─────────────────────────────────┐
+│  USB Device Descriptor Summary  │
+├───────────────────┬─────────────┤
+│bDeviceClass       │ 0           │
+├───────────────────┼─────────────┤
+│bDeviceSubClass    │ 0           │
+├───────────────────┼─────────────┤
+│bDeviceProtocol    │ 0           │
+├───────────────────┼─────────────┤
+│bMaxPacketSize0    │ 64          │
+├───────────────────┼─────────────┤
+│idVendor           │ 0x303a      │
+├───────────────────┼─────────────┤
+│idProduct          │ 0x4002      │
+├───────────────────┼─────────────┤
+│bcdDevice          │ 0x100       │
+├───────────────────┼─────────────┤
+│iManufacturer      │ 0x1         │
+├───────────────────┼─────────────┤
+│iProduct           │ 0x2         │
+├───────────────────┼─────────────┤
+│iSerialNumber      │ 0x3         │
+├───────────────────┼─────────────┤
+│bNumConfigurations │ 0x1         │
+└───────────────────┴─────────────┘
+[0;32mI (601) TinyUSB: TinyUSB Driver installed[0m
+[0;32mI (601) USB_MSC: ========================================[0m
+[0;32mI (601) USB_MSC: USB MSC initialized successfully![0m
+[0;32mI (611) USB_MSC: - Connect second USB-C cable to ESP32S3[0m
+[0;32mI (611) USB_MSC: - SD card will appear as removable USB storage[0m
+[0;32mI (621) USB_MSC: - Audio playback continues on first USB (UART)[0m
+[0;32mI (621) USB_MSC: ========================================[0m
+[0;32mI (631) MAIN: USB MSC enabled - SD card accessible via USB mass storage[0m
+[0;32mI (641) MAIN: Attempting SD card initialization...[0m
+[0;32mI (641) SD_CARD: Initializing SD card...[0m
+[0;32mI (641) SD_CARD: SPI Pins - CS=10, MOSI=11, MISO=13, CLK=12[0m
+[0;32mI (651) SD_CARD: Initializing SPI bus...[0m
+[0;32mI (651) SD_CARD: SPI bus initialized successfully[0m
+[0;32mI (661) SD_CARD: Configuring SD card slot...[0m
+[0;32mI (661) SD_CARD: Mounting SD card to /sdcard...[0m
+[0;32mI (671) gpio: GPIO[10]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (671) sdspi_transaction: cmd=52, R1 response: command CRC error[0m
+[0;32mI (721) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (761) SD_CARD: SD card mounted successfully![0m
+[0;32mI (761) SD_CARD: Card Info:[0m
+[0;32mI (761) SD_CARD:   - Capacity: 31914983424 bytes[0m
+[0;32mI (761) SD_CARD:   - Sectors: 62333952[0m
+[0;32mI (761) SD_CARD:   - Sector Size: 512 bytes[0m
+[0;32mI (771) USB_MSC: SD card registered with USB MSC[0m
+[0;32mI (771) USB_MSC: - Capacity: 31914983424 bytes[0m
+[0;32mI (781) USB_MSC: - Sectors: 62333952[0m
+[0;32mI (781) MAIN: SD card registered with USB MSC[0m
+[0;32mI (781) SD_CARD: Scanning folders in: /sdcard[0m
+[0;32mI (791) SD_CARD:   [0] /sdcard/SYSTEM~1[0m
+[0;32mI (791) SD_CARD:   [1] /sdcard/RECORD~1[0m
+[0;32mI (801) SD_CARD:   [2] /sdcard/ANNOUN~1[0m
+[0;32mI (801) SD_CARD:   [3] /sdcard/STORIES[0m
+[0;32mI (801) SD_CARD:   [4] /sdcard/TAWID[0m
+[0;32mI (801) SD_CARD: Found 5 folders[0m
+[0;32mI (811) MAIN: Found 5 main folders[0m
+[0;32mI (811) NAVIGATION: Selected folder: 3[0m
+[0;32mI (811) MAIN: Default folder: 3[0m
+[0;32mI (821) ANNOUNCE: Playing boot greetings...[0m
+[0;32mI (831) ENCODER: Initializing encoder...[0m
+[0;32mI (831) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (831) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (841) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (851) ENCODER: Encoder initialized: CLK=1, DT=2, SW=21[0m
+[0;32mI (851) ENCODER: Encoder task started[0m
+[0;32mI (861) ENCODER: Encoder task started[0m
+[0;32mI (861) MAIN: Audio task started[0m
+[0;32mI (861) MAIN: Initialization complete. Entering main loop...[0m
+[0;32mI (4971) NAVIGATION: Previous folder: 2 (of 5)[0m
+[0;32mI (4971) MAIN: Encoder: Main folder 2 selected (ANNOUN~1)[0m
+[0;32mI (5061) NAVIGATION: Next folder: 3 (of 5)[0m
+[0;32mI (5071) MAIN: Encoder: Main folder 3 selected (STORIES)[0m
+[0;32mI (8101) NAVIGATION: Previous folder: 2 (of 5)[0m
+[0;32mI (8101) MAIN: Encoder: Main folder 2 selected (ANNOUN~1)[0m
+[0;32mI (10511) MAIN: Play button pressed (state=0)[0m
+[0;32mI (10511) NAVIGATION: Forward: HOME -> FOLDER_VIEW[0m
+[0;32mI (10511) MAIN: HOME -> FOLDER_VIEW[0m
+[0;32mI (12941) NAVIGATION: Next folder: 3 (of 5)[0m
+[0;32mI (12951) MAIN: Encoder: Main folder 3 selected (STORIES)[0m
+[0;32mI (15901) NAVIGATION: Next folder: 4 (of 5)[0m
+[0;32mI (15911) MAIN: Encoder: Main folder 4 selected (TAWID)[0m
+[0;32mI (19161) NAVIGATION: Previous folder: 3 (of 5)[0m
+[0;32mI (19161) MAIN: Encoder: Main folder 3 selected (STORIES)[0m
+[0;32mI (20641) NAVIGATION: Previous folder: 2 (of 5)[0m
+[0;32mI (20641) MAIN: Encoder: Main folder 2 selected (ANNOUN~1)[0m
+[0;32mI (20851) NAVIGATION: Next folder: 3 (of 5)[0m
+[0;32mI (20851) MAIN: Encoder: Main folder 3 selected (STORIES)[0m
+[0;32mI (21881) NAVIGATION: Next folder: 4 (of 5)[0m
+[0;32mI (21891) MAIN: Encoder: Main folder 4 selected (TAWID)[0m
+[0;32mI (23241) NAVIGATION: Next folder: 0 (of 5)[0m
+[0;32mI (23241) MAIN: Encoder: Main folder 0 selected (SYSTEM~1)[0m
+[0;32mI (23311) NAVIGATION: Previous folder: 4 (of 5)[0m
+[0;32mI (23321) MAIN: Encoder: Main folder 4 selected (TAWID)[0m
+[0;32mI (24461) NAVIGATION: Next folder: 0 (of 5)[0m
+[0;32mI (24461) MAIN: Encoder: Main folder 0 selected (SYSTEM~1)[0m
+[0;32mI (25741) NAVIGATION: Next folder: 1 (of 5)[0m
+[0;32mI (25741) MAIN: Encoder: Main folder 1 selected (RECORD~1)[0m
+[0;32mI (27301) NAVIGATION: Previous folder: 0 (of 5)[0m
+[0;32mI (27301) MAIN: Encoder: Main folder 0 selected (SYSTEM~1)[0m
+[0;32mI (27391) NAVIGATION: Next folder: 1 (of 5)[0m
+[0;32mI (27391) MAIN: Encoder: Main folder 1 selected (RECORD~1)[0m
+[0;32mI (28911) NAVIGATION: Next folder: 2 (of 5)[0m
+[0;32mI (28911) MAIN: Encoder: Main folder 2 selected (ANNOUN~1)[0m
+[0;32mI (31201) MAIN: Play button pressed (state=1)[0m
+[0;32mI (31201) SD_CARD: Subfolder list freed[0m
+[0;32mI (31211) SD_CARD: Total subfolders found: 0[0m
+[0;32mI (34791) NAVIGATION: Next folder: 3 (of 5)[0m
+[0;32mI (34801) MAIN: Encoder: Main folder 3 selected (STORIES)[0m
+[0;32mI (37221) MAIN: Play button pressed (state=1)[0m
+[0;32mI (37221) SD_CARD: Subfolder list freed[0m
+[0;32mI (37221) SD_CARD: Found subfolder [0]: ADAM[0m
+[0;32mI (37221) SD_CARD: Found subfolder [1]: DAOUD[0m
+[0;32mI (37221) SD_CARD: Found subfolder [2]: IBRAHIM[0m
+[0;32mI (37221) SD_CARD: Found subfolder [3]: ISMAEEL[0m
+[0;32mI (37231) SD_CARD: Found subfolder [4]: ISSA[0m
+[0;32mI (37231) SD_CARD: Found subfolder [5]: MOUSSA[0m
+[0;32mI (37241) SD_CARD: Found subfolder [6]: MUHAMMAD[0m
+[0;32mI (37241) SD_CARD: Found subfolder [7]: NUH[0m
+[0;32mI (37241) SD_CARD: Found subfolder [8]: YAQOOB[0m
+[0;32mI (37251) SD_CARD: Found subfolder [9]: YOUSUF[0m
+[0;32mI (37251) SD_CARD: Total subfolders found: 10[0m
+[0;32mI (37261) NAVIGATION: Forward: FOLDER_VIEW -> SUBFOLDER_VIEW[0m
+[0;32mI (37271) MAIN: Entered folder (subfolders=10)[0m
+[0;32mI (38771) MAIN: Play button pressed (state=2)[0m
+[0;32mI (38771) SD_CARD: Scanning WAV files in: /sdcard/STORIES/ADAM[0m
+[0;32mI (38771) SD_CARD:   Checking: A1.WAV[0m
+[0;32mI (38771) SD_CARD:   [0] /sdcard/STORIES/ADAM/A1.WAV[0m
+[0;32mI (38771) SD_CARD:   Checking: A2.WAV[0m
+[0;32mI (38781) SD_CARD:   [1] /sdcard/STORIES/ADAM/A2.WAV[0m
+[0;32mI (38781) SD_CARD:   Checking: A3.WAV[0m
+[0;32mI (38781) SD_CARD:   [2] /sdcard/STORIES/ADAM/A3.WAV[0m
+[0;32mI (38791) SD_CARD:   Checking: A4.WAV[0m
+[0;32mI (38791) SD_CARD:   [3] /sdcard/STORIES/ADAM/A4.WAV[0m
+[0;32mI (38801) SD_CARD:   Checking: A5.WAV[0m
+[0;32mI (38801) SD_CARD:   [4] /sdcard/STORIES/ADAM/A5.WAV[0m
+[0;32mI (38801) SD_CARD:   Checking: A6.WAV[0m
+[0;32mI (38811) SD_CARD:   [5] /sdcard/STORIES/ADAM/A6.WAV[0m
+[0;32mI (38811) SD_CARD:   Checking: A7.WAV[0m
+[0;32mI (38821) SD_CARD:   [6] /sdcard/STORIES/ADAM/A7.WAV[0m
+[0;32mI (38821) SD_CARD: Found 7 WAV files[0m
+[0;32mI (38821) NAVIGATION: Forward: SUBFOLDER_VIEW -> FILE_VIEW[0m
+[0;32mI (38831) MAIN: Entered subfolder (files=7)[0m
+[0;32mI (40991) NAVIGATION: Previous track: 6 (of 7)[0m
+[0;32mI (40991) MAIN: Encoder: Track 6 selected (A7.WAV)[0m
+[0;32mI (41851) NAVIGATION: Next track: 0 (of 7)[0m
+[0;32mI (41851) MAIN: Encoder: Track 0 selected (A1.WAV)[0m
+[0;32mI (43041) NAVIGATION: Next track: 1 (of 7)[0m
+[0;32mI (43041) MAIN: Encoder: Track 1 selected (A2.WAV)[0m
+[0;32mI (44121) MAIN: Playing track 1: /sdcard/STORIES/ADAM/A2.WAV[0m
+[0;32mI (44121) AUDIO: Playing: /sdcard/STORIES/ADAM/A2.WAV[0m
+[0;32mI (44121) MAIN: Encoder button: Start playback track 1[0m
+[0;32mI (44131) AUDIO: Format: 44100 Hz, 16-bit, 2 channels[0m
+[0;32mI (44131) AUDIO: Starting playback loop...[0m
+[0;32mI (51461) AUDIO: Volume UP -> 70%[0m
+[0;32mI (51971) AUDIO: Volume UP -> 80%[0m
+[0;32mI (52391) AUDIO: Volume UP -> 90%[0m
+[0;32mI (52881) AUDIO: Volume UP -> 100%[0m
+[0;32mI (53351) AUDIO: Volume UP -> 110%[0m
+[0;32mI (54601) AUDIO: Volume UP -> 120%[0m
+[0;32mI (55351) AUDIO: Volume DOWN -> 110%[0m
+[0;32mI (55781) AUDIO: Volume DOWN -> 100%[0m
+[0;32mI (56261) AUDIO: Volume DOWN -> 90%[0m
+[0;32mI (56731) AUDIO: Volume DOWN -> 80%[0m
+[0;32mI (57381) AUDIO: Volume UP -> 90%[0m
+[0;32mI (57741) AUDIO: Volume UP -> 100%[0m
+[0;32mI (58101) AUDIO: Volume UP -> 110%[0m
+[0;32mI (58501) AUDIO: Volume UP -> 120%[0m
+[0;32mI (59091) AUDIO: Volume UP -> 130%[0m
+[0;32mI (59611) AUDIO: Volume UP -> 140%[0m
+[0;32mI (66061) MAIN: Home button pressed (state=3)[0m
+[0;32mI (66061) NAVIGATION: Back: FILE_VIEW -> SUBFOLDER_VIEW[0m
+[0;32mI (66061) MAIN: FILE_VIEW -> SUBFOLDER_VIEW[0m
+[0;32mI (66071) AUDIO: Playback stopped by flag[0m
+[0;32mI (66071) AUDIO: Playback finished[0m
+[0;32mI (70171) NAVIGATION: Next subfolder: 1 (of 10)[0m
+[0;32mI (70181) MAIN: Encoder: Subfolder 1 selected (DAOUD)[0m
+[0;32mI (71531) NAVIGATION: Next subfolder: 2 (of 10)[0m
+[0;32mI (71531) MAIN: Encoder: Subfolder 2 selected (IBRAHIM)[0m
+[0;32mI (72641) NAVIGATION: Next subfolder: 3 (of 10)[0m
+[0;32mI (72641) MAIN: Encoder: Subfolder 3 selected (ISMAEEL)[0m
+[0;32mI (78271) SD_CARD: Scanning WAV files in: /sdcard/STORIES/ISMAEEL[0m
+[0;32mI (78281) SD_CARD:   Checking: IS1.WAV[0m
+[0;32mI (78281) SD_CARD:   [0] /sdcard/STORIES/ISMAEEL/IS1.WAV[0m
+[0;32mI (78281) SD_CARD:   Checking: IS2.WAV[0m
+[0;32mI (78281) SD_CARD:   [1] /sdcard/STORIES/ISMAEEL/IS2.WAV[0m
+[0;32mI (78291) SD_CARD:   Checking: IS3.WAV[0m
+[0;32mI (78291) SD_CARD:   [2] /sdcard/STORIES/ISMAEEL/IS3.WAV[0m
+[0;32mI (78291) SD_CARD:   Checking: IS4.WAV[0m
+[0;32mI (78301) SD_CARD:   [3] /sdcard/STORIES/ISMAEEL/IS4.WAV[0m
+[0;32mI (78301) SD_CARD:   Checking: IS5.WAV[0m
+[0;32mI (78311) SD_CARD:   [4] /sdcard/STORIES/ISMAEEL/IS5.WAV[0m
+[0;32mI (78311) SD_CARD:   Checking: IS6.WAV[0m
+[0;32mI (78311) SD_CARD:   [5] /sdcard/STORIES/ISMAEEL/IS6.WAV[0m
+[0;32mI (78321) SD_CARD:   Checking: IS7.WAV[0m
+[0;32mI (78321) SD_CARD:   [6] /sdcard/STORIES/ISMAEEL/IS7.WAV[0m
+[0;32mI (78331) SD_CARD: Found 7 WAV files[0m
+[0;32mI (78331) NAVIGATION: Forward: SUBFOLDER_VIEW -> FILE_VIEW[0m
+[0;32mI (78341) MAIN: Encoder button: Entered subfolder (files=7)[0m
+[0;32mI (78341) MAIN: Playing track 0: /sdcard/STORIES/ISMAEEL/IS1.WAV[0m
+[0;32mI (78351) AUDIO: Playing: /sdcard/STORIES/ISMAEEL/IS1.WAV[0m
+[0;32mI (78351) MAIN: Encoder button: Start playback track 0[0m
+[0;32mI (78361) AUDIO: Format: 44100 Hz, 16-bit, 1 channels[0m
+[0;32mI (78361) AUDIO: Starting playback loop...[0m
+[0;32mI (86251) NAVIGATION: Previous track: 6 (of 7)[0m
+[0;32mI (86251) MAIN: Encoder: Track 6 selected (IS7.WAV)[0m
+[0;32mI (86261) AUDIO: Playback stopped by flag[0m
+[0;32mI (86261) AUDIO: Playback finished[0m
+[0;32mI (88371) NAVIGATION: Next track: 0 (of 7)[0m
+[0;32mI (88371) MAIN: Encoder: Track 0 selected (IS1.WAV)[0m
+[0;32mI (90781) MAIN: Play button pressed (state=3)[0m
+[0;32mI (90781) MAIN: Playing track 0: /sdcard/STORIES/ISMAEEL/IS1.WAV[0m
+[0;32mI (90781) AUDIO: Playing: /sdcard/STORIES/ISMAEEL/IS1.WAV[0m
+[0;32mI (90781) MAIN: Play: Start track 0[0m
+[0;32mI (90791) AUDIO: Format: 44100 Hz, 16-bit, 1 channels[0m
+[0;32mI (90791) AUDIO: Starting playback loop...[0m
+[0;32mI (92511) MAIN: Home button pressed (state=3)[0m
+[0;32mI (92511) NAVIGATION: Back: FILE_VIEW -> SUBFOLDER_VIEW[0m
+[0;32mI (92511) AUDIO: Playback stopped by flag[0m
+[0;32mI (92511) MAIN: FILE_VIEW -> SUBFOLDER_VIEW[0m
+[0;32mI (92511) AUDIO: Playback finished[0m
+[0;32mI (96231) NAVIGATION: Next subfolder: 4 (of 10)[0m
+[0;32mI (96241) MAIN: Encoder: Subfolder 4 selected (ISSA)[0m
+[0;32mI (97261) NAVIGATION: Next subfolder: 5 (of 10)[0m
+[0;32mI (97271) MAIN: Encoder: Subfolder 5 selected (MOUSSA)[0m
+[0;32mI (97561) NAVIGATION: Next subfolder: 6 (of 10)[0m
+[0;32mI (97571) MAIN: Encoder: Subfolder 6 selected (MUHAMMAD)[0m
+[0;32mI (99371) MAIN: Play button pressed (state=2)[0m
+[0;32mI (99381) SD_CARD: Scanning WAV files in: /sdcard/STORIES/MUHAMMAD[0m
+[0;32mI (99381) SD_CARD:   Checking: CRRM1.WAV[0m
+[0;32mI (99381) SD_CARD:   [0] /sdcard/STORIES/MUHAMMAD/CRRM1.WAV[0m
+[0;32mI (99381) SD_CARD:   Checking: M1.WAV[0m
+[0;32mI (99381) SD_CARD:   [1] /sdcard/STORIES/MUHAMMAD/M1.WAV[0m
+[0;32mI (99391) SD_CARD:   Checking: M2.WAV[0m
+[0;32mI (99391) SD_CARD:   [2] /sdcard/STORIES/MUHAMMAD/M2.WAV[0m
+[0;32mI (99401) SD_CARD:   Checking: M3.WAV[0m
+[0;32mI (99401) SD_CARD:   [3] /sdcard/STORIES/MUHAMMAD/M3.WAV[0m
+[0;32mI (99401) SD_CARD:   Checking: M4.WAV[0m
+[0;32mI (99411) SD_CARD:   [4] /sdcard/STORIES/MUHAMMAD/M4.WAV[0m
+[0;32mI (99411) SD_CARD:   Checking: M5.WAV[0m
+[0;32mI (99421) SD_CARD:   [5] /sdcard/STORIES/MUHAMMAD/M5.WAV[0m
+[0;32mI (99421) SD_CARD:   Checking: M6.WAV[0m
+[0;32mI (99421) SD_CARD:   [6] /sdcard/STORIES/MUHAMMAD/M6.WAV[0m
+[0;32mI (99431) SD_CARD:   Checking: M7.WAV[0m
+[0;32mI (99431) SD_CARD:   [7] /sdcard/STORIES/MUHAMMAD/M7.WAV[0m
+[0;32mI (99441) SD_CARD:   Checking: SM1.WAV[0m
+[0;32mI (99441) SD_CARD:   [8] /sdcard/STORIES/MUHAMMAD/SM1.WAV[0m
+[0;32mI (99451) SD_CARD:   Checking: WRM1.WAV[0m
+[0;32mI (99451) SD_CARD:   [9] /sdcard/STORIES/MUHAMMAD/WRM1.WAV[0m
+[0;32mI (99461) SD_CARD: Found 10 WAV files[0m
+[0;32mI (99461) NAVIGATION: Forward: SUBFOLDER_VIEW -> FILE_VIEW[0m
+[0;32mI (99461) MAIN: Entered subfolder (files=10)[0m
+[0;32mI (102741) NAVIGATION: Previous track: 9 (of 10)[0m
+[0;32mI (102741) MAIN: Encoder: Track 9 selected (WRM1.WAV)[0m
+[0;32mI (103521) NAVIGATION: Next track: 0 (of 10)[0m
+[0;32mI (103521) MAIN: Encoder: Track 0 selected (CRRM1.WAV)[0m
+[0;32mI (105061) NAVIGATION: Previous track: 9 (of 10)[0m
+[0;32mI (105061) MAIN: Encoder: Track 9 selected (WRM1.WAV)[0m
+[0;32mI (105131) NAVIGATION: Next track: 0 (of 10)[0m
+[0;32mI (105131) MAIN: Encoder: Track 0 selected (CRRM1.WAV)[0m
+[0;32mI (106231) NAVIGATION: Previous track: 9 (of 10)[0m
+[0;32mI (106231) MAIN: Encoder: Track 9 selected (WRM1.WAV)[0m
+[0;32mI (107211) NAVIGATION: Next track: 0 (of 10)[0m
+[0;32mI (107211) MAIN: Encoder: Track 0 selected (CRRM1.WAV)[0m
+[0;32mI (108491) NAVIGATION: Next track: 1 (of 10)[0m
+[0;32mI (108511) MAIN: Encoder: Track 1 selected (M1.WAV)[0m
+[0;32mI (108961) NAVIGATION: Previous track: 0 (of 10)[0m
+[0;32mI (108961) MAIN: Encoder: Track 0 selected (CRRM1.WAV)[0m
+[0;32mI (109791) NAVIGATION: Next track: 1 (of 10)[0m
+[0;32mI (109801) MAIN: Encoder: Track 1 selected (M1.WAV)[0m
+[0;32mI (110441) NAVIGATION: Previous track: 0 (of 10)[0m
+[0;32mI (110441) MAIN: Encoder: Track 0 selected (CRRM1.WAV)[0m
+[0;32mI (110931) NAVIGATION: Next track: 1 (of 10)[0m
+[0;32mI (110941) MAIN: Encoder: Track 1 selected (M1.WAV)[0m
+[0;32mI (111481) NAVIGATION: Previous track: 0 (of 10)[0m
+[0;32mI (111481) MAIN: Encoder: Track 0 selected (CRRM1.WAV)[0m
+[0;32mI (112151) NAVIGATION: Next track: 1 (of 10)[0m
+[0;32mI (112161) MAIN: Encoder: Track 1 selected (M1.WAV)[0m
+[0;32mI (113111) NAVIGATION: Next track: 2 (of 10)[0m
+[0;32mI (113121) MAIN: Encoder: Track 2 selected (M2.WAV)[0m
+[0;32mI (115311) NAVIGATION: Next track: 3 (of 10)[0m
+[0;32mI (115321) MAIN: Encoder: Track 3 selected (M3.WAV)[0m
+[0;32mI (115421) NAVIGATION: Next track: 4 (of 10)[0m
+[0;32mI (115431) MAIN: Encoder: Track 4 selected (M4.WAV)[0m
+[0;32mI (116711) NAVIGATION: Next track: 5 (of 10)[0m
+[0;32mI (116721) MAIN: Encoder: Track 5 selected (M5.WAV)[0m
+[0;32mI (116791) NAVIGATION: Previous track: 4 (of 10)[0m
+[0;32mI (116801) MAIN: Encoder: Track 4 selected (M4.WAV)[0m
+[0;32mI (116871) NAVIGATION: Previous track: 3 (of 10)[0m
+[0;32mI (116881) MAIN: Encoder: Track 3 selected (M3.WAV)[0m
+[0;32mI (119091) MAIN: Play button pressed (state=3)[0m
+[0;32mI (119091) MAIN: Playing track 3: /sdcard/STORIES/MUHAMMAD/M3.WAV[0m
+[0;32mI (119091) AUDIO: Playing: /sdcard/STORIES/MUHAMMAD/M3.WAV[0m
+[0;32mI (119091) MAIN: Play: Start track 3[0m
+[0;32mI (119101) AUDIO: Format: 44100 Hz, 16-bit, 2 channels[0m
+[0;32mI (119101) AUDIO: Starting playback loop...[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0xb (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x1564
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd24
+load:0x403cb700,len:0x2ed4
+entry 0x403c8928
+[0;32mI (27) boot: ESP-IDF v5.4.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar  5 2026 11:50:28[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c040020 size=133d8h ( 78808) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=00023400 vaddr=3fc95400 size=02f3ch ( 12092) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=00026344 vaddr=40374000 size=09cd4h ( 40148) load[0m
+[0;32mI (115) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=32f34h (208692) map[0m
+[0;32mI (152) esp_image: segment 4: paddr=00062f5c vaddr=4037dcd4 size=07634h ( 30260) load[0m
+[0;32mI (159) esp_image: segment 5: paddr=0006a598 vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (166) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (166) boot: Disabling RNG early entropy source...[0m
+[0;32mI (177) cpu_start: Multicore app[0m
+[0;32mI (186) cpu_start: Pro cpu start user code[0m
+[0;32mI (187) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (187) app_init: Application information:[0m
+[0;32mI (187) app_init: Project name:     app-template[0m
+[0;32mI (191) app_init: App version:      c2a023c-dirty[0m
+[0;32mI (195) app_init: Compile time:     Mar  5 2026 11:49:57[0m
+[0;32mI (200) app_init: ELF file SHA256:  4de7485da...[0m
+[0;32mI (205) app_init: ESP-IDF:          v5.4.3[0m
+[0;32mI (209) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (212) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (216) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (220) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (227) heap_init: At 3FC99450 len 000502C0 (320 KiB): RAM[0m
+[0;32mI (232) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (237) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (248) spi_flash: detected chip: boya[0m
+[0;32mI (251) spi_flash: flash io: dio[0m
+[0;33mW (254) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (266) i2s(legacy): legacy i2s driver is deprecated, please migrate to use driver/i2s_std.h, driver/i2s_pdm.h or driver/i2s_tdm.h[0m
+[0;32mI (277) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (284) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (291) main_task: Started on CPU0[0m
+[0;32mI (301) main_task: Calling app_main()[0m
+[0;32mI (301) MAIN: === Noor Audio Player (4-Level Navigation) ===[0m
+[0;32mI (301) MAIN: Initializing modules...[0m
+[0;32mI (301) AUDIO: ================================[0m
+[0;32mI (311) AUDIO: Audio System Initialization[0m
+[0;32mI (311) AUDIO: Default Volume: 60% (60/100)[0m
+[0;32mI (321) AUDIO: I2S Pins: BCLK=18, WS=17, DIN=16[0m
+[0;32mI (321) AUDIO: ================================[0m
+[0;32mI (331) AUDIO: Audio system initialized (volume=60%)[0m
+[0;32mI (331) BUTTONS: Initializing buttons...[0m
+[0;32mI (331) gpio: GPIO[4]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (341) gpio: GPIO[5]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (351) gpio: GPIO[14]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (361) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (371) BUTTONS: Buttons initialized: Play=14, Home=15, Vol+=4, Vol-=5[0m
+[0;32mI (371) NAVIGATION: Navigation initialized at HOME[0m
+[0;32mI (381) ANNOUNCE: Announcements system initialized[0m
+[0;32mI (381) HP_DETECT: Headphone detection disabled (detect pin not configured)[0m
+[0;32mI (391) MAIN: Attempting USB MSC initialization...[0m
+[0;32mI (391) USB_MSC: ========================================[0m
+[0;32mI (401) USB_MSC: Initializing USB MSC (Mass Storage Class)[0m
+[0;32mI (401) USB_MSC: ========================================[0m
+[0;33mW (411) tusb_desc: No Device descriptor provided, using default.[0m
+[0;33mW (411) tusb_desc: No FullSpeed configuration descriptor provided, using default.[0m
+[0;33mW (421) tusb_desc: No String descriptors provided, using default.[0m
+[0;32mI (431) tusb_desc: [0m
+┌─────────────────────────────────┐
+│  USB Device Descriptor Summary  │
+├───────────────────┬─────────────┤
+│bDeviceClass       │ 0           │
+├───────────────────┼─────────────┤
+│bDeviceSubClass    │ 0           │
+├───────────────────┼─────────────┤
+│bDeviceProtocol    │ 0           │
+├───────────────────┼─────────────┤
+│bMaxPacketSize0    │ 64          │
+├───────────────────┼─────────────┤
+│idVendor           │ 0x303a      │
+├───────────────────┼─────────────┤
+│idProduct          │ 0x4002      │
+├───────────────────┼─────────────┤
+│bcdDevice          │ 0x100       │
+├───────────────────┼─────────────┤
+│iManufacturer      │ 0x1         │
+├───────────────────┼─────────────┤
+│iProduct           │ 0x2         │
+├───────────────────┼─────────────┤
+│iSerialNumber      │ 0x3         │
+├───────────────────┼─────────────┤
+│bNumConfigurations │ 0x1         │
+└───────────────────┴─────────────┘
+[0;32mI (601) TinyUSB: TinyUSB Driver installed[0m
+[0;32mI (601) USB_MSC: ========================================[0m
+[0;32mI (601) USB_MSC: USB MSC initialized successfully![0m
+[0;32mI (611) USB_MSC: - Connect second USB-C cable to ESP32S3[0m
+[0;32mI (611) USB_MSC: - SD card will appear as removable USB storage[0m
+[0;32mI (621) USB_MSC: - Audio playback continues on first USB (UART)[0m
+[0;32mI (621) USB_MSC: ========================================[0m
+[0;32mI (631) MAIN: USB MSC enabled - SD card accessible via USB mass storage[0m
+[0;32mI (641) MAIN: Attempting SD card initialization...[0m
+[0;32mI (641) SD_CARD: Initializing SD card...[0m
+[0;32mI (641) SD_CARD: SPI Pins - CS=10, MOSI=11, MISO=13, CLK=12[0m
+[0;32mI (651) SD_CARD: Initializing SPI bus...[0m
+[0;32mI (651) SD_CARD: SPI bus initialized successfully[0m
+[0;32mI (661) SD_CARD: Configuring SD card slot...[0m
+[0;32mI (661) SD_CARD: Mounting SD card to /sdcard...[0m
+[0;32mI (671) gpio: GPIO[10]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (671) sdspi_transaction: cmd=52, R1 response: command CRC error[0m
+[0;32mI (721) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (761) SD_CARD: SD card mounted successfully![0m
+[0;32mI (761) SD_CARD: Card Info:[0m
+[0;32mI (761) SD_CARD:   - Capacity: 31914983424 bytes[0m
+[0;32mI (761) SD_CARD:   - Sectors: 62333952[0m
+[0;32mI (761) SD_CARD:   - Sector Size: 512 bytes[0m
+[0;32mI (771) USB_MSC: SD card registered with USB MSC[0m
+[0;32mI (771) USB_MSC: - Capacity: 31914983424 bytes[0m
+[0;32mI (781) USB_MSC: - Sectors: 62333952[0m
+[0;32mI (781) MAIN: SD card registered with USB MSC[0m
+[0;32mI (781) SD_CARD: Scanning folders in: /sdcard[0m
+[0;32mI (791) SD_CARD:   [0] /sdcard/SYSTEM~1[0m
+[0;32mI (791) SD_CARD:   [1] /sdcard/ANNOUN~1[0m
+[0;32mI (791) SD_CARD:   [2] /sdcard/STORIES[0m
+[0;32mI (801) SD_CARD:   [3] /sdcard/TAWID[0m
+[0;32mI (801) SD_CARD: Found 4 folders[0m
+[0;32mI (801) MAIN: Found 4 main folders[0m
+[0;32mI (811) NAVIGATION: Selected folder: 2[0m
+[0;32mI (811) MAIN: Default folder: 2[0m
+[0;32mI (811) ANNOUNCE: Playing boot greetings...[0m
+[0;32mI (831) ENCODER: Initializing encoder...[0m
+[0;32mI (831) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (831) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (841) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (851) ENCODER: Encoder initialized: CLK=1, DT=2, SW=21[0m
+[0;32mI (851) ENCODER: Encoder task started[0m
+[0;32mI (851) ENCODER: Encoder task started[0m
+[0;32mI (861) MAIN: Audio task started[0m
+[0;32mI (861) MAIN: Initialization complete. Entering main loop...[0m
+[0;32mI (5521) NAVIGATION: Next folder: 3 (of 4)[0m
+[0;32mI (5571) MAIN: Encoder: Main folder 3 selected (TAWID)[0m
+[0;32mI (6891) NAVIGATION: Previous folder: 2 (of 4)[0m
+[0;32mI (6891) MAIN: Encoder: Main folder 2 selected (STORIES)[0m
+[0;32mI (8541) NAVIGATION: Previous folder: 1 (of 4)[0m
+[0;32mI (8541) MAIN: Encoder: Main folder 1 selected (ANNOUN~1)[0m
+[0;32mI (9751) NAVIGATION: Previous folder: 0 (of 4)[0m
+[0;32mI (9751) MAIN: Encoder: Main folder 0 selected (SYSTEM~1)[0m
+[0;32mI (13161) NAVIGATION: Previous folder: 3 (of 4)[0m
+[0;32mI (13211) MAIN: Encoder: Main folder 3 selected (TAWID)[0m
+[0;32mI (14311) NAVIGATION: Next folder: 0 (of 4)[0m
+[0;32mI (14311) MAIN: Encoder: Main folder 0 selected (SYSTEM~1)[0m
+[0;32mI (15361) NAVIGATION: Next folder: 1 (of 4)[0m
+[0;32mI (15361) MAIN: Encoder: Main folder 1 selected (ANNOUN~1)[0m
+[0;32mI (19971) MAIN: Play button pressed (state=0)[0m
+[0;32mI (19971) NAVIGATION: Forward: HOME -> FOLDER_VIEW[0m
+[0;32mI (19971) MAIN: HOME -> FOLDER_VIEW[0m
+[0;32mI (23151) MAIN: Play button pressed (state=1)[0m
+[0;32mI (23151) SD_CARD: Subfolder list freed[0m
+[0;32mI (23201) SD_CARD: Total subfolders found: 0[0m
+[0;32mI (25471) MAIN: Home button pressed (state=1)[0m
+[0;32mI (25471) NAVIGATION: Back: FOLDER_VIEW -> HOME[0m
+[0;32mI (25511) MAIN: FOLDER_VIEW -> HOME[0m
+[0;32mI (30901) NAVIGATION: Next folder: 2 (of 4)[0m
+[0;32mI (30951) MAIN: Encoder: Main folder 2 selected (STORIES)[0m
+[0;32mI (32091) NAVIGATION: Previous folder: 1 (of 4)[0m
+[0;32mI (32091) MAIN: Encoder: Main folder 1 selected (ANNOUN~1)[0m
+[0;32mI (34201) MAIN: Play button pressed (state=0)[0m
+[0;32mI (34201) NAVIGATION: Forward: HOME -> FOLDER_VIEW[0m
+[0;32mI (34201) MAIN: HOME -> FOLDER_VIEW[0m
+[0;32mI (35791) NAVIGATION: Next folder: 2 (of 4)[0m
+[0;32mI (35841) MAIN: Encoder: Main folder 2 selected (STORIES)[0m
+[0;32mI (37691) NAVIGATION: Next folder: 3 (of 4)[0m
+[0;32mI (37741) MAIN: Encoder: Main folder 3 selected (TAWID)[0m
+[0;32mI (38451) NAVIGATION: Next folder: 0 (of 4)[0m
+[0;32mI (38451) MAIN: Encoder: Main folder 0 selected (SYSTEM~1)[0m
+[0;32mI (39321) NAVIGATION: Previous folder: 3 (of 4)[0m
+[0;32mI (39371) MAIN: Encoder: Main folder 3 selected (TAWID)[0m
+[0;32mI (40201) NAVIGATION: Previous folder: 2 (of 4)[0m
+[0;32mI (40211) MAIN: Encoder: Main folder 2 selected (STORIES)[0m
+[0;32mI (42061) NAVIGATION: Previous folder: 1 (of 4)[0m
+[0;32mI (42061) MAIN: Encoder: Main folder 1 selected (ANNOUN~1)[0m
+[0;32mI (44381) MAIN: Play button pressed (state=1)[0m
+[0;32mI (44381) SD_CARD: Subfolder list freed[0m
+[0;32mI (44431) SD_CARD: Total subfolders found: 0[0m
+[0;32mI (47671) NAVIGATION: Next folder: 2 (of 4)[0m
+[0;32mI (47711) MAIN: Encoder: Main folder 2 selected (STORIES)[0m
+[0;32mI (48471) NAVIGATION: Next folder: 3 (of 4)[0m
+[0;32mI (48501) MAIN: Encoder: Main folder 3 selected (TAWID)[0m
+[0;32mI (49901) NAVIGATION: Previous folder: 2 (of 4)[0m
+[0;32mI (49941) MAIN: Encoder: Main folder 2 selected (STORIES)[0m
+[0;32mI (50371) NAVIGATION: Previous folder: 1 (of 4)[0m
+[0;32mI (50371) MAIN: Encoder: Main folder 1 selected (ANNOUN~1)[0m
+[0;32mI (51171) NAVIGATION: Next folder: 2 (of 4)[0m
+[0;32mI (51211) MAIN: Encoder: Main folder 2 selected (STORIES)[0m
+[0;32mI (51261) NAVIGATION: Previous folder: 1 (of 4)[0m
+[0;32mI (51261) MAIN: Encoder: Main folder 1 selected (ANNOUN~1)[0m
+[0;32mI (51391) NAVIGATION: Next folder: 2 (of 4)[0m
+[0;32mI (51391) MAIN: Encoder: Main folder 2 selected (STORIES)[0m
+[0;32mI (384221) MAIN: Play button pressed (state=1)[0m
+[0;32mI (384221) SD_CARD: Subfolder list freed[0m
+[0;32mI (384261) SD_CARD: Found subfolder [0]: ADAM[0m
+[0;32mI (384261) SD_CARD: Found subfolder [1]: DAOUD[0m
+[0;32mI (384261) SD_CARD: Found subfolder [2]: IBRAHIM[0m
+[0;32mI (384261) SD_CARD: Found subfolder [3]: ISMAEEL[0m
+[0;32mI (384271) SD_CARD: Found subfolder [4]: ISSA[0m
+[0;32mI (384271) SD_CARD: Found subfolder [5]: MOUSSA[0m
+[0;32mI (384281) SD_CARD: Found subfolder [6]: MUHAMMAD[0m
+[0;32mI (384281) SD_CARD: Found subfolder [7]: NUH[0m
+[0;32mI (384281) SD_CARD: Found subfolder [8]: YAQOOB[0m
+[0;32mI (384291) SD_CARD: Found subfolder [9]: YOUSUF[0m
+[0;32mI (384291) SD_CARD: Total subfolders found: 10[0m
+[0;32mI (384301) NAVIGATION: Forward: FOLDER_VIEW -> SUBFOLDER_VIEW[0m
+[0;32mI (384311) MAIN: Entered folder (subfolders=10)[0m
+[0;32mI (388991) NAVIGATION: Next subfolder: 1 (of 10)[0m
+[0;32mI (389031) MAIN: Encoder: Subfolder 1 selected (DAOUD)[0m
+[0;32mI (389081) NAVIGATION: Previous subfolder: 0 (of 10)[0m
+[0;32mI (389091) MAIN: Encoder: Subfolder 0 selected (ADAM)[0m
+[0;32mI (390581) NAVIGATION: Previous subfolder: 9 (of 10)[0m
+[0;32mI (390631) MAIN: Encoder: Subfolder 9 selected (YOUSUF)[0m
+[0;32mI (392771) NAVIGATION: Previous subfolder: 8 (of 10)[0m
+[0;32mI (392821) MAIN: Encoder: Subfolder 8 selected (YAQOOB)[0m
+[0;32mI (394261) NAVIGATION: Previous subfolder: 7 (of 10)[0m
+[0;32mI (394311) MAIN: Encoder: Subfolder 7 selected (NUH)[0m
+[0;32mI (395991) NAVIGATION: Previous subfolder: 6 (of 10)[0m
+[0;32mI (396031) MAIN: Encoder: Subfolder 6 selected (MUHAMMAD)[0m
+[0;32mI (397691) MAIN: Play button pressed (state=2)[0m
+[0;32mI (397741) SD_CARD: Scanning WAV files in: /sdcard/STORIES/MUHAMMAD[0m
+[0;32mI (397741) SD_CARD:   Checking: CRRM1.WAV[0m
+[0;32mI (397741) SD_CARD:   [0] /sdcard/STORIES/MUHAMMAD/CRRM1.WAV[0m
+[0;32mI (397741) SD_CARD:   Checking: M1.WAV[0m
+[0;32mI (397741) SD_CARD:   [1] /sdcard/STORIES/MUHAMMAD/M1.WAV[0m
+[0;32mI (397751) SD_CARD:   Checking: M2.WAV[0m
+[0;32mI (397751) SD_CARD:   [2] /sdcard/STORIES/MUHAMMAD/M2.WAV[0m
+[0;32mI (397761) SD_CARD:   Checking: M3.WAV[0m
+[0;32mI (397761) SD_CARD:   [3] /sdcard/STORIES/MUHAMMAD/M3.WAV[0m
+[0;32mI (397771) SD_CARD:   Checking: M4.WAV[0m
+[0;32mI (397771) SD_CARD:   [4] /sdcard/STORIES/MUHAMMAD/M4.WAV[0m
+[0;32mI (397771) SD_CARD:   Checking: M5.WAV[0m
+[0;32mI (397781) SD_CARD:   [5] /sdcard/STORIES/MUHAMMAD/M5.WAV[0m
+[0;32mI (397781) SD_CARD:   Checking: M6.WAV[0m
+[0;32mI (397791) SD_CARD:   [6] /sdcard/STORIES/MUHAMMAD/M6.WAV[0m
+[0;32mI (397791) SD_CARD:   Checking: M7.WAV[0m
+[0;32mI (397791) SD_CARD:   [7] /sdcard/STORIES/MUHAMMAD/M7.WAV[0m
+[0;32mI (397801) SD_CARD:   Checking: SM1.WAV[0m
+[0;32mI (397801) SD_CARD:   [8] /sdcard/STORIES/MUHAMMAD/SM1.WAV[0m
+[0;32mI (397811) SD_CARD:   Checking: WRM1.WAV[0m
+[0;32mI (397811) SD_CARD:   [9] /sdcard/STORIES/MUHAMMAD/WRM1.WAV[0m
+[0;32mI (397821) SD_CARD: Found 10 WAV files[0m
+[0;32mI (397821) NAVIGATION: Forward: SUBFOLDER_VIEW -> FILE_VIEW[0m
+[0;32mI (397831) MAIN: Entered subfolder (files=10)[0m
+[0;32mI (399641) NAVIGATION: Next track: 1 (of 10)[0m
+[0;32mI (399691) MAIN: Encoder: Track 1 selected (M1.WAV)[0m
+[0;32mI (399821) NAVIGATION: Next track: 2 (of 10)[0m
+[0;32mI (399831) MAIN: Encoder: Track 2 selected (M2.WAV)[0m
+[0;32mI (402691) NAVIGATION: Next track: 3 (of 10)[0m
+[0;32mI (402741) MAIN: Encoder: Track 3 selected (M3.WAV)[0m
+[0;32mI (404091) NAVIGATION: Next track: 4 (of 10)[0m
+[0;32mI (404141) MAIN: Encoder: Track 4 selected (M4.WAV)[0m
+[0;32mI (405141) NAVIGATION: Next track: 5 (of 10)[0m
+[0;32mI (405191) MAIN: Encoder: Track 5 selected (M5.WAV)[0m
+[0;32mI (405671) NAVIGATION: Next track: 6 (of 10)[0m
+[0;32mI (405721) MAIN: Encoder: Track 6 selected (M6.WAV)[0m
+[0;32mI (407001) NAVIGATION: Next track: 7 (of 10)[0m
+[0;32mI (407051) MAIN: Encoder: Track 7 selected (M7.WAV)[0m
+[0;32mI (408591) NAVIGATION: Next track: 8 (of 10)[0m
+[0;32mI (408591) MAIN: Encoder: Track 8 selected (SM1.WAV)[0m
+[0;32mI (409631) NAVIGATION: Previous track: 7 (of 10)[0m
+[0;32mI (409681) MAIN: Encoder: Track 7 selected (M7.WAV)[0m
+[0;32mI (411021) NAVIGATION: Next track: 8 (of 10)[0m
+[0;32mI (411021) MAIN: Encoder: Track 8 selected (SM1.WAV)[0m
+[0;32mI (411961) NAVIGATION: Next track: 9 (of 10)[0m
+[0;32mI (411961) MAIN: Encoder: Track 9 selected (WRM1.WAV)[0m
+[0;32mI (412051) NAVIGATION: Previous track: 8 (of 10)[0m
+[0;32mI (412051) MAIN: Encoder: Track 8 selected (SM1.WAV)[0m
+[0;32mI (412861) NAVIGATION: Next track: 9 (of 10)[0m
+[0;32mI (412861) MAIN: Encoder: Track 9 selected (WRM1.WAV)[0m
+[0;32mI (413241) NAVIGATION: Previous track: 8 (of 10)[0m
+[0;32mI (413241) MAIN: Encoder: Track 8 selected (SM1.WAV)[0m
+[0;32mI (414251) NAVIGATION: Next track: 9 (of 10)[0m
+[0;32mI (414261) MAIN: Encoder: Track 9 selected (WRM1.WAV)[0m
+[0;32mI (415891) NAVIGATION: Next track: 0 (of 10)[0m
+[0;32mI (415891) MAIN: Encoder: Track 0 selected (CRRM1.WAV)[0m
+[0;32mI (417401) NAVIGATION: Previous track: 9 (of 10)[0m
+[0;32mI (417401) MAIN: Encoder: Track 9 selected (WRM1.WAV)[0m
+[0;32mI (419621) MAIN: Play button pressed (state=3)[0m
+[0;32mI (419621) MAIN: Playing track 9: /sdcard/STORIES/MUHAMMAD/WRM1.WAV[0m
+[0;32mI (419621) AUDIO: Playing: /sdcard/STORIES/MUHAMMAD/WRM1.WAV[0m
+[0;32mI (419661) MAIN: Play: Start track 9[0m
+[0;32mI (419671) AUDIO: Format: 24000 Hz, 16-bit, 1 channels[0m
+[0;32mI (419671) AUDIO: Starting playback loop...[0m
+[0;32mI (421971) AUDIO: End of file reached[0m
+[0;32mI (421971) AUDIO: Playback finished[0m
+[0;32mI (421971) MAIN: Track finished normally[0m
+[0;32mI (425581) NAVIGATION: Next track: 0 (of 10)[0m
+[0;32mI (425581) MAIN: Encoder: Track 0 selected (CRRM1.WAV)[0m
+[0;32mI (427651) NAVIGATION: Next track: 1 (of 10)[0m
+[0;32mI (427701) MAIN: Encoder: Track 1 selected (M1.WAV)[0m
+[0;32mI (429701) NAVIGATION: Next track: 2 (of 10)[0m
+[0;32mI (429751) MAIN: Encoder: Track 2 selected (M2.WAV)[0m
+[0;32mI (431301) NAVIGATION: Next track: 3 (of 10)[0m
+[0;32mI (431351) MAIN: Encoder: Track 3 selected (M3.WAV)[0m
+[0;32mI (431541) NAVIGATION: Previous track: 2 (of 10)[0m
+[0;32mI (431551) MAIN: Encoder: Track 2 selected (M2.WAV)[0m
+[0;32mI (432131) NAVIGATION: Next track: 3 (of 10)[0m
+[0;32mI (432181) MAIN: Encoder: Track 3 selected (M3.WAV)[0m
+[0;32mI (433581) NAVIGATION: Next track: 4 (of 10)[0m
+[0;32mI (433631) MAIN: Encoder: Track 4 selected (M4.WAV)[0m
+[0;32mI (434291) NAVIGATION: Next track: 5 (of 10)[0m
+[0;32mI (434341) MAIN: Encoder: Track 5 selected (M5.WAV)[0m
+[0;32mI (435431) NAVIGATION: Next track: 6 (of 10)[0m
+[0;32mI (435481) MAIN: Encoder: Track 6 selected (M6.WAV)[0m
+[0;32mI (437261) MAIN: Play button pressed (state=3)[0m
+[0;32mI (437261) MAIN: Playing track 6: /sdcard/STORIES/MUHAMMAD/M6.WAV[0m
+[0;32mI (437261) AUDIO: Playing: /sdcard/STORIES/MUHAMMAD/M6.WAV[0m
+[0;32mI (437301) MAIN: Play: Start track 6[0m
+[0;32mI (437311) AUDIO: Format: 44100 Hz, 16-bit, 1 channels[0m
+[0;32mI (437311) AUDIO: Starting playback loop...[0m
+[0;32mI (443931) AUDIO: Volume UP -> 70%[0m
+[0;32mI (444301) AUDIO: Volume UP -> 80%[0m
+[0;32mI (444681) AUDIO: Volume UP -> 90%[0m
+[0;32mI (445031) AUDIO: Volume UP -> 100%[0m
+[0;32mI (445371) AUDIO: Volume UP -> 110%[0m
+[0;32mI (445681) AUDIO: Volume UP -> 120%[0m
+[0;32mI (445971) AUDIO: Volume UP -> 130%[0m
+[0;32mI (676541) AUDIO: End of file reached[0m
+[0;32mI (676541) AUDIO: Playback finished[0m
+[0;32mI (676551) MAIN: Track finished normally[0m
+[0;32mI (2268771) NAVIGATION: Next track: 7 (of 10)[0m
+[0;32mI (2268821) MAIN: Encoder: Track 7 selected (M7.WAV)[0m
+[0;32mI (2272051) MAIN: Home button pressed (state=3)[0m
+[0;32mI (2272051) NAVIGATION: Back: FILE_VIEW -> SUBFOLDER_VIEW[0m
+[0;32mI (2272091) MAIN: FILE_VIEW -> SUBFOLDER_VIEW[0m
+[0;32mI (2275991) MAIN: Home button pressed (state=2)[0m
+[0;32mI (2275991) SD_CARD: Subfolder list freed[0m
+[0;32mI (2275991) NAVIGATION: Back: SUBFOLDER_VIEW -> FOLDER_VIEW[0m
+[0;32mI (2276031) MAIN: SUBFOLDER_VIEW -> FOLDER_VIEW[0m
+[0;32mI (2278201) MAIN: Home button pressed (state=1)[0m
+[0;32mI (2278201) NAVIGATION: Back: FOLDER_VIEW -> HOME[0m
+[0;32mI (2278241) MAIN: FOLDER_VIEW -> HOME[0m
+[0;32mI (2281341) NAVIGATION: Next folder: 3 (of 4)[0m
+[0;32mI (2281391) MAIN: Encoder: Main folder 3 selected (TAWID)[0m
+[0;32mI (2282931) NAVIGATION: Next folder: 0 (of 4)[0m
+[0;32mI (2282931) MAIN: Encoder: Main folder 0 selected (SYSTEM~1)[0m
+[0;32mI (2283941) NAVIGATION: Next folder: 1 (of 4)[0m
+[0;32mI (2283941) MAIN: Encoder: Main folder 1 selected (ANNOUN~1)[0m
+[0;32mI (2285761) NAVIGATION: Next folder: 2 (of 4)[0m
+[0;32mI (2285801) MAIN: Encoder: Main folder 2 selected (STORIES)[0m
+[0;32mI (2289021) NAVIGATION: Previous folder: 1 (of 4)[0m
+[0;32mI (2289021) MAIN: Encoder: Main folder 1 selected (ANNOUN~1)[0m
+[0;32mI (2290651) NAVIGATION: Next folder: 2 (of 4)[0m
+[0;32mI (2290701) MAIN: Encoder: Main folder 2 selected (STORIES)[0m
+[0;32mI (2291321) NAVIGATION: Next folder: 3 (of 4)[0m
+[0;32mI (2291371) MAIN: Encoder: Main folder 3 selected (TAWID)[0m
+[0;32mI (2292231) NAVIGATION: Next folder: 0 (of 4)[0m
+[0;32mI (2292231) MAIN: Encoder: Main folder 0 selected (SYSTEM~1)[0m
+[0;32mI (2293851) NAVIGATION: Next folder: 1 (of 4)[0m
+[0;32mI (2293851) MAIN: Encoder: Main folder 1 selected (ANNOUN~1)[0m
+[0;32mI (2294921) NAVIGATION: Next folder: 2 (of 4)[0m
+[0;32mI (2294971) MAIN: Encoder: Main folder 2 selected (STORIES)[0m
+[0;32mI (2295841) NAVIGATION: Next folder: 3 (of 4)[0m
+[0;32mI (2295891) MAIN: Encoder: Main folder 3 selected (TAWID)[0m
+[0;32mI (2296831) NAVIGATION: Previous folder: 2 (of 4)[0m
+[0;32mI (2296881) MAIN: Encoder: Main folder 2 selected (STORIES)[0m
+[0;32mI (2299081) NAVIGATION: Next folder: 3 (of 4)[0m
+[0;32mI (2299131) MAIN: Encoder: Main folder 3 selected (TAWID)[0m
+[0;32mI (2299391) NAVIGATION: Next folder: 0 (of 4)[0m
+[0;32mI (2299391) MAIN: Encoder: Main folder 0 selected (SYSTEM~1)[0m
+[0;32mI (2299571) NAVIGATION: Next folder: 1 (of 4)[0m
+[0;32mI (2299571) MAIN: Encoder: Main folder 1 selected (ANNOUN~1)[0m
+[0;32mI (2300011) NAVIGATION: Next folder: 2 (of 4)[0m
+[0;32mI (2300061) MAIN: Encoder: Main folder 2 selected (STORIES)[0m
+[0;32mI (2300241) NAVIGATION: Next folder: 3 (of 4)[0m
+[0;32mI (2300251) MAIN: Encoder: Main folder 3 selected (TAWID)[0m
+[0;32mI (2300461) NAVIGATION: Next folder: 0 (of 4)[0m
+[0;32mI (2300461) MAIN: Encoder: Main folder 0 selected (SYSTEM~1)[0m
+[0;32mI (2305641) NAVIGATION: Next folder: 1 (of 4)[0m
+[0;32mI (2305641) MAIN: Encoder: Main folder 1 selected (ANNOUN~1)[0m
+[0;32mI (2308251) MAIN: Play button pressed (state=0)[0m
+[0;32mI (2308251) NAVIGATION: Forward: HOME -> FOLDER_VIEW[0m
+[0;32mI (2308251) MAIN: HOME -> FOLDER_VIEW[0m
+[0;32mI (2311371) NAVIGATION: Next folder: 2 (of 4)[0m
+[0;32mI (2311411) MAIN: Encoder: Main folder 2 selected (STORIES)[0m
+[0;32mI (2313691) NAVIGATION: Previous folder: 1 (of 4)[0m
+[0;32mI (2313691) MAIN: Encoder: Main folder 1 selected (ANNOUN~1)[0m
+[0;32mI (2314981) NAVIGATION: Next folder: 2 (of 4)[0m
+[0;32mI (2315031) MAIN: Encoder: Main folder 2 selected (STORIES)[0m
+[0;32mI (2315831) NAVIGATION: Next folder: 3 (of 4)[0m
+[0;32mI (2315881) MAIN: Encoder: Main folder 3 selected (TAWID)[0m
+[0;32mI (2318401) NAVIGATION: Next folder: 0 (of 4)[0m
+[0;32mI (2318401) MAIN: Encoder: Main folder 0 selected (SYSTEM~1)[0m
+[0;32mI (2319871) NAVIGATION: Previous folder: 3 (of 4)[0m
+[0;32mI (2319921) MAIN: Encoder: Main folder 3 selected (TAWID)[0m
+[0;32mI (2320331) NAVIGATION: Next folder: 0 (of 4)[0m
+[0;32mI (2320331) MAIN: Encoder: Main folder 0 selected (SYSTEM~1)[0m
+[0;32mI (2322181) NAVIGATION: Previous folder: 3 (of 4)[0m
+[0;32mI (2322231) MAIN: Encoder: Main folder 3 selected (TAWID)[0m
+[0;32mI (2326071) NAVIGATION: Next folder: 0 (of 4)[0m
+[0;32mI (2326071) MAIN: Encoder: Main folder 0 selected (SYSTEM~1)[0m
+[0;32mI (2327141) NAVIGATION: Previous folder: 3 (of 4)[0m
+[0;32mI (2327191) MAIN: Encoder: Main folder 3 selected (TAWID)[0m
+[0;32mI (2329191) MAIN: Play button pressed (state=1)[0m
+[0;32mI (2329191) SD_CARD: Subfolder list freed[0m
+[0;32mI (2329231) SD_CARD: Total subfolders found: 0[0m
+[0;32mI (2330421) NAVIGATION: Next folder: 0 (of 4)[0m
+[0;32mI (2330421) MAIN: Encoder: Main folder 0 selected (SYSTEM~1)[0m
+[0;32mI (2330511) NAVIGATION: Previous folder: 3 (of 4)[0m
+[0;32mI (2330551) MAIN: Encoder: Main folder 3 selected (TAWID)[0m
+[0;32mI (2331651) NAVIGATION: Next folder: 0 (of 4)[0m
+[0;32mI (2331651) MAIN: Encoder: Main folder 0 selected (SYSTEM~1)[0m
+[0;32mI (2332281) NAVIGATION: Previous folder: 3 (of 4)[0m
+[0;32mI (2332331) MAIN: Encoder: Main folder 3 selected (TAWID)[0m
+[0;32mI (2333151) NAVIGATION: Next folder: 0 (of 4)[0m
+[0;32mI (2333151) MAIN: Encoder: Main folder 0 selected (SYSTEM~1)[0m
+[0;32mI (2334761) NAVIGATION: Next folder: 1 (of 4)[0m
+[0;32mI (2334761) MAIN: Encoder: Main folder 1 selected (ANNOUN~1)[0m
+[0;32mI (2337581) MAIN: Play button pressed (state=1)[0m
+[0;32mI (2337581) SD_CARD: Subfolder list freed[0m
+[0;32mI (2337631) SD_CARD: Total subfolders found: 0[0m
+[0;32mI (2338201) MAIN: Play button pressed (state=1)[0m
+[0;32mI (2338201) SD_CARD: Subfolder list freed[0m
+[0;32mI (2338251) SD_CARD: Total subfolders found: 0[0m
+[0;32mI (2339651) NAVIGATION: Next folder: 2 (of 4)[0m
+[0;32mI (2339691) MAIN: Encoder: Main folder 2 selected (STORIES)[0m
+[0;32mI (2339711) NAVIGATION: Next folder: 3 (of 4)[0m
+[0;32mI (2339721) MAIN: Encoder: Main folder 3 selected (TAWID)[0m
+[0;32mI (2340891) NAVIGATION: Next folder: 0 (of 4)[0m
+[0;32mI (2340891) MAIN: Encoder: Main folder 0 selected (SYSTEM~1)[0m
+[0;32mI (2341501) NAVIGATION: Previous folder: 3 (of 4)[0m
+[0;32mI (2341551) MAIN: Encoder: Main folder 3 selected (TAWID)[0m
+[0;32mI (2342111) NAVIGATION: Next folder: 0 (of 4)[0m
+[0;32mI (2342111) MAIN: Encoder: Main folder 0 selected (SYSTEM~1)[0m
+[0;32mI (2343011) NAVIGATION: Previous folder: 3 (of 4)[0m
+[0;32mI (2343061) MAIN: Encoder: Main folder 3 selected (TAWID)[0m
+[0;32mI (2344071) NAVIGATION: Next folder: 0 (of 4)[0m
+[0;32mI (2344071) MAIN: Encoder: Main folder 0 selected (SYSTEM~1)[0m
+[0;32mI (2346181) NAVIGATION: Next folder: 1 (of 4)[0m
+[0;32mI (2346181) MAIN: Encoder: Main folder 1 selected (ANNOUN~1)[0m
+[0;32mI (2347501) NAVIGATION: Next folder: 2 (of 4)[0m
+[0;32mI (2347551) MAIN: Encoder: Main folder 2 selected (STORIES)[0m
+[0;32mI (2349321) MAIN: Play button pressed (state=1)[0m
+[0;32mI (2349321) SD_CARD: Subfolder list freed[0m
+[0;32mI (2349361) SD_CARD: Found subfolder [0]: ADAM[0m
+[0;32mI (2349361) SD_CARD: Found subfolder [1]: DAOUD[0m
+[0;32mI (2349361) SD_CARD: Found subfolder [2]: IBRAHIM[0m
+[0;32mI (2349361) SD_CARD: Found subfolder [3]: ISMAEEL[0m
+[0;32mI (2349371) SD_CARD: Found subfolder [4]: ISSA[0m
+[0;32mI (2349371) SD_CARD: Found subfolder [5]: MOUSSA[0m
+[0;32mI (2349381) SD_CARD: Found subfolder [6]: MUHAMMAD[0m
+[0;32mI (2349381) SD_CARD: Found subfolder [7]: NUH[0m
+[0;32mI (2349391) SD_CARD: Found subfolder [8]: YAQOOB[0m
+[0;32mI (2349391) SD_CARD: Found subfolder [9]: YOUSUF[0m
+[0;32mI (2349391) SD_CARD: Total subfolders found: 10[0m
+[0;32mI (2349401) NAVIGATION: Forward: FOLDER_VIEW -> SUBFOLDER_VIEW[0m
+[0;32mI (2349411) MAIN: Entered folder (subfolders=10)[0m
+[0;32mI (2350841) NAVIGATION: Next subfolder: 1 (of 10)[0m
+[0;32mI (2350881) MAIN: Encoder: Subfolder 1 selected (DAOUD)[0m
+[0;32mI (2351511) NAVIGATION: Previous subfolder: 0 (of 10)[0m
+[0;32mI (2351561) MAIN: Encoder: Subfolder 0 selected (ADAM)[0m
+[0;32mI (2352091) NAVIGATION: Next subfolder: 1 (of 10)[0m
+[0;32mI (2352101) MAIN: Encoder: Subfolder 1 selected (DAOUD)[0m
+[0;32mI (2352751) NAVIGATION: Next subfolder: 2 (of 10)[0m
+[0;32mI (2352791) MAIN: Encoder: Subfolder 2 selected (IBRAHIM)[0m
+[0;32mI (2353501) NAVIGATION: Next subfolder: 3 (of 10)[0m
+[0;32mI (2353541) MAIN: Encoder: Subfolder 3 selected (ISMAEEL)[0m
+[0;32mI (2353991) NAVIGATION: Previous subfolder: 2 (of 10)[0m
+[0;32mI (2354001) MAIN: Encoder: Subfolder 2 selected (IBRAHIM)[0m
+[0;32mI (2354471) NAVIGATION: Next subfolder: 3 (of 10)[0m
+[0;32mI (2354481) MAIN: Encoder: Subfolder 3 selected (ISMAEEL)[0m
+[0;32mI (2355381) NAVIGATION: Next subfolder: 4 (of 10)[0m
+[0;32mI (2355421) MAIN: Encoder: Subfolder 4 selected (ISSA)[0m
+[0;32mI (2355881) NAVIGATION: Previous subfolder: 3 (of 10)[0m
+[0;32mI (2355891) MAIN: Encoder: Subfolder 3 selected (ISMAEEL)[0m
+[0;32mI (2356381) NAVIGATION: Next subfolder: 4 (of 10)[0m
+[0;32mI (2356391) MAIN: Encoder: Subfolder 4 selected (ISSA)[0m
+[0;32mI (2356861) NAVIGATION: Previous subfolder: 3 (of 10)[0m
+[0;32mI (2356871) MAIN: Encoder: Subfolder 3 selected (ISMAEEL)[0m
+[0;32mI (2357381) NAVIGATION: Next subfolder: 4 (of 10)[0m
+[0;32mI (2357391) MAIN: Encoder: Subfolder 4 selected (ISSA)[0m
+[0;32mI (2359411) MAIN: Play button pressed (state=2)[0m
+[0;32mI (2359411) SD_CARD: Scanning WAV files in: /sdcard/STORIES/ISSA[0m
+[0;32mI (2359451) SD_CARD:   Checking: I1.WAV[0m
+[0;32mI (2359451) SD_CARD:   [0] /sdcard/STORIES/ISSA/I1.WAV[0m
+[0;32mI (2359451) SD_CARD:   Checking: I2.WAV[0m
+[0;32mI (2359451) SD_CARD:   [1] /sdcard/STORIES/ISSA/I2.WAV[0m
+[0;32mI (2359461) SD_CARD:   Checking: I3.WAV[0m
+[0;32mI (2359461) SD_CARD:   [2] /sdcard/STORIES/ISSA/I3.WAV[0m
+[0;32mI (2359471) SD_CARD:   Checking: I4.WAV[0m
+[0;32mI (2359471) SD_CARD:   [3] /sdcard/STORIES/ISSA/I4.WAV[0m
+[0;32mI (2359481) SD_CARD:   Checking: I5.WAV[0m
+[0;32mI (2359481) SD_CARD:   [4] /sdcard/STORIES/ISSA/I5.WAV[0m
+[0;32mI (2359481) SD_CARD:   Checking: I6.WAV[0m
+[0;32mI (2359491) SD_CARD:   [5] /sdcard/STORIES/ISSA/I6.WAV[0m
+[0;32mI (2359491) SD_CARD:   Checking: I7.WAV[0m
+[0;32mI (2359501) SD_CARD:   [6] /sdcard/STORIES/ISSA/I7.WAV[0m
+[0;32mI (2359501) SD_CARD: Found 7 WAV files[0m
+[0;32mI (2359501) NAVIGATION: Forward: SUBFOLDER_VIEW -> FILE_VIEW[0m
+[0;32mI (2359511) MAIN: Entered subfolder (files=7)[0m
+[0;32mI (2361011) NAVIGATION: Previous track: 6 (of 7)[0m
+[0;32mI (2361011) MAIN: Encoder: Track 6 selected (I7.WAV)[0m
+[0;32mI (2361231) NAVIGATION: Next track: 0 (of 7)[0m
+[0;32mI (2361231) MAIN: Encoder: Track 0 selected (I1.WAV)[0m
+[0;32mI (2361531) NAVIGATION: Next track: 1 (of 7)[0m
+[0;32mI (2361531) MAIN: Encoder: Track 1 selected (I2.WAV)[0m
+[0;32mI (2362451) NAVIGATION: Next track: 2 (of 7)[0m
+[0;32mI (2362451) MAIN: Encoder: Track 2 selected (I3.WAV)[0m
+[0;32mI (2362601) NAVIGATION: Previous track: 1 (of 7)[0m
+[0;32mI (2362601) MAIN: Encoder: Track 1 selected (I2.WAV)[0m
+[0;32mI (2362901) NAVIGATION: Next track: 2 (of 7)[0m
+[0;32mI (2362901) MAIN: Encoder: Track 2 selected (I3.WAV)[0m
+[0;32mI (2363131) NAVIGATION: Previous track: 1 (of 7)[0m
+[0;32mI (2363131) MAIN: Encoder: Track 1 selected (I2.WAV)[0m
+[0;32mI (2363391) NAVIGATION: Next track: 2 (of 7)[0m
+[0;32mI (2363391) MAIN: Encoder: Track 2 selected (I3.WAV)[0m
+[0;32mI (2363781) NAVIGATION: Previous track: 1 (of 7)[0m
+[0;32mI (2363781) MAIN: Encoder: Track 1 selected (I2.WAV)[0m
+[0;32mI (2363861) NAVIGATION: Next track: 2 (of 7)[0m
+[0;32mI (2363861) MAIN: Encoder: Track 2 selected (I3.WAV)[0m
+[0;32mI (2364201) NAVIGATION: Next track: 3 (of 7)[0m
+[0;32mI (2364201) MAIN: Encoder: Track 3 selected (I4.WAV)[0m
+[0;32mI (2365161) NAVIGATION: Next track: 4 (of 7)[0m
+[0;32mI (2365161) MAIN: Encoder: Track 4 selected (I5.WAV)[0m
+[0;32mI (2365611) NAVIGATION: Next track: 5 (of 7)[0m
+[0;32mI (2365611) MAIN: Encoder: Track 5 selected (I6.WAV)[0m
+[0;32mI (2366291) NAVIGATION: Next track: 6 (of 7)[0m
+[0;32mI (2366291) MAIN: Encoder: Track 6 selected (I7.WAV)[0m
+[0;32mI (2367011) NAVIGATION: Next track: 0 (of 7)[0m
+[0;32mI (2367011) MAIN: Encoder: Track 0 selected (I1.WAV)[0m
+[0;32mI (2367731) NAVIGATION: Next track: 1 (of 7)[0m
+[0;32mI (2367731) MAIN: Encoder: Track 1 selected (I2.WAV)[0m
+[0;32mI (2368101) NAVIGATION: Next track: 2 (of 7)[0m
+[0;32mI (2368101) MAIN: Encoder: Track 2 selected (I3.WAV)[0m
+[0;32mI (2368631) NAVIGATION: Previous track: 1 (of 7)[0m
+[0;32mI (2368631) MAIN: Encoder: Track 1 selected (I2.WAV)[0m
+[0;32mI (2369011) NAVIGATION: Next track: 2 (of 7)[0m
+[0;32mI (2369011) MAIN: Encoder: Track 2 selected (I3.WAV)[0m
+[0;32mI (2369751) NAVIGATION: Next track: 3 (of 7)[0m
+[0;32mI (2369751) MAIN: Encoder: Track 3 selected (I4.WAV)[0m
+[0;32mI (2372191) MAIN: Home button pressed (state=3)[0m
+[0;32mI (2372191) NAVIGATION: Back: FILE_VIEW -> SUBFOLDER_VIEW[0m
+[0;32mI (2372231) MAIN: FILE_VIEW -> SUBFOLDER_VIEW[0m
+[0;32mI (2373761) NAVIGATION: Next subfolder: 5 (of 10)[0m
+[0;32mI (2373811) MAIN: Encoder: Subfolder 5 selected (MOUSSA)[0m
+[0;32mI (2376111) MAIN: Play button pressed (state=2)[0m
+[0;32mI (2376111) SD_CARD: Scanning WAV files in: /sdcard/STORIES/MOUSSA[0m
+[0;32mI (2376151) SD_CARD:   Checking: MS1.WAV[0m
+[0;32mI (2376151) SD_CARD:   [0] /sdcard/STORIES/MOUSSA/MS1.WAV[0m
+[0;32mI (2376151) SD_CARD:   Checking: MS2.WAV[0m
+[0;32mI (2376151) SD_CARD:   [1] /sdcard/STORIES/MOUSSA/MS2.WAV[0m
+[0;32mI (2376161) SD_CARD:   Checking: MS3.WAV[0m
+[0;32mI (2376161) SD_CARD:   [2] /sdcard/STORIES/MOUSSA/MS3.WAV[0m
+[0;32mI (2376171) SD_CARD:   Checking: MS4.WAV[0m
+[0;32mI (2376171) SD_CARD:   [3] /sdcard/STORIES/MOUSSA/MS4.WAV[0m
+[0;32mI (2376181) SD_CARD:   Checking: MS5.WAV[0m
+[0;32mI (2376181) SD_CARD:   [4] /sdcard/STORIES/MOUSSA/MS5.WAV[0m
+[0;32mI (2376191) SD_CARD:   Checking: MS6.WAV[0m
+[0;32mI (2376191) SD_CARD:   [5] /sdcard/STORIES/MOUSSA/MS6.WAV[0m
+[0;32mI (2376191) SD_CARD:   Checking: MS7.WAV[0m
+[0;32mI (2376201) SD_CARD:   [6] /sdcard/STORIES/MOUSSA/MS7.WAV[0m
+[0;32mI (2376201) SD_CARD: Found 7 WAV files[0m
+[0;32mI (2376211) NAVIGATION: Forward: SUBFOLDER_VIEW -> FILE_VIEW[0m
+[0;32mI (2376211) MAIN: Entered subfolder (files=7)[0m
+[0;32mI (2377601) NAVIGATION: Previous track: 6 (of 7)[0m
+[0;32mI (2377601) MAIN: Encoder: Track 6 selected (MS7.WAV)[0m
+[0;32mI (2377791) NAVIGATION: Next track: 0 (of 7)[0m
+[0;32mI (2377791) MAIN: Encoder: Track 0 selected (MS1.WAV)[0m
+[0;32mI (2378341) NAVIGATION: Next track: 1 (of 7)[0m
+[0;32mI (2378341) MAIN: Encoder: Track 1 selected (MS2.WAV)[0m
+[0;32mI (2379041) NAVIGATION: Next track: 2 (of 7)[0m
+[0;32mI (2379041) MAIN: Encoder: Track 2 selected (MS3.WAV)[0m
+[0;32mI (2379361) NAVIGATION: Previous track: 1 (of 7)[0m
+[0;32mI (2379361) MAIN: Encoder: Track 1 selected (MS2.WAV)[0m
+[0;32mI (2379731) NAVIGATION: Next track: 2 (of 7)[0m
+[0;32mI (2379731) MAIN: Encoder: Track 2 selected (MS3.WAV)[0m
+[0;32mI (2380231) NAVIGATION: Previous track: 1 (of 7)[0m
+[0;32mI (2380231) MAIN: Encoder: Track 1 selected (MS2.WAV)[0m
+[0;32mI (2380641) NAVIGATION: Next track: 2 (of 7)[0m
+[0;32mI (2380641) MAIN: Encoder: Track 2 selected (MS3.WAV)[0m
+[0;32mI (2381041) NAVIGATION: Previous track: 1 (of 7)[0m
+[0;32mI (2381041) MAIN: Encoder: Track 1 selected (MS2.WAV)[0m
+[0;32mI (2382071) NAVIGATION: Next track: 2 (of 7)[0m
+[0;32mI (2382071) MAIN: Encoder: Track 2 selected (MS3.WAV)[0m
+[0;32mI (2382781) NAVIGATION: Next track: 3 (of 7)[0m
+[0;32mI (2382781) MAIN: Encoder: Track 3 selected (MS4.WAV)[0m
+[0;32mI (2383311) NAVIGATION: Previous track: 2 (of 7)[0m
+[0;32mI (2383311) MAIN: Encoder: Track 2 selected (MS3.WAV)[0m
+[0;32mI (2383701) NAVIGATION: Next track: 3 (of 7)[0m
+[0;32mI (2383701) MAIN: Encoder: Track 3 selected (MS4.WAV)[0m
+[0;32mI (2384131) NAVIGATION: Previous track: 2 (of 7)[0m
+[0;32mI (2384131) MAIN: Encoder: Track 2 selected (MS3.WAV)[0m
+[0;32mI (2384641) NAVIGATION: Next track: 3 (of 7)[0m
+[0;32mI (2384641) MAIN: Encoder: Track 3 selected (MS4.WAV)[0m
+[0;32mI (2385491) NAVIGATION: Previous track: 2 (of 7)[0m
+[0;32mI (2385491) MAIN: Encoder: Track 2 selected (MS3.WAV)[0m
+[0;32mI (2386091) NAVIGATION: Next track: 3 (of 7)[0m
+[0;32mI (2386091) MAIN: Encoder: Track 3 selected (MS4.WAV)[0m
+[0;32mI (2386761) NAVIGATION: Next track: 4 (of 7)[0m
+[0;32mI (2386761) MAIN: Encoder: Track 4 selected (MS5.WAV)[0m
+[0;32mI (2387321) NAVIGATION: Next track: 5 (of 7)[0m
+[0;32mI (2387321) MAIN: Encoder: Track 5 selected (MS6.WAV)[0m
+[0;32mI (2388411) NAVIGATION: Next track: 6 (of 7)[0m
+[0;32mI (2388411) MAIN: Encoder: Track 6 selected (MS7.WAV)[0m
+[0;32mI (2389001) NAVIGATION: Next track: 0 (of 7)[0m
+[0;32mI (2389001) MAIN: Encoder: Track 0 selected (MS1.WAV)[0m
+[0;32mI (2389641) NAVIGATION: Previous track: 6 (of 7)[0m
+[0;32mI (2389641) MAIN: Encoder: Track 6 selected (MS7.WAV)[0m
+[0;32mI (2391701) MAIN: Home button pressed (state=3)[0m
+[0;32mI (2391701) NAVIGATION: Back: FILE_VIEW -> SUBFOLDER_VIEW[0m
+[0;32mI (2391741) MAIN: FILE_VIEW -> SUBFOLDER_VIEW[0m
+[0;32mI (2392991) NAVIGATION: Next subfolder: 6 (of 10)[0m
+[0;32mI (2393031) MAIN: Encoder: Subfolder 6 selected (MUHAMMAD)[0m
+[0;32mI (2393111) NAVIGATION: Previous subfolder: 5 (of 10)[0m
+[0;32mI (2393111) MAIN: Encoder: Subfolder 5 selected (MOUSSA)[0m
+[0;32mI (2394051) NAVIGATION: Next subfolder: 6 (of 10)[0m
+[0;32mI (2394101) MAIN: Encoder: Subfolder 6 selected (MUHAMMAD)[0m
+[0;32mI (2394131) NAVIGATION: Next subfolder: 7 (of 10)[0m
+[0;32mI (2394141) MAIN: Encoder: Subfolder 7 selected (NUH)[0m
+[0;32mI (2395981) MAIN: Play button pressed (state=2)[0m
+[0;32mI (2395981) SD_CARD: Scanning WAV files in: /sdcard/STORIES/NUH[0m
+[0;32mI (2396021) SD_CARD:   Checking: N1.WAV[0m
+[0;32mI (2396021) SD_CARD:   [0] /sdcard/STORIES/NUH/N1.WAV[0m
+[0;32mI (2396021) SD_CARD:   Checking: N2.WAV[0m
+[0;32mI (2396021) SD_CARD:   [1] /sdcard/STORIES/NUH/N2.WAV[0m
+[0;32mI (2396031) SD_CARD:   Checking: N3.WAV[0m
+[0;32mI (2396031) SD_CARD:   [2] /sdcard/STORIES/NUH/N3.WAV[0m
+[0;32mI (2396041) SD_CARD:   Checking: N4.WAV[0m
+[0;32mI (2396041) SD_CARD:   [3] /sdcard/STORIES/NUH/N4.WAV[0m
+[0;32mI (2396041) SD_CARD:   Checking: N5.WAV[0m
+[0;32mI (2396051) SD_CARD:   [4] /sdcard/STORIES/NUH/N5.WAV[0m
+[0;32mI (2396051) SD_CARD:   Checking: N6.WAV[0m
+[0;32mI (2396061) SD_CARD:   [5] /sdcard/STORIES/NUH/N6.WAV[0m
+[0;32mI (2396061) SD_CARD:   Checking: N7.WAV[0m
+[0;32mI (2396071) SD_CARD:   [6] /sdcard/STORIES/NUH/N7.WAV[0m
+[0;32mI (2396071) SD_CARD: Found 7 WAV files[0m
+[0;32mI (2396071) NAVIGATION: Forward: SUBFOLDER_VIEW -> FILE_VIEW[0m
+[0;32mI (2396081) MAIN: Entered subfolder (files=7)[0m
+[0;32mI (2397941) NAVIGATION: Next track: 1 (of 7)[0m
+[0;32mI (2397941) MAIN: Encoder: Track 1 selected (N2.WAV)[0m
+[0;32mI (2398301) NAVIGATION: Previous track: 0 (of 7)[0m
+[0;32mI (2398301) MAIN: Encoder: Track 0 selected (N1.WAV)[0m
+[0;32mI (2398741) NAVIGATION: Next track: 1 (of 7)[0m
+[0;32mI (2398741) MAIN: Encoder: Track 1 selected (N2.WAV)[0m
+[0;32mI (2399171) NAVIGATION: Previous track: 0 (of 7)[0m
+[0;32mI (2399171) MAIN: Encoder: Track 0 selected (N1.WAV)[0m
+[0;32m

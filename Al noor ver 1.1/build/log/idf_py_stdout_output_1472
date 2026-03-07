@@ -1,0 +1,114 @@
+[1/17] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/buttons.c.obj
+[2/17] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/audio.c.obj
+In file included from C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/audio.c:11:
+C:/Users/HP/esp/v5.4.3/esp-idf/components/driver/deprecated/driver/i2s.h:27:2: warning: #warning "This set of I2S APIs has been deprecated, please include 'driver/i2s_std.h', 'driver/i2s_pdm.h' or 'driver/i2s_tdm.h' instead. if you want to keep using the old APIs and ignore this warning, you can enable 'Suppress legacy driver deprecated warning' option under 'I2S Configuration' menu in Kconfig" [-Wcpp]
+   27 | #warning "This set of I2S APIs has been deprecated, \
+      |  ^~~~~~~
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/audio.c: In function 'audio_play_file':
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/audio.c:156:9: warning: 'I2S_COMM_FORMAT_I2S' is deprecated [-Wdeprecated-declarations]
+  156 |         .communication_format = I2S_COMM_FORMAT_I2S,
+      |         ^
+In file included from C:/Users/HP/esp/v5.4.3/esp-idf/components/driver/deprecated/driver/i2s.h:20:
+C:/Users/HP/esp/v5.4.3/esp-idf/components/driver/deprecated/driver/i2s_types_legacy.h:88:5: note: declared here
+   88 |     I2S_COMM_FORMAT_I2S       __attribute__((deprecated)) = 0x01, /*!< I2S communication format I2S, correspond to `I2S_COMM_FORMAT_STAND_I2S`*/
+      |     ^~~~~~~~~~~~~~~~~~~
+[3/17] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/encoder.c.obj
+In file included from C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/encoder.c:6:
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/encoder.h:25:9: warning: "ENC_DEBOUNCE_MS" redefined
+   25 | #define ENC_DEBOUNCE_MS  60
+      |         ^~~~~~~~~~~~~~~
+In file included from C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/encoder.h:13:
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/config.h:136:9: note: this is the location of the previous definition
+  136 | #define ENC_DEBOUNCE_MS         80
+      |         ^~~~~~~~~~~~~~~
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/encoder.h:28:9: warning: "ENC_QUEUE_LEN" redefined
+   28 | #define ENC_QUEUE_LEN  16
+      |         ^~~~~~~~~~~~~
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/config.h:96:9: note: this is the location of the previous definition
+   96 | #define ENC_QUEUE_LEN       20
+      |         ^~~~~~~~~~~~~
+[4/17] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/announcements.c.obj
+[5/17] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/sd_card.c.obj
+[6/17] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/headphone_detect.c.obj
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/headphone_detect.c: In function 'headphone_detect_init':
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/headphone_detect.c:137:35: warning: left shift count >= width of type [-Wshift-count-overflow]
+  137 |             .pin_bit_mask = (1ULL << (unsigned)SPEAKER_ENABLE_PIN),
+      |                                   ^~
+[7/17] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\HP\Documents\GitHub\Noor2\Al noor ver 1.1\build\bootloader\esp-idf\esptool_py" && C:\Users\HP\.espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Users/HP/esp/v5.4.3/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin""
+Bootloader binary size 0x51c0 bytes. 0x2e40 bytes (36%) free.
+[8/17] No install step for 'bootloader'
+[9/17] Completed 'bootloader'
+[10/17] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/SD_CARD_OTA.c.obj
+[11/17] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/main.c:40:
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/encoder.h:25:9: warning: "ENC_DEBOUNCE_MS" redefined
+   25 | #define ENC_DEBOUNCE_MS  60
+      |         ^~~~~~~~~~~~~~~
+In file included from C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/main.c:36:
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/config.h:136:9: note: this is the location of the previous definition
+  136 | #define ENC_DEBOUNCE_MS         80
+      |         ^~~~~~~~~~~~~~~
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/encoder.h:28:9: warning: "ENC_QUEUE_LEN" redefined
+   28 | #define ENC_QUEUE_LEN  16
+      |         ^~~~~~~~~~~~~
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/config.h:96:9: note: this is the location of the previous definition
+   96 | #define ENC_QUEUE_LEN       20
+      |         ^~~~~~~~~~~~~
+[12/17] Linking C static library esp-idf\main\libmain.a
+[13/17] Generating ld/sections.ld
+[14/17] Linking CXX executable app-template.elf
+[15/17] Generating binary image from built executable
+esptool.py v4.11.0
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/app-template.bin
+[16/17] C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\HP\Documents\GitHub\Noor2\Al noor ver 1.1\build\esp-idf\esptool_py" && C:\Users\HP\.espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Users/HP/esp/v5.4.3/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/partition_table/partition-table.bin" "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/app-template.bin""
+app-template.bin binary size 0x5ed20 bytes. Smallest app partition is 0x70000 bytes. 0x112e0 bytes (15%) free.
+[16/17] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\HP\esp\v5.4.3\esp-idf\components\esptool_py && C:\Users\HP\.espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Users/HP/esp/v5.4.3/esp-idf -D SERIAL_TOOL=C:/Users/HP/.espressif/python_env/idf5.4_py3.11_env/Scripts/python.exe;;C:/Users/HP/esp/v5.4.3/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D "WORKING_DIRECTORY=C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build" -P C:/Users/HP/esp/v5.4.3/esp-idf/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32s3 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 app-template.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.11.0
+Serial port COM3
+Connecting....
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: dc:b4:d9:0b:26:58
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x0006efff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 20928 bytes to 13321...
+Writing at 0x00000000... (100 %)
+Wrote 20928 bytes (13321 compressed) at 0x00000000 in 0.7 seconds (effective 247.3 kbit/s)...
+Hash of data verified.
+Compressed 388384 bytes to 211906...
+Writing at 0x00010000... (7 %)
+Writing at 0x0001d70c... (15 %)
+Writing at 0x00028b29... (23 %)
+Writing at 0x0002e7d5... (30 %)
+Writing at 0x000347b5... (38 %)
+Writing at 0x0003b170... (46 %)
+Writing at 0x00040f2c... (53 %)
+Writing at 0x00046f0f... (61 %)
+Writing at 0x0004d2ba... (69 %)
+Writing at 0x00053a8c... (76 %)
+Writing at 0x00059a0c... (84 %)
+Writing at 0x0006247b... (92 %)
+Writing at 0x00068803... (100 %)
+Wrote 388384 bytes (211906 compressed) at 0x00010000 in 5.2 seconds (effective 594.2 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 128...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (128 compressed) at 0x00008000 in 0.1 seconds (effective 404.9 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

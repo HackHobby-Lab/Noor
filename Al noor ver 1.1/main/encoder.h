@@ -21,11 +21,11 @@
 #define ENC_DT_PIN   2    // B phase (data)
 #define ENC_SW_PIN   21   // Push button switch
 
-/* Encoder debounce time */
-#define ENC_DEBOUNCE_MS  60
+// /* Encoder debounce time */
+// #define ENC_DEBOUNCE_MS  60
 
-/* Queue length for encoder events */
-#define ENC_QUEUE_LEN  16
+// /* Queue length for encoder events */
+// #define ENC_QUEUE_LEN  16
 
 /**
  * Encoder event types

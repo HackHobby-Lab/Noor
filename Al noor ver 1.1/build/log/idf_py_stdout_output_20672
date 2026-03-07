@@ -1,0 +1,77 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\HP\Documents\GitHub\Noor2\Al noor ver 1.1\build\bootloader\esp-idf\esptool_py" && C:\Users\HP\.espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Users/HP/esp/v5.4.3/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin""
+Bootloader binary size 0x51c0 bytes. 0x2e40 bytes (36%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/main.c:40:
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/encoder.h:25:9: warning: "ENC_DEBOUNCE_MS" redefined
+   25 | #define ENC_DEBOUNCE_MS  60
+      |         ^~~~~~~~~~~~~~~
+In file included from C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/main.c:36:
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/config.h:136:9: note: this is the location of the previous definition
+  136 | #define ENC_DEBOUNCE_MS         80
+      |         ^~~~~~~~~~~~~~~
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/encoder.h:28:9: warning: "ENC_QUEUE_LEN" redefined
+   28 | #define ENC_QUEUE_LEN  16
+      |         ^~~~~~~~~~~~~
+C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/config.h:96:9: note: this is the location of the previous definition
+   96 | #define ENC_QUEUE_LEN       20
+      |         ^~~~~~~~~~~~~
+[5/10] Linking C static library esp-idf\main\libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable app-template.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.11.0
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/app-template.bin
+[9/10] C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\HP\Documents\GitHub\Noor2\Al noor ver 1.1\build\esp-idf\esptool_py" && C:\Users\HP\.espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Users/HP/esp/v5.4.3/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/partition_table/partition-table.bin" "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/app-template.bin""
+app-template.bin binary size 0x5adf0 bytes. Smallest app partition is 0x100000 bytes. 0xa5210 bytes (65%) free.
+[9/10] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\HP\esp\v5.4.3\esp-idf\components\esptool_py && C:\Users\HP\.espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Users/HP/esp/v5.4.3/esp-idf -D SERIAL_TOOL=C:/Users/HP/.espressif/python_env/idf5.4_py3.11_env/Scripts/python.exe;;C:/Users/HP/esp/v5.4.3/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D "WORKING_DIRECTORY=C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build" -P C:/Users/HP/esp/v5.4.3/esp-idf/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32s3 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 app-template.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.11.0
+Serial port COM3
+Connecting....
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: dc:b4:d9:0b:26:58
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x0006afff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 20928 bytes to 13319...
+Writing at 0x00000000... (100 %)
+Wrote 20928 bytes (13319 compressed) at 0x00000000 in 0.7 seconds (effective 244.0 kbit/s)...
+Hash of data verified.
+Compressed 372208 bytes to 202113...
+Writing at 0x00010000... (7 %)
+Writing at 0x0001d864... (15 %)
+Writing at 0x00028320... (23 %)
+Writing at 0x0002e01a... (30 %)
+Writing at 0x000340de... (38 %)
+Writing at 0x0003a9a3... (46 %)
+Writing at 0x000407c5... (53 %)
+Writing at 0x00046619... (61 %)
+Writing at 0x0004cc94... (69 %)
+Writing at 0x000533e7... (76 %)
+Writing at 0x00059e73... (84 %)
+Writing at 0x00062039... (92 %)
+Writing at 0x000688c2... (100 %)
+Wrote 372208 bytes (202113 compressed) at 0x00010000 in 5.0 seconds (effective 598.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 419.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

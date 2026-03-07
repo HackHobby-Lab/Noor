@@ -1,0 +1,257 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0xb (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x1564
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd24
+load:0x403cb700,len:0x2ed4
+entry 0x403c8928
+[0;32mI (27) boot: ESP-IDF v5.4.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar  5 2026 11:50:28[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c040020 size=134d8h ( 79064) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=00023500 vaddr=3fc95400 size=02f3ch ( 12092) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=00026444 vaddr=40374000 size=09bd4h ( 39892) load[0m
+[0;32mI (115) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=33338h (209720) map[0m
+[0;32mI (152) esp_image: segment 4: paddr=00063360 vaddr=4037dbd4 size=07734h ( 30516) load[0m
+[0;32mI (159) esp_image: segment 5: paddr=0006aa9c vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (166) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (166) boot: Disabling RNG early entropy source...[0m
+[0;32mI (178) cpu_start: Multicore app[0m
+[0;32mI (187) cpu_start: Pro cpu start user code[0m
+[0;32mI (187) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (187) app_init: Application information:[0m
+[0;32mI (187) app_init: Project name:     app-template[0m
+[0;32mI (191) app_init: App version:      c2a023c-dirty[0m
+[0;32mI (196) app_init: Compile time:     Mar  5 2026 11:49:57[0m
+[0;32mI (201) app_init: ELF file SHA256:  b7ab06de9...[0m
+[0;32mI (205) app_init: ESP-IDF:          v5.4.3[0m
+[0;32mI (209) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (213) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (217) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (220) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (227) heap_init: At 3FC994D8 len 00050238 (320 KiB): RAM[0m
+[0;32mI (232) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (237) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (242) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (248) spi_flash: detected chip: boya[0m
+[0;32mI (251) spi_flash: flash io: dio[0m
+[0;33mW (254) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (266) i2s(legacy): legacy i2s driver is deprecated, please migrate to use driver/i2s_std.h, driver/i2s_pdm.h or driver/i2s_tdm.h[0m
+[0;32mI (278) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (284) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (291) main_task: Started on CPU0[0m
+[0;32mI (301) main_task: Calling app_main()[0m
+[0;32mI (301) MAIN: === Noor Audio Player (4-Level Navigation) ===[0m
+[0;32mI (301) MAIN: Initializing modules...[0m
+[0;32mI (301) AUDIO: ================================[0m
+[0;32mI (311) AUDIO: Audio System Initialization[0m
+[0;32mI (311) AUDIO: Default Volume: 60% (60/100)[0m
+[0;32mI (321) AUDIO: I2S Pins: BCLK=18, WS=17, DIN=16[0m
+[0;32mI (321) AUDIO: ================================[0m
+[0;32mI (331) AUDIO: Audio system initialized (volume=60%)[0m
+[0;32mI (331) BUTTONS: Initializing buttons...[0m
+[0;32mI (331) gpio: GPIO[4]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (341) gpio: GPIO[5]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (351) gpio: GPIO[14]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (361) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (371) BUTTONS: Buttons initialized: Play=14, Home=15, Vol+=4, Vol-=5[0m
+[0;32mI (371) NAVIGATION: Navigation initialized at HOME[0m
+[0;33mW (381) ANNOUNCE: Announcements directory not found — tried ANNOUN~1 and announcements[0m
+[0;32mI (391) ANNOUNCE: Announcements system initialized[0m
+[0;32mI (391) HP_DETECT: Headphone detection disabled (detect pin not configured)[0m
+[0;32mI (401) MAIN: Attempting USB MSC initialization...[0m
+[0;32mI (401) USB_MSC: ========================================[0m
+[0;32mI (411) USB_MSC: Initializing USB MSC (Mass Storage Class)[0m
+[0;32mI (411) USB_MSC: ========================================[0m
+[0;33mW (421) tusb_desc: No Device descriptor provided, using default.[0m
+[0;33mW (421) tusb_desc: No FullSpeed configuration descriptor provided, using default.[0m
+[0;33mW (431) tusb_desc: No String descriptors provided, using default.[0m
+[0;32mI (441) tusb_desc: [0m
+┌─────────────────────────────────┐
+│  USB Device Descriptor Summary  │
+├───────────────────┬─────────────┤
+│bDeviceClass       │ 0           │
+├───────────────────┼─────────────┤
+│bDeviceSubClass    │ 0           │
+├───────────────────┼─────────────┤
+│bDeviceProtocol    │ 0           │
+├───────────────────┼─────────────┤
+│bMaxPacketSize0    │ 64          │
+├───────────────────┼─────────────┤
+│idVendor           │ 0x303a      │
+├───────────────────┼─────────────┤
+│idProduct          │ 0x4002      │
+├───────────────────┼─────────────┤
+│bcdDevice          │ 0x100       │
+├───────────────────┼─────────────┤
+│iManufacturer      │ 0x1         │
+├───────────────────┼─────────────┤
+│iProduct           │ 0x2         │
+├───────────────────┼─────────────┤
+│iSerialNumber      │ 0x3         │
+├───────────────────┼─────────────┤
+│bNumConfigurations │ 0x1         │
+└───────────────────┴─────────────┘
+[0;32mI (601) TinyUSB: TinyUSB Driver installed[0m
+[0;32mI (611) USB_MSC: ========================================[0m
+[0;32mI (611) USB_MSC: USB MSC initialized successfully![0m
+[0;32mI (621) USB_MSC: - Connect second USB-C cable to ESP32S3[0m
+[0;32mI (621) USB_MSC: - SD card will appear as removable USB storage[0m
+[0;32mI (631) USB_MSC: - Audio playback continues on first USB (UART)[0m
+[0;32mI (631) USB_MSC: ========================================[0m
+[0;32mI (641) MAIN: USB MSC enabled - SD card accessible via USB mass storage[0m
+[0;32mI (641) MAIN: Attempting SD card initialization...[0m
+[0;32mI (651) SD_CARD: Initializing SD card...[0m
+[0;32mI (651) SD_CARD: SPI Pins - CS=10, MOSI=11, MISO=13, CLK=12[0m
+[0;32mI (661) SD_CARD: Initializing SPI bus...[0m
+[0;32mI (661) SD_CARD: SPI bus initialized successfully[0m
+[0;32mI (671) SD_CARD: Configuring SD card slot...[0m
+[0;32mI (671) SD_CARD: Mounting SD card to /sdcard...[0m
+[0;32mI (671) gpio: GPIO[10]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (681) sdspi_transaction: cmd=52, R1 response: command CRC error[0m
+[0;32mI (731) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (771) SD_CARD: SD card mounted successfully![0m
+[0;32mI (771) SD_CARD: Card Info:[0m
+[0;32mI (771) SD_CARD:   - Capacity: 31914983424 bytes[0m
+[0;32mI (771) SD_CARD:   - Sectors: 62333952[0m
+[0;32mI (771) SD_CARD:   - Sector Size: 512 bytes[0m
+[0;32mI (781) USB_MSC: SD card registered with USB MSC[0m
+[0;32mI (781) USB_MSC: - Capacity: 31914983424 bytes[0m
+[0;32mI (791) USB_MSC: - Sectors: 62333952[0m
+[0;32mI (791) MAIN: SD card registered with USB MSC[0m
+[0;32mI (791) SD_CARD: Scanning folders in: /sdcard[0m
+[0;32mI (801) SD_CARD:   [0] /sdcard/SYSTEM~1[0m
+[0;32mI (801) SD_CARD:   [1] /sdcard/ANNOUN~1[0m
+[0;32mI (801) SD_CARD:   [2] /sdcard/STORIES[0m
+[0;32mI (811) SD_CARD:   [3] /sdcard/TAWID[0m
+[0;32mI (811) SD_CARD: Found 4 folders[0m
+[0;32mI (811) MAIN: Found 4 main folders[0m
+[0;32mI (821) NAVIGATION: Selected folder: 2[0m
+[0;32mI (821) MAIN: Default folder: 2[0m
+[0;33mW (821) ANNOUNCE: Cannot play boot greetings — announce root not found[0m
+[0;32mI (831) ENCODER: Initializing encoder...[0m
+[0;32mI (831) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (841) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (851) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (861) ENCODER: Encoder initialized: CLK=1, DT=2, SW=21[0m
+[0;32mI (861) ENCODER: Encoder task started[0m
+[0;32mI (871) ENCODER: Encoder task started[0m
+[0;32mI (871) MAIN: Audio task started[0m
+[0;32mI (871) MAIN: Initialization complete. Entering main loop...[0m
+[0;32mI (22821) NAVIGATION: Next folder: 3 (of 4)[0m
+[0;32mI (22871) MAIN: Encoder: Main folder 3 selected (TAWID)[0m
+[0;32mI (23971) NAVIGATION: Previous folder: 2 (of 4)[0m
+[0;32mI (24011) MAIN: Encoder: Main folder 2 selected (STORIES)[0m
+[0;32mI (25541) NAVIGATION: Forward: HOME -> FOLDER_VIEW[0m
+[0;32mI (25581) MAIN: Encoder button: HOME -> FOLDER_VIEW[0m
+[0;32mI (26441) NAVIGATION: Next folder: 3 (of 4)[0m
+[0;32mI (26491) MAIN: Encoder: Main folder 3 selected (TAWID)[0m
+[0;32mI (27171) NAVIGATION: Previous folder: 2 (of 4)[0m
+[0;32mI (27221) MAIN: Encoder: Main folder 2 selected (STORIES)[0m
+[0;32mI (28071) NAVIGATION: Next folder: 3 (of 4)[0m
+[0;32mI (28121) MAIN: Encoder: Main folder 3 selected (TAWID)[0m
+[0;32mI (29351) NAVIGATION: Next folder: 0 (of 4)[0m
+[0;32mI (29351) MAIN: Encoder: Main folder 0 selected (SYSTEM~1)[0m
+[0;32mI (30721) SD_CARD: Subfolder list freed[0m
+[0;32mI (30761) SD_CARD: Total subfolders found: 0[0m
+[0;32mI (30761) SD_CARD: Scanning WAV files in: /sdcard/SYSTEM~1[0m
+[0;32mI (30761) SD_CARD:   Checking: WPSETT~1.DAT[0m
+[0;33mW (30771) SD_CARD:     Not a WAV file: WPSETT~1.DAT[0m
+[0;32mI (30771) SD_CARD:   Checking: INDEXE~1[0m
+[0;33mW (30771) SD_CARD:     Not a WAV file: INDEXE~1[0m
+[0;32mI (30781) SD_CARD: Found 0 WAV files[0m
+[0;33mW (30781) MAIN: No subfolders or files found in /sdcard/SYSTEM~1[0m
+[0;32mI (32461) NAVIGATION: Next folder: 1 (of 4)[0m
+[0;32mI (32461) MAIN: Encoder: Main folder 1 selected (ANNOUN~1)[0m
+[0;32mI (33981) SD_CARD: Subfolder list freed[0m
+[0;32mI (34041) SD_CARD: Total subfolders found: 0[0m
+[0;32mI (34041) SD_CARD: Scanning WAV files in: /sdcard/ANNOUN~1[0m
+[0;32mI (34041) SD_CARD:   Checking: A1ANN.WAV[0m
+[0;32mI (34041) SD_CARD:   [0] /sdcard/ANNOUN~1/A1ANN.WAV[0m
+[0;32mI (34041) SD_CARD:   Checking: A2ANN.WAV[0m
+[0;32mI (34051) SD_CARD:   [1] /sdcard/ANNOUN~1/A2ANN.WAV[0m
+[0;32mI (34051) SD_CARD:   Checking: A3ANN.WAV[0m
+[0;32mI (34061) SD_CARD:   [2] /sdcard/ANNOUN~1/A3ANN.WAV[0m
+[0;32mI (34061) SD_CARD:   Checking: A4ANN.WAV[0m
+[0;32mI (34061) SD_CARD:   [3] /sdcard/ANNOUN~1/A4ANN.WAV[0m
+[0;32mI (34071) SD_CARD:   Checking: A5ANN.WAV[0m
+[0;32mI (34071) SD_CARD:   [4] /sdcard/ANNOUN~1/A5ANN.WAV[0m
+[0;32mI (34081) SD_CARD:   Checking: A6ANN.WAV[0m
+[0;32mI (34081) SD_CARD:   [5] /sdcard/ANNOUN~1/A6ANN.WAV[0m
+[0;32mI (34081) SD_CARD:   Checking: A7ANN.WAV[0m
+[0;32mI (34091) SD_CARD:   [6] /sdcard/ANNOUN~1/A7ANN.WAV[0m
+[0;32mI (34091) SD_CARD:   Checking: ADAM.WAV[0m
+[0;32mI (34101) SD_CARD:   [7] /sdcard/ANNOUN~1/ADAM.WAV[0m
+[0;32mI (34101) SD_CARD:   Checking: B1.WAV[0m
+[0;32mI (34101) SD_CARD:   [8] /sdcard/ANNOUN~1/B1.WAV[0m
+[0;32mI (34111) SD_CARD:   Checking: B2.WAV[0m
+[0;32mI (34111) SD_CARD:   [9] /sdcard/ANNOUN~1/B2.WAV[0m
+[0;32mI (34121) SD_CARD:   Checking: B3.WAV[0m
+[0;32mI (34121) SD_CARD:   [10] /sdcard/ANNOUN~1/B3.WAV[0m
+[0;32mI (34121) SD_CARD:   Checking: CORRECT.WAV[0m
+[0;32mI (34131) SD_CARD:   [11] /sdcard/ANNOUN~1/CORRECT.WAV[0m
+[0;32mI (34131) SD_CARD:   Checking: D1ANN.WAV[0m
+[0;32mI (34141) SD_CARD:   [12] /sdcard/ANNOUN~1/D1ANN.WAV[0m
+[0;32mI (34141) SD_CARD:   Checking: D2ANN.WAV[0m
+[0;32mI (34141) SD_CARD:   [13] /sdcard/ANNOUN~1/D2ANN.WAV[0m
+[0;32mI (34151) SD_CARD:   Checking: D3ANN.WAV[0m
+[0;32mI (34151) SD_CARD:   [14] /sdcard/ANNOUN~1/D3ANN.WAV[0m
+[0;32mI (34161) SD_CARD:   Checking: D4ANN.WAV[0m
+[0;32mI (34161) SD_CARD:   [15] /sdcard/ANNOUN~1/D4ANN.WAV[0m
+[0;32mI (34171) SD_CARD:   Checking: D5ANN.WAV[0m
+[0;32mI (34171) SD_CARD:   [16] /sdcard/ANNOUN~1/D5ANN.WAV[0m
+[0;32mI (34171) SD_CARD:   Checking: D6ANN.WAV[0m
+[0;32mI (34181) SD_CARD:   [17] /sdcard/ANNOUN~1/D6ANN.WAV[0m
+[0;32mI (34181) SD_CARD:   Checking: D7ANN.WAV[0m
+[0;32mI (34191) SD_CARD:   [18] /sdcard/ANNOUN~1/D7ANN.WAV[0m
+[0;32mI (34191) SD_CARD:   Checking: DAOUD.WAV[0m
+[0;32mI (34191) SD_CARD:   [19] /sdcard/ANNOUN~1/DAOUD.WAV[0m
+[0;32mI (34201) SD_CARD:   Checking: I1ANN.WAV[0m
+[0;32mI (34201) SD_CARD:   [20] /sdcard/ANNOUN~1/I1ANN.WAV[0m
+[0;32mI (34211) SD_CARD:   Checking: I2ANN.WAV[0m
+[0;32mI (34211) SD_CARD:   [21] /sdcard/ANNOUN~1/I2ANN.WAV[0m
+[0;32mI (34221) SD_CARD:   Checking: I3ANN.WAV[0m
+[0;32mI (34221) SD_CARD:   [22] /sdcard/ANNOUN~1/I3ANN.WAV[0m
+[0;32mI (34221) SD_CARD:   Checking: I4ANN.WAV[0m
+[0;32mI (34231) SD_CARD:   [23] /sdcard/ANNOUN~1/I4ANN.WAV[0m
+[0;32mI (34231) SD_CARD:   Checking: I5ANN.WAV[0m
+[0;32mI (34241) SD_CARD:   [24] /sdcard/ANNOUN~1/I5ANN.WAV[0m
+[0;32mI (34241) SD_CARD:   Checking: I6ANN.WAV[0m
+[0;32mI (34241) SD_CARD:   [25] /sdcard/ANNOUN~1/I6ANN.WAV[0m
+[0;32mI (34251) SD_CARD:   Checking: I7ANN.WAV[0m
+[0;32mI (34251) SD_CARD:   [26] /sdcard/ANNOUN~1/I7ANN.WAV[0m
+[0;32mI (34261) SD_CARD:   Checking: IB1ANN.WAV[0m
+[0;32mI (34261) SD_CARD:   [27] /sdcard/ANNOUN~1/IB1ANN.WAV[0m
+[0;32mI (34271) SD_CARD:   Checking: IB2ANN.WAV[0m
+[0;32mI (34271) SD_CARD:   [28] /sdcard/ANNOUN~1/IB2ANN.WAV[0m
+[0;32mI (34271) SD_CARD:   Checking: IB3ANN.WAV[0m
+[0;32mI (34281) SD_CARD:   [29] /sdcard/ANNOUN~1/IB3ANN.WAV[0m
+[0;32mI (34291) SD_CARD:   Checking: IB4ANN.WAV[0m
+[0;32mI (34291) SD_CARD:   [30] /sdcard/ANNOUN~1/IB4ANN.WAV[0m
+[0;32mI (34291) SD_CARD:   Checking: IB5ANN.WAV[0m
+[0;32mI (34301) SD_CARD:   [31] /sdcard/ANNOUN~1/IB5ANN.WAV[0m
+[0;32mI (34301) SD_CARD:   Checking: IB6ANN.WAV[0m
+[0;32mI (34301) SD_CARD:   [32] /sdcard/ANNOUN~1/IB6ANN.WAV[0m
+[0;32mI (34311) SD_CARD:   Checking: IB7ANN.WAV[0m
+[0;32mI (34311) SD_CARD:   [33] /sdcard/ANNOUN~1/IB7ANN.WAV[0m
+[0;32mI (34321) SD_CARD:   Checking: IBRAHIM.WAV[0m
+[0;32mI (34321) SD_CARD:   [34] /sdcard/ANNOUN~1/IBRAHIM.WAV[0m
+[0;32mI (34331) SD_CARD:   Checking: INSMUH.WAV[0m
+[0;32mI (34331) SD_CARD:   [35] /sdcard/ANNOUN~1/INSMUH.WAV[0m
+[0;32mI (34331) SD_CARD:   Checking: IS1ANN.WAV[0m
+[

@@ -173,7 +173,7 @@ void usb_msc_set_sd_card(sdmmc_card_t *card) {
     if (card) {
         ESP_LOGI(TAG, "SD card registered with USB MSC");
         ESP_LOGI(TAG, "- Capacity: %llu bytes", (unsigned long long)card->csd.capacity * 512);
-        ESP_LOGI(TAG, "- Sectors: %lu", card->csd.capacity);
+        ESP_LOGI(TAG, "- Sectors: %" PRIu32, (uint32_t)card->csd.capacity);
     }
 }
 
