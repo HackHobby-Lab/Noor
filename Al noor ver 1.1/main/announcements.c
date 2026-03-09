@@ -27,6 +27,7 @@
 
 #include "config.h"        /* ANNOUNCE_PATH_MAX, NOTIFY_ANNOUNCE_BIT, VOLUME_MAX … */
 #include "announcements.h"
+#include "main.h"
 #include "audio.h"
 #include <string.h>
 #include <strings.h>
@@ -35,6 +36,7 @@
 #include <unistd.h>
 #include "esp_log.h"
 
+extern TaskHandle_t audio_task_handle;
 static const char *TAG = "ANNOUNCE";
 
 /*
@@ -430,3 +432,49 @@ void announce_play_track(const char *wav_filename) {
         play_announce_file(ann_file);
     }
 }
+
+/* =====================================================================
+ * Volume Announcement Helper
+ * ===================================================================== */
+
+void announce_volume_percent(int volume_percent)
+{
+    if (volume_percent <= 0)
+        return;
+
+    int step = (volume_percent + 9) / 10;
+
+    if (step < 1) step = 1;
+    if (step > 10) step = 10;
+
+    char filename[16];
+    snprintf(filename, sizeof(filename), "v%d.wav", step);
+
+    ESP_LOGI("ANNOUNCE", "Volume announcement: %s", filename);
+
+    announce_play_direct(filename);
+}
+
+// void announce_volume(int volume_percent) {
+//     if (volume_percent < 0) volume_percent = 0;
+//     if (volume_percent > 10) volume_percent = 10;  // assuming 10 steps
+
+//     char filename[16];
+//     snprintf(filename, sizeof(filename), "v%d.wav", volume_percent);
+
+//     char *path = build_path(announce_root, filename);
+//     if (!path) return;
+
+//     if (access(path, F_OK) == 0) {
+//         // Stop any current playback
+//         stop_current_playback = true;
+
+//         // Queue announcement via audio task
+//         announce_request(path, audio_task_handle, &stop_current_playback);
+//         ESP_LOGI(TAG, "Volume announcement queued: %s", path);
+//     } else {
+//         ESP_LOGW(TAG, "Volume WAV not found: %s", path);
+//     }
+
+//     free(path);
+// }

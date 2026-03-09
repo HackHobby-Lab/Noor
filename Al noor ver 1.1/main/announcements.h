@@ -67,3 +67,7 @@ bool announce_play_direct(const char *filename);
  * Example: announce_play_track("a1.wav") plays A1ANN.WAV.
  */
 void announce_play_track(const char *wav_filename);
+
+void announce_volume_percent(int volume_percent);
+
+void announce_volume(int volume_percent);

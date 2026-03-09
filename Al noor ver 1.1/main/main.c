@@ -8,21 +8,39 @@
  * 3. SUBFOLDER_VIEW- Browse prophet folders (ADAM, DAOUD …)
  * 4. FILE_VIEW     - Browse and play audio files (a1.wav, m2.wav …)
  *
- * Fixes applied vs previous version
- * -----------------------------------
- * 1. announcements_init() now called AFTER sd_card_init() so the
- *    /sdcard/ANNOUN~1 directory is already mounted when probed.
- * 2. announce_play_boot_greetings() called after announcements_init().
- * 3. SYSTEM~1 and ANNOUN~1 folders are hidden from user navigation.
- * 4. TAWID (flat folder – files with no subfolders) uses
- *    nav_go_to_files_direct() / nav_go_back_from_files_direct().
- * 5. Track-announcement played before every story track.
- * 6. VOLUME_MAX enforced at 100 (in config.h / audio.h).
- * 7. "Invalid track index" guard added.
- * 8. announce_check_and_play() now searches the resolved ANNOUN~1
- *    directory automatically, so callers pass NULL for root_path.
- * 9. Back from flat-folder FILE_VIEW goes to FOLDER_VIEW, not
- *    SUBFOLDER_VIEW.
+ * Changes vs previous version:
+ * ----------------------------
+ *
+ * FIX 1 — Stale settle index announces wrong track/folder
+ *   Root cause: g_enc_settle_index and g_enc_settle_state were captured
+ *   when the settle timer was ARMED (at encoder rotation time).  If the
+ *   encoder moved again before the 250ms window elapsed, those values were
+ *   stale by the time the timer fired.
+ *
+ *   Fix: removed g_enc_settle_index and g_enc_settle_state entirely.
+ *   The settle timer callback just sends NOTIFY_SETTLE_BIT.  audio_task
+ *   reads nav_get_state() / nav_get_selected_*() LIVE at the moment it
+ *   handles the notification.  Since the timer only fires after 250ms of
+ *   no rotation, the nav state at fire-time is always the final position.
+ *
+ * FIX 2 — Entering-folder announcement (INSMUH.WAV etc.) skipped
+ *   Root cause: in the SUBFOLDER_VIEW play handler, the "entering folder"
+ *   announce was queued to audio_task via announce_check_and_play(), but
+ *   the main loop immediately continued and:
+ *     - sd_scan_wav_files() ran while INSMUH was still playing
+ *     - nav_go_forward() entered FILE_VIEW
+ *     - announce_play_track(track0) was queued, overwriting INSMUH
+ *   All three steps happened within the same 10ms main-loop tick.
+ *
+ *   Fix: the entering-folder announcement + FILE_VIEW transition is now
+ *   handled entirely inside audio_task via a new NOTIFY_ENTER_SUBFOLDER_BIT
+ *   notification.  The main loop just sets the subfolder path and wakes
+ *   audio_task; audio_task plays the intro then scans files, transitions
+ *   state, and announces track 0 — all sequentially with no races.
+ *
+ *   The same pattern (announce_check_and_play then immediately calling
+ *   sd_scan + nav_go_forward) existed in both the encoder button handler
+ *   and the Play button handler for SUBFOLDER_VIEW — both fixed.
  */
 
 #include <stdio.h>
@@ -54,11 +72,6 @@ static volatile bool g_pause         = false;
 static volatile int  g_playing_track = -1;
 static volatile bool g_stop_flag     = false;
 
-/*
- * Set to true when we entered FILE_VIEW directly from FOLDER_VIEW
- * (flat folder like TAWID that has no subfolders).
- * Controls which "back" transition is used.
- */
 static bool g_in_flat_folder = false;
 
 /* Task handle for audio task */
@@ -71,30 +84,35 @@ static button_t btn_vol_up;
 static button_t btn_vol_down;
 
 /* -------------------------------------------------------------------------
- * Encoder settle-timer
+ * Notification bits
  *
- * Both problems — missed announcements on fast spin and bounce-back to the
- * same folder — are caused by the same root issue: encoder events arrive
- * faster than the announcement system can react.
+ * NOTIFY_ANNOUNCE_BIT      (bit 31) — announcement pending in announce queue
+ * NOTIFY_SETTLE_BIT        (bit 30) — encoder settle timer fired
+ * NOTIFY_ENTER_SUBFOLDER   (bit 29) — enter subfolder: play intro + transition
  *
- * Fix: instead of playing the announcement on every rotation event, we
- * record the last-rotation timestamp and the target index.  A lightweight
- * FreeRTOS timer fires ENC_SETTLE_MS after the LAST rotation event and
- * plays the announcement for whatever index is current at that point.
- *
- * This means:
- *  - Fast spinning: only the final folder gets announced (no missed/skipped).
- *  - Bounce: a mechanical ghost-pulse arrives within ENC_SETTLE_MS of the
- *    real click, so the timer is just re-armed and no extra announcement fires.
- *
- * ENC_SETTLE_MS is defined in config.h (default 180 ms).
+ * Bits 0-28: track index + 1 for direct track playback (value != 0)
  * ---------------------------------------------------------------------- */
-static TimerHandle_t  g_enc_settle_timer  = NULL;
-static volatile int   g_enc_settle_index  = -1;   /* folder/subfolder/track index to announce */
-static volatile int   g_enc_settle_state  = -1;   /* nav_state_t at last rotation            */
+#define NOTIFY_ENTER_SUBFOLDER_BIT  (1UL << 29)
 
 /* -------------------------------------------------------------------------
- * Helper: last path component ("folder name" or "filename")
+ * Pending subfolder path for NOTIFY_ENTER_SUBFOLDER_BIT.
+ * Written by main loop / encoder callback, read by audio_task.
+ * Protected by the fact that main loop and audio_task never write it
+ * concurrently — we set g_stop_flag first, which makes audio_task finish
+ * its current operation before reading this.
+ * ---------------------------------------------------------------------- */
+static char g_pending_subfolder_path[256] = {0};
+
+/* -------------------------------------------------------------------------
+ * Encoder settle timer
+ *
+ * FIX 1: g_enc_settle_index / g_enc_settle_state REMOVED.
+ * The timer just sends NOTIFY_SETTLE_BIT; audio_task reads nav state live.
+ * ---------------------------------------------------------------------- */
+static TimerHandle_t g_enc_settle_timer = NULL;
+
+/* -------------------------------------------------------------------------
+ * Helper: last path component
  * ---------------------------------------------------------------------- */
 static const char *get_folder_name(const char *path) {
     if (!path) return NULL;
@@ -103,11 +121,9 @@ static const char *get_folder_name(const char *path) {
 }
 
 static const char *get_filename(const char *path) {
-    return get_folder_name(path);   /* same logic */
+    return get_folder_name(path);
 }
 
-/* Return heap-allocated directory part of a full file path.
- * Caller must free(). */
 static char *get_folder_dir(const char *filepath) {
     if (!filepath) return NULL;
     const char *last_slash = strrchr(filepath, '/');
@@ -120,34 +136,17 @@ static char *get_folder_dir(const char *filepath) {
     return folder;
 }
 
-/* -------------------------------------------------------------------------
- * Helper: should this top-level folder be hidden from the user?
- * SYSTEM~1 is Windows metadata; ANNOUN~1 is internal announcement files.
- * ---------------------------------------------------------------------- */
 static bool folder_is_hidden(const char *folder_name) {
     if (!folder_name) return true;
-    if (strncasecmp(folder_name, "SYSTEM",  6) == 0) return true;
-    if (strncasecmp(folder_name, "ANNOUN",  6) == 0) return true;
+    if (strncasecmp(folder_name, "SYSTEM", 6) == 0) return true;
+    if (strncasecmp(folder_name, "ANNOUN", 6) == 0) return true;
     return false;
 }
 
 /* -------------------------------------------------------------------------
- * Helper: play track announcement then start playback via audio_task.
- *
- * ALL I2S access goes through audio_task — we never call audio_play_file()
- * directly from the main loop or encoder callback.  This eliminates the
- * "I2S port is in use" race condition entirely.
- *
- * Sequence:
- *   1. Set stop_flag so any running playback stops cleanly.
- *   2. Store the announcement path in the pending slot.
- *   3. Send NOTIFY_ANNOUNCE_BIT — audio_task plays the announcement.
- *   4. After the announcement finishes, audio_task checks g_next_track
- *      and starts the story automatically.
+ * Next track queued after announcement
  * ---------------------------------------------------------------------- */
-
-/* Next track queued to play after the current announcement finishes */
-static volatile int  g_next_track      = -1;
+static volatile int  g_next_track         = -1;
 static volatile bool g_next_track_pending = false;
 
 static void start_track_playback(int track_index) {
@@ -163,7 +162,6 @@ static void start_track_playback(int track_index) {
     char       *folder_dir = get_folder_dir(filepath);
     const char *folder_name = folder_dir ? get_folder_name(folder_dir) : NULL;
 
-    /* Build announcement filename */
     char ann_file[32] = {0};
     bool has_ann = false;
 
@@ -176,10 +174,7 @@ static void start_track_playback(int track_index) {
 
     if (folder_dir) free(folder_dir);
 
-    /* Stop any current audio */
-    g_stop_flag = true;
-
-    /* Queue the story track so audio_task starts it after announcement */
+    g_stop_flag          = true;
     g_next_track         = track_index;
     g_next_track_pending = true;
     g_playing_track      = track_index;
@@ -187,10 +182,8 @@ static void start_track_playback(int track_index) {
     g_pause              = false;
 
     if (has_ann) {
-        /* Route announcement through audio_task */
         announce_check_and_play(NULL, NULL, ann_file, audio_task_handle, &g_stop_flag);
     } else {
-        /* No announcement — kick story directly */
         g_stop_flag = false;
         xTaskNotify(audio_task_handle, (uint32_t)(track_index + 1),
                     eSetValueWithOverwrite);
@@ -200,11 +193,18 @@ static void start_track_playback(int track_index) {
 }
 
 /* -------------------------------------------------------------------------
- * play_announce_for_index — called from audio_task (full stack, safe for I/O)
+ * play_announce_for_index — called from audio_task, reads nav state live.
+ *
+ * FIX 1: no index/state parameters from a captured snapshot.
+ * We read the navigation state fresh here, which is always correct because
+ * the settle timer only fires after 250ms of no encoder movement.
  * ---------------------------------------------------------------------- */
-static void play_announce_for_index(int state, int index)
+static void play_announce_for_current_selection(void)
 {
+    nav_state_t state = nav_get_state();
+
     if (state == NAV_STATE_HOME || state == NAV_STATE_FOLDER_VIEW) {
+        int index = nav_get_selected_folder();
         const char *fpath = sd_get_folder_path(index);
         const char *fname = get_folder_name(fpath);
         if (!fname) return;
@@ -217,14 +217,18 @@ static void play_announce_for_index(int state, int index)
                 announce_check_and_play(NULL, NULL, ann,
                                         audio_task_handle, &g_stop_flag);
         }
+
     } else if (state == NAV_STATE_SUBFOLDER_VIEW) {
+        int index = nav_get_selected_subfolder();
         const char *spath = sd_get_subfolder_path(index);
         const char *sname = get_folder_name(spath);
         const char *ann   = announce_get_folder_file(sname);
         if (ann)
             announce_check_and_play(NULL, NULL, ann,
                                     audio_task_handle, &g_stop_flag);
+
     } else if (state == NAV_STATE_FILE_VIEW) {
+        int index = nav_get_selected_track();
         const char *filepath    = sd_get_wav_path(index);
         const char *filename    = get_filename(filepath);
         char       *folder_dir  = get_folder_dir(filepath);
@@ -246,7 +250,13 @@ static void play_announce_for_index(int state, int index)
 }
 
 /* -------------------------------------------------------------------------
- * Audio task – single owner of the I2S driver
+ * Audio task — single owner of the I2S driver
+ *
+ * FIX 1: NOTIFY_SETTLE_BIT handler calls play_announce_for_current_selection()
+ *        with no captured state — reads live nav position.
+ *
+ * FIX 2: NOTIFY_ENTER_SUBFOLDER_BIT handler plays intro, scans files,
+ *        transitions to FILE_VIEW, and announces track 0 — all sequentially.
  * ---------------------------------------------------------------------- */
 static void audio_task(void *arg) {
     ESP_LOGI(TAG, "Audio task started");
@@ -255,17 +265,92 @@ static void audio_task(void *arg) {
         uint32_t notification_value = 0;
         xTaskNotifyWait(0, 0xFFFFFFFF, &notification_value, portMAX_DELAY);
 
-        /* ---- Encoder settle: announce final selection after spinning ---- */
+        /* ---- FIX 1: Encoder settle — read nav state live ---- */
         if (notification_value & NOTIFY_SETTLE_BIT) {
-            int state = g_enc_settle_state;
-            int index = g_enc_settle_index;
-            g_enc_settle_state = -1;
-            g_enc_settle_index = -1;
-            if (state >= 0 && index >= 0) {
-                g_stop_flag = false;
-                play_announce_for_index(state, index);
+            g_stop_flag = false;
+            play_announce_for_current_selection();
+            continue;
+        }
+
+        /* ---- FIX 2: Enter subfolder — play intro then transition ---- */
+        if (notification_value & NOTIFY_ENTER_SUBFOLDER_BIT) {
+            /* g_pending_subfolder_path was set by caller before sending this bit */
+            const char *spath = g_pending_subfolder_path;
+            const char *sname = get_folder_name(spath);
+
+            if (!spath || spath[0] == '\0') {
+                ESP_LOGW(TAG, "ENTER_SUBFOLDER: empty path, ignoring");
+                continue;
             }
-            continue;  /* never fall through to track-playback handler */
+
+            /* Step 1: Play the "entering folder" announcement (e.g. INSMUH.WAV).
+             * This runs to completion before anything else happens. */
+            g_stop_flag = false;
+            const char *entering = announce_get_entering_folder_file(sname);
+            if (entering) {
+                ESP_LOGI(TAG, "Playing announcement: %s/%s", spath, entering);
+                char ann_path[512];
+                snprintf(ann_path, sizeof(ann_path), "%s/%s", spath, entering);
+                /* Use the announce root path instead of spath if it exists there */
+                announce_check_and_play(NULL, spath, entering,
+                                        audio_task_handle, &g_stop_flag);
+                /* Re-enter wait: announce_check_and_play sends NOTIFY_ANNOUNCE_BIT
+                 * back to this same task, so we need to process it now inline.
+                 * Actually announce_check_and_play queues the path and sends the
+                 * bit — we must process the ANNOUNCE notification before continuing.
+                 * The simplest approach: play it directly here. */
+            }
+
+            /* Step 2: Process the pending NOTIFY_ANNOUNCE_BIT that
+             * announce_check_and_play just queued — drain it now. */
+            {
+                char announce_path[ANNOUNCE_PATH_MAX];
+                if (announce_get_pending(announce_path, sizeof(announce_path))) {
+                    g_stop_flag = false;
+                    ESP_LOGI(TAG, "Playing announcement: %s", announce_path);
+                    audio_play_file(announce_path, &g_stop_flag, NULL);
+                    announce_clear_pending();
+                }
+            }
+
+            /* Step 3: Check for stop — if home was pressed during intro, abort */
+            if (g_stop_flag) {
+                ESP_LOGI(TAG, "Subfolder entry aborted during intro");
+                continue;
+            }
+
+            /* Step 4: Scan files and transition to FILE_VIEW */
+            sd_scan_wav_files(spath);
+            int num_wavs = sd_get_wav_count();
+
+            if (num_wavs > 0) {
+                nav_go_forward(); /* SUBFOLDER_VIEW -> FILE_VIEW */
+                g_in_flat_folder = false;
+                nav_set_selected_track(0);
+
+                ESP_LOGI(TAG, "Entered subfolder (files=%d)", num_wavs);
+
+                /* Step 5: Announce track 0 */
+                const char *fp0      = sd_get_wav_path(0);
+                const char *fn0      = get_filename(fp0);
+                char        story[32];
+                if (announce_get_story_file(fn0, story, sizeof(story))) {
+                    ESP_LOGI(TAG, "Playing announcement: track 0 = %s", story);
+                    /* Queue via pending mechanism */
+                    announce_check_and_play(NULL, NULL, story,
+                                            audio_task_handle, &g_stop_flag);
+                    /* Drain the queued announcement inline */
+                    char ann2[ANNOUNCE_PATH_MAX];
+                    if (announce_get_pending(ann2, sizeof(ann2))) {
+                        g_stop_flag = false;
+                        audio_play_file(ann2, &g_stop_flag, NULL);
+                        announce_clear_pending();
+                    }
+                }
+            } else {
+                ESP_LOGW(TAG, "No files in %s", spath);
+            }
+            continue;
         }
 
         /* ---- Announcement request ---- */
@@ -278,11 +363,8 @@ static void audio_task(void *arg) {
                 announce_clear_pending();
             }
 
-            /* If a story track is queued to follow this announcement, play it now.
-             * Both the announcement and the story run sequentially in this same
-             * task, so the I2S driver is never double-installed. */
             if (g_next_track_pending && !g_stop_flag) {
-                int track_index = g_next_track;
+                int track_index      = g_next_track;
                 g_next_track_pending = false;
                 g_next_track         = -1;
 
@@ -302,34 +384,29 @@ static void audio_task(void *arg) {
                 g_playing       = false;
                 g_playing_track = -1;
             } else {
-                /* Announcement was interrupted or no track queued */
                 g_next_track_pending = false;
                 g_next_track         = -1;
-                if (!g_playing) {
-                    /* Make sure state is clean */
-                }
             }
             continue;
         }
 
-        /* ---- Regular track playback (direct notify, no announcement) ---- */
+        /* ---- Regular track playback (direct notify) ---- */
         if (notification_value != 0) {
             int track_index = (int)notification_value - 1;
 
-            /* Also drain any pending next-track flag to avoid double-play */
             g_next_track_pending = false;
             g_next_track         = -1;
 
             if (track_index < 0 || track_index >= sd_get_wav_count()) {
                 ESP_LOGW(TAG, "Invalid track index: %d", track_index);
-                g_playing = false;
+                g_playing       = false;
                 g_playing_track = -1;
                 continue;
             }
 
             const char *filepath = sd_get_wav_path(track_index);
             if (!filepath) {
-                g_playing = false;
+                g_playing       = false;
                 g_playing_track = -1;
                 continue;
             }
@@ -350,16 +427,14 @@ static void audio_task(void *arg) {
 }
 
 /* -------------------------------------------------------------------------
- * Settle timer callback — fires ENC_SETTLE_MS after the last encoder step.
- * Plays the announcement for whatever index is current at that moment.
- * Runs in the FreeRTOS timer daemon task (keep it short — no blocking I/O).
+ * Settle timer callback
+ *
+ * FIX 1: No state/index captured. Just sends NOTIFY_SETTLE_BIT.
+ * audio_task reads nav position live when it handles the bit.
  * ---------------------------------------------------------------------- */
 static void enc_settle_timer_cb(TimerHandle_t xTimer)
 {
     (void)xTimer;
-    /* Called from Timer Service task — stack is only ~2 KB.
-     * Do NOT call announce_check_and_play() or any file I/O here.
-     * Just set the stop flag and wake the audio_task which has a full stack. */
     g_stop_flag = true;
     BaseType_t xHigherPriorityTaskWoken = pdFALSE;
     xTaskNotifyFromISR(audio_task_handle, NOTIFY_SETTLE_BIT,
@@ -368,25 +443,40 @@ static void enc_settle_timer_cb(TimerHandle_t xTimer)
 }
 
 /* -------------------------------------------------------------------------
- * Encoder callback – rotation & button press
+ * Helper: request subfolder entry via audio_task (FIX 2)
+ *
+ * Instead of calling announce + sd_scan + nav_go_forward in the main loop
+ * (which races), we package the subfolder path and hand off to audio_task
+ * via NOTIFY_ENTER_SUBFOLDER_BIT.  audio_task plays the intro, then scans
+ * and transitions — all sequentially.
+ * ---------------------------------------------------------------------- */
+static void request_enter_subfolder(const char *spath)
+{
+    if (!spath || spath[0] == '\0') return;
+
+    /* Copy path before sending notification */
+    strncpy(g_pending_subfolder_path, spath, sizeof(g_pending_subfolder_path) - 1);
+    g_pending_subfolder_path[sizeof(g_pending_subfolder_path) - 1] = '\0';
+
+    /* Stop current audio and wake audio_task */
+    g_stop_flag = true;
+    xTaskNotify(audio_task_handle, NOTIFY_ENTER_SUBFOLDER_BIT, eSetBits);
+}
+
+/* -------------------------------------------------------------------------
+ * Encoder callback — rotation & button press
  * ---------------------------------------------------------------------- */
 static void encoder_callback(encoder_event_t event) {
     nav_state_t state = nav_get_state();
 
-    /* ================================================================
-     * ROTATION
-     * ============================================================== */
     if (event.type == ENC_EVENT_ROTATE) {
 
-        /* Stop any currently-playing audio immediately */
         g_stop_flag = true;
 
-        /* ---- HOME or FOLDER_VIEW: cycle main folders ---- */
         if (state == NAV_STATE_HOME || state == NAV_STATE_FOLDER_VIEW) {
             int total = sd_get_folder_count();
             if (total <= 0) return;
 
-            /* Step, skip hidden folders */
             do {
                 if (event.direction == ENC_DIR_CW)
                     nav_next_folder(total);
@@ -401,12 +491,9 @@ static void encoder_callback(encoder_event_t event) {
                      selected,
                      get_folder_name(sd_get_folder_path(selected)));
 
-            /* Arm settle timer — announcement fires after last rotation */
-            g_enc_settle_state = (int)state;
-            g_enc_settle_index = selected;
+            /* FIX 1: just re-arm timer — no index/state capture */
             xTimerReset(g_enc_settle_timer, 0);
 
-        /* ---- SUBFOLDER_VIEW: cycle prophet subfolders ---- */
         } else if (state == NAV_STATE_SUBFOLDER_VIEW) {
             int total = sd_get_subfolder_count();
             if (total <= 0) return;
@@ -421,12 +508,9 @@ static void encoder_callback(encoder_event_t event) {
                      selected,
                      get_folder_name(sd_get_subfolder_path(selected)));
 
-            /* Arm settle timer */
-            g_enc_settle_state = (int)state;
-            g_enc_settle_index = selected;
+            /* FIX 1: just re-arm timer */
             xTimerReset(g_enc_settle_timer, 0);
 
-        /* ---- FILE_VIEW: cycle tracks ---- */
         } else if (state == NAV_STATE_FILE_VIEW) {
             int total = sd_get_wav_count();
             if (total <= 0) return;
@@ -440,23 +524,16 @@ static void encoder_callback(encoder_event_t event) {
             ESP_LOGI(TAG, "Encoder: Track %d selected (%s)",
                      selected, get_filename(sd_get_wav_path(selected)));
 
-            /* Arm settle timer */
-            g_enc_settle_state = (int)state;
-            g_enc_settle_index = selected;
+            /* FIX 1: just re-arm timer */
             xTimerReset(g_enc_settle_timer, 0);
         }
 
-    /* ================================================================
-     * BUTTON PRESS
-     * ============================================================== */
     } else if (event.type == ENC_EVENT_BUTTON) {
 
-        /* ---- HOME: enter FOLDER_VIEW ---- */
         if (state == NAV_STATE_HOME) {
             if (sd_get_folder_count() > 0) {
-                nav_go_forward(); /* HOME -> FOLDER_VIEW */
+                nav_go_forward();
 
-                /* Skip hidden folders */
                 int total = sd_get_folder_count();
                 while (folder_is_hidden(
                            get_folder_name(
@@ -475,11 +552,10 @@ static void encoder_callback(encoder_event_t event) {
                 ESP_LOGI(TAG, "Encoder button: HOME -> FOLDER_VIEW");
             }
 
-        /* ---- FOLDER_VIEW: enter selected folder ---- */
         } else if (state == NAV_STATE_FOLDER_VIEW) {
-            int selected          = nav_get_selected_folder();
-            const char *fpath     = sd_get_folder_path(selected);
-            const char *fname     = get_folder_name(fpath);
+            int selected      = nav_get_selected_folder();
+            const char *fpath = sd_get_folder_path(selected);
+            const char *fname = get_folder_name(fpath);
 
             if (!fpath || folder_is_hidden(fname)) return;
 
@@ -487,14 +563,13 @@ static void encoder_callback(encoder_event_t event) {
             int num_sub = sd_get_subfolder_count();
 
             if (num_sub > 0) {
-                /* Normal folder with subfolders (STORIES) */
-                nav_go_forward(); /* FOLDER_VIEW -> SUBFOLDER_VIEW */
+                nav_go_forward();
                 g_in_flat_folder = false;
                 nav_set_selected_subfolder(0);
 
-                const char *sp   = sd_get_subfolder_path(0);
-                const char *sn   = get_folder_name(sp);
-                const char *ann  = announce_get_folder_file(sn);
+                const char *sp  = sd_get_subfolder_path(0);
+                const char *sn  = get_folder_name(sp);
+                const char *ann = announce_get_folder_file(sn);
                 if (ann)
                     announce_check_and_play(NULL, NULL, ann,
                                             audio_task_handle, &g_stop_flag);
@@ -502,15 +577,13 @@ static void encoder_callback(encoder_event_t event) {
                 ESP_LOGI(TAG, "Encoder button: FOLDER_VIEW -> SUBFOLDER_VIEW (%d sub)", num_sub);
 
             } else {
-                /* Flat folder: no subfolders — scan WAV files directly (TAWID) */
                 sd_scan_wav_files(fpath);
                 int num_wavs = sd_get_wav_count();
 
                 if (num_wavs > 0) {
-                    nav_go_to_files_direct(); /* FOLDER_VIEW -> FILE_VIEW */
+                    nav_go_to_files_direct();
                     g_in_flat_folder = true;
 
-                    /* Announce first track */
                     if (strcasecmp(fname, "TAWID") == 0) {
                         announce_check_and_play(NULL, fpath, "TT1.WAV",
                                                 audio_task_handle, &g_stop_flag);
@@ -525,42 +598,19 @@ static void encoder_callback(encoder_event_t event) {
                 }
             }
 
-        /* ---- SUBFOLDER_VIEW: enter selected subfolder ---- */
         } else if (state == NAV_STATE_SUBFOLDER_VIEW) {
-            int selected          = nav_get_selected_subfolder();
-            const char *spath     = sd_get_subfolder_path(selected);
-            const char *sname     = get_folder_name(spath);
+            /* FIX 2: hand off to audio_task — no racing announce+scan here */
+            int selected      = nav_get_selected_subfolder();
+            const char *spath = sd_get_subfolder_path(selected);
 
             if (!spath) return;
 
-            /* "Entering folder" announcement (e.g. INSMUH.WAV for MUHAMMAD) */
-            const char *entering = announce_get_entering_folder_file(sname);
-            if (entering)
-                announce_check_and_play(NULL, spath, entering,
-                                        audio_task_handle, &g_stop_flag);
+            ESP_LOGI(TAG, "Encoder button: SUBFOLDER_VIEW -> FILE_VIEW (pending)");
+            request_enter_subfolder(spath);
 
-            sd_scan_wav_files(spath);
-            int num_wavs = sd_get_wav_count();
-
-            if (num_wavs > 0) {
-                nav_go_forward(); /* SUBFOLDER_VIEW -> FILE_VIEW */
-                g_in_flat_folder = false;
-                nav_set_selected_track(0);
-
-                /* Announce first track */
-                const char *fp0  = sd_get_wav_path(0);
-                announce_play_track(get_filename(fp0));
-
-                ESP_LOGI(TAG, "Encoder button: SUBFOLDER_VIEW -> FILE_VIEW (%d tracks)", num_wavs);
-            } else {
-                ESP_LOGW(TAG, "No files in %s", spath);
-            }
-
-        /* ---- FILE_VIEW: start / switch playback ---- */
         } else if (state == NAV_STATE_FILE_VIEW) {
             int track = nav_get_selected_track();
 
-            /* Guard against stale/invalid index */
             if (track < 0 || track >= sd_get_wav_count()) {
                 nav_set_selected_track(0);
                 track = 0;
@@ -574,7 +624,6 @@ static void encoder_callback(encoder_event_t event) {
                 start_track_playback(track);
                 ESP_LOGI(TAG, "Encoder button: Switch to track %d", track);
             }
-            /* If same track already playing: do nothing (use Play button to pause) */
         }
     }
 }
@@ -586,7 +635,6 @@ void app_main(void) {
     ESP_LOGI(TAG, "=== Noor Audio Player (4-Level Navigation) ===");
     ESP_LOGI(TAG, "Initializing modules...");
 
-    /* ---- Core init (no SD dependency) ---- */
     audio_init();
     buttons_init();
     nav_init();
@@ -596,7 +644,6 @@ void app_main(void) {
     button_init_struct(&btn_vol_up,   BTN_VOLUP_PIN);
     button_init_struct(&btn_vol_down, BTN_VOLDN_PIN);
 
-    /* ---- USB MSC init (before SD so it can register the card later) ---- */
     ESP_LOGI(TAG, "Attempting USB MSC initialization...");
     if (!usb_msc_init()) {
         ESP_LOGW(TAG, "USB MSC initialization failed (non-fatal)");
@@ -604,7 +651,6 @@ void app_main(void) {
         ESP_LOGI(TAG, "USB MSC enabled");
     }
 
-    /* ---- SD card init ---- */
     ESP_LOGI(TAG, "Attempting SD card initialization...");
     bool sd_ok = sd_card_init();
 
@@ -613,28 +659,20 @@ void app_main(void) {
         ESP_LOGE(TAG, "Check pins: CS=%d MOSI=%d MISO=%d CLK=%d",
                  PIN_NUM_CS, PIN_NUM_MOSI, PIN_NUM_MISO, PIN_NUM_CLK);
     } else {
-        /* Register SD card with USB MSC */
         usb_msc_set_sd_card(sd_get_card_handle());
         ESP_LOGI(TAG, "SD card registered with USB MSC");
-
-        /* Check for firmware.bin on SD card — flashes and reboots if found */
         check_sd_ota_update();
     }
 
-    /* ---- announcements_init() MUST come after SD card mounts ---- */
-    announcements_init();   /* probes /sdcard/ANNOUN~1 or /sdcard/announcements */
+    announcements_init();
 
     if (sd_ok) {
-        /* Play boot greetings now that announce_root is resolved */
         announce_play_boot_greetings(NULL);
-
-        /* Scan top-level folders */
         sd_scan_folders("/sdcard");
 
         int num_folders = sd_get_folder_count();
         ESP_LOGI(TAG, "Found %d top-level folders", num_folders);
 
-        /* Default to STORIES folder if present */
         int default_folder = -1;
         for (int i = 0; i < num_folders; i++) {
             const char *fn = get_folder_name(sd_get_folder_path(i));
@@ -644,7 +682,6 @@ void app_main(void) {
             }
         }
 
-        /* If STORIES not found, pick first non-hidden folder */
         if (default_folder < 0) {
             for (int i = 0; i < num_folders; i++) {
                 const char *fn = get_folder_name(sd_get_folder_path(i));
@@ -663,42 +700,31 @@ void app_main(void) {
         }
     }
 
-    /* ---- Headphone detection ---- */
     if (headphone_detect_init()) {
         headphone_detect_start_task();
     }
 
-    /* ---- Encoder settle timer ----
-     * One-shot timer: fires ENC_SETTLE_MS after the last encoder step.
-     * Re-armed on every rotation event so it only fires when the knob
-     * has been idle for ENC_SETTLE_MS.  This fixes both:
-     *   (a) missed announcements when spinning fast — only the final
-     *       selected item gets announced.
-     *   (b) bounce-back to same folder — mechanical ghost pulses that
-     *       arrive within ENC_SETTLE_MS are collapsed into one event.
-     */
+    /* Settle timer — one-shot, re-armed on every rotation */
     g_enc_settle_timer = xTimerCreate(
         "enc_settle",
         pdMS_TO_TICKS(ENC_SETTLE_MS),
-        pdFALSE,               /* one-shot */
+        pdFALSE,
         NULL,
         enc_settle_timer_cb
     );
     configASSERT(g_enc_settle_timer != NULL);
 
-    /* ---- Encoder ---- */
     if (encoder_init()) {
         encoder_start_task(encoder_callback);
     }
 
-    /* ---- Audio task ---- */
     xTaskCreatePinnedToCore(audio_task, "audio_task", 8192, NULL,
                             PRIORITY_AUDIO, &audio_task_handle, tskNO_AFFINITY);
 
     ESP_LOGI(TAG, "Initialization complete. Entering main loop...");
 
     /* =========================================================================
-     * Main loop — handle dedicated button presses
+     * Main loop
      * ====================================================================== */
     while (1) {
         nav_state_t state = nav_get_state();
@@ -707,7 +733,6 @@ void app_main(void) {
          * PLAY / PAUSE button
          * -------------------------------------------------------------- */
         if (button_is_pressed(&btn_play)) {
-            /* In FILE_VIEW while playing: don't interrupt (just pause/resume) */
             if (state != NAV_STATE_FILE_VIEW || !g_playing) {
                 g_stop_flag = true;
             }
@@ -715,9 +740,8 @@ void app_main(void) {
             ESP_LOGI(TAG, "Play button pressed (state=%d)", state);
 
             if (state == NAV_STATE_HOME) {
-                /* Same as encoder button at HOME */
                 if (sd_get_folder_count() > 0) {
-                    nav_go_forward(); /* HOME -> FOLDER_VIEW */
+                    nav_go_forward();
 
                     int total = sd_get_folder_count();
                     while (folder_is_hidden(
@@ -747,7 +771,7 @@ void app_main(void) {
                 int num_sub = sd_get_subfolder_count();
 
                 if (num_sub > 0) {
-                    nav_go_forward(); /* FOLDER_VIEW -> SUBFOLDER_VIEW */
+                    nav_go_forward();
                     g_in_flat_folder = false;
                     nav_set_selected_subfolder(0);
 
@@ -761,12 +785,11 @@ void app_main(void) {
                     ESP_LOGI(TAG, "Entered folder (subfolders=%d)", num_sub);
 
                 } else {
-                    /* Flat folder (TAWID) */
                     sd_scan_wav_files(fpath);
                     int num_wavs = sd_get_wav_count();
 
                     if (num_wavs > 0) {
-                        nav_go_to_files_direct(); /* FOLDER_VIEW -> FILE_VIEW */
+                        nav_go_to_files_direct();
                         g_in_flat_folder = true;
                         nav_set_selected_track(0);
 
@@ -783,34 +806,18 @@ void app_main(void) {
                 }
 
             } else if (state == NAV_STATE_SUBFOLDER_VIEW) {
+                /* FIX 2: same as encoder button — hand off to audio_task */
                 int selected      = nav_get_selected_subfolder();
                 const char *spath = sd_get_subfolder_path(selected);
-                const char *sname = get_folder_name(spath);
 
                 if (!spath) goto next_button;
 
-                const char *entering = announce_get_entering_folder_file(sname);
-                if (entering)
-                    announce_check_and_play(NULL, spath, entering,
-                                            audio_task_handle, &g_stop_flag);
-
-                sd_scan_wav_files(spath);
-                int num_wavs = sd_get_wav_count();
-
-                if (num_wavs > 0) {
-                    nav_go_forward(); /* SUBFOLDER_VIEW -> FILE_VIEW */
-                    g_in_flat_folder = false;
-                    nav_set_selected_track(0);
-
-                    announce_play_track(get_filename(sd_get_wav_path(0)));
-
-                    ESP_LOGI(TAG, "Entered subfolder (files=%d)", num_wavs);
-                }
+                ESP_LOGI(TAG, "Play button: SUBFOLDER_VIEW -> FILE_VIEW (pending)");
+                request_enter_subfolder(spath);
 
             } else if (state == NAV_STATE_FILE_VIEW) {
                 int track = nav_get_selected_track();
 
-                /* Guard against invalid index */
                 if (track < 0 || track >= sd_get_wav_count()) {
                     nav_set_selected_track(0);
                     track = 0;
@@ -821,12 +828,10 @@ void app_main(void) {
                     ESP_LOGI(TAG, "Play: Start track %d", track);
 
                 } else if (g_playing_track == track) {
-                    /* Toggle pause on same track */
                     g_pause = !g_pause;
                     ESP_LOGI(TAG, "Play: %s", g_pause ? "Paused" : "Resumed");
 
                 } else {
-                    /* Switch to different track */
                     g_stop_flag = true;
                     start_track_playback(track);
                     ESP_LOGI(TAG, "Play: Switch to track %d", track);
@@ -851,8 +856,7 @@ void app_main(void) {
                 sd_free_wavs();
 
                 if (g_in_flat_folder) {
-                    /* Came from FOLDER_VIEW directly — go straight back */
-                    nav_go_back_from_files_direct(); /* FILE_VIEW -> FOLDER_VIEW */
+                    nav_go_back_from_files_direct();
                     g_in_flat_folder = false;
 
                     int sel       = nav_get_selected_folder();
@@ -870,7 +874,7 @@ void app_main(void) {
                     ESP_LOGI(TAG, "Back (flat): FILE_VIEW -> FOLDER_VIEW");
 
                 } else {
-                    nav_go_back(); /* FILE_VIEW -> SUBFOLDER_VIEW */
+                    nav_go_back();
 
                     int sel        = nav_get_selected_subfolder();
                     const char *sp = sd_get_subfolder_path(sel);
@@ -885,7 +889,7 @@ void app_main(void) {
 
             } else if (state == NAV_STATE_SUBFOLDER_VIEW) {
                 sd_free_subfolders();
-                nav_go_back(); /* SUBFOLDER_VIEW -> FOLDER_VIEW */
+                nav_go_back();
 
                 int sel       = nav_get_selected_folder();
                 const char *fn = get_folder_name(sd_get_folder_path(sel));
@@ -897,11 +901,8 @@ void app_main(void) {
                 ESP_LOGI(TAG, "SUBFOLDER_VIEW -> FOLDER_VIEW");
 
             } else if (state == NAV_STATE_FOLDER_VIEW) {
-                nav_go_back(); /* FOLDER_VIEW -> HOME */
-
-                /* Play ROTATE.WAV as "home" audio cue */
+                nav_go_back();
                 announce_play_direct("ROTATE.WAV");
-
                 ESP_LOGI(TAG, "FOLDER_VIEW -> HOME");
             }
         }
@@ -918,7 +919,7 @@ void app_main(void) {
         }
 
         /* ----------------------------------------------------------------
-         * Periodic USB MSC status log (every 5 s)
+         * Periodic USB MSC status log
          * -------------------------------------------------------------- */
         static uint32_t last_usb_log = 0;
         uint32_t now = xTaskGetTickCount();

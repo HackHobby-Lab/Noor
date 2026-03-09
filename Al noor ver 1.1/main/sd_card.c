@@ -1,6 +1,16 @@
 /**
  * sd_card.c
  * SD Card operations implementation
+ *
+ * Changes vs previous version:
+ * ----------------------------
+ * 1. Added sd_mutex (SemaphoreHandle_t) created in sd_card_init().
+ * 2. sd_get_access_mutex() exposes the mutex to audio.c and usb_msc.c
+ *    so ALL SD card access is serialised through one shared lock.
+ * 3. sd_mutex is taken/given around every fopen-level VFS call that
+ *    originates from this module (scan functions use opendir/readdir
+ *    which go through the same FAT layer as fread, so they are also
+ *    protected).
  */
 
 #include <stdio.h>
@@ -20,6 +30,17 @@
 #include "esp_ota_ops.h"
 
 static const char *TAG = "SD_CARD";
+
+/* ------------------------------------------------------------------ */
+/* Shared SD access mutex                                              */
+/* All callers (audio.c fread, usb_msc.c sdmmc_read/write_sectors)   */
+/* must hold this mutex while accessing the card.                     */
+/* ------------------------------------------------------------------ */
+static SemaphoreHandle_t sd_mutex = NULL;
+
+SemaphoreHandle_t sd_get_access_mutex(void) {
+    return sd_mutex;
+}
 
 /* Internal storage for folder and file lists */
 static char *folder_list[MAX_FOLDERS];
@@ -99,6 +120,14 @@ bool sd_card_init(void) {
     ESP_LOGI(TAG, "SPI Pins - CS=%d, MOSI=%d, MISO=%d, CLK=%d",
              PIN_NUM_CS, PIN_NUM_MOSI, PIN_NUM_MISO, PIN_NUM_CLK);
 
+    /* Create the shared SD mutex before any card access */
+    sd_mutex = xSemaphoreCreateMutex();
+    if (!sd_mutex) {
+        ESP_LOGE(TAG, "Failed to create SD access mutex");
+        return false;
+    }
+    ESP_LOGI(TAG, "SD access mutex created");
+
     spi_bus_config_t bus_config = {
         .mosi_io_num = PIN_NUM_MOSI,
         .miso_io_num = PIN_NUM_MISO,
@@ -146,7 +175,7 @@ bool sd_card_init(void) {
 }
 
 /* ------------------------------------------------------------------ */
-/* Free helpers — defined before any scan function that calls them     */
+/* Free helpers                                                        */
 /* ------------------------------------------------------------------ */
 
 void sd_free_folders(void) {
@@ -171,16 +200,20 @@ void sd_free_subfolders(void) {
 }
 
 /* ------------------------------------------------------------------ */
-/* Public API                                                          */
+/* Scan functions — mutex held for the entire directory traversal     */
+/* because opendir/readdir/stat all touch FAT structures on the card. */
 /* ------------------------------------------------------------------ */
 
 void sd_scan_folders(const char *path) {
     ESP_LOGI(TAG, "Scanning folders in: %s", path);
     sd_free_folders();
 
+    if (sd_mutex) xSemaphoreTake(sd_mutex, portMAX_DELAY);
+
     DIR *dir = opendir(path);
     if (!dir) {
         ESP_LOGE(TAG, "Failed to open directory: %s", path);
+        if (sd_mutex) xSemaphoreGive(sd_mutex);
         return;
     }
 
@@ -200,6 +233,8 @@ void sd_scan_folders(const char *path) {
     }
 
     closedir(dir);
+    if (sd_mutex) xSemaphoreGive(sd_mutex);
+
     num_folders = found;
     ESP_LOGI(TAG, "Found %d folders", num_folders);
 }
@@ -208,9 +243,12 @@ void sd_scan_wav_files(const char *folder_path) {
     ESP_LOGI(TAG, "Scanning WAV files in: %s", folder_path);
     sd_free_wavs();
 
+    if (sd_mutex) xSemaphoreTake(sd_mutex, portMAX_DELAY);
+
     DIR *dir = opendir(folder_path);
     if (!dir) {
         ESP_LOGE(TAG, "Failed to open folder: %s", folder_path);
+        if (sd_mutex) xSemaphoreGive(sd_mutex);
         return;
     }
 
@@ -232,6 +270,8 @@ void sd_scan_wav_files(const char *folder_path) {
     }
 
     closedir(dir);
+    if (sd_mutex) xSemaphoreGive(sd_mutex);
+
     num_wavs = found;
     ESP_LOGI(TAG, "Found %d WAV files", num_wavs);
 }
@@ -239,9 +279,12 @@ void sd_scan_wav_files(const char *folder_path) {
 void sd_scan_subfolders(const char *folder_path) {
     sd_free_subfolders();
 
+    if (sd_mutex) xSemaphoreTake(sd_mutex, portMAX_DELAY);
+
     DIR *dir = opendir(folder_path);
     if (!dir) {
         ESP_LOGE(TAG, "Failed to open folder: %s", folder_path);
+        if (sd_mutex) xSemaphoreGive(sd_mutex);
         return;
     }
 
@@ -260,8 +303,14 @@ void sd_scan_subfolders(const char *folder_path) {
     }
 
     closedir(dir);
+    if (sd_mutex) xSemaphoreGive(sd_mutex);
+
     ESP_LOGI(TAG, "Total subfolders found: %d", num_subfolders);
 }
+
+/* ------------------------------------------------------------------ */
+/* Public getters                                                      */
+/* ------------------------------------------------------------------ */
 
 int sd_get_folder_count(void)    { return num_folders; }
 int sd_get_subfolder_count(void) { return num_subfolders; }
@@ -287,7 +336,7 @@ sdmmc_card_t* sd_get_card_handle(void) {
 }
 
 /* ------------------------------------------------------------------ */
-/* OTA via SD card (update.bin)                                        */
+/* OTA via SD card (update.bin)                                       */
 /* ------------------------------------------------------------------ */
 
 static const char *OTA_TAG = "SD_OTA";
@@ -300,7 +349,10 @@ esp_err_t sdcard_ota_update(void) {
         return ESP_ERR_INVALID_STATE;
     }
 
+    if (sd_mutex) xSemaphoreTake(sd_mutex, portMAX_DELAY);
     FILE *f = fopen("/sdcard/update.bin", "rb");
+    if (sd_mutex) xSemaphoreGive(sd_mutex);
+
     if (!f) {
         ESP_LOGI(OTA_TAG, "No update.bin found on SD card.");
         return ESP_ERR_NOT_FOUND;
@@ -325,7 +377,13 @@ esp_err_t sdcard_ota_update(void) {
 
     uint8_t buf[1024];
     size_t read_bytes;
-    while ((read_bytes = fread(buf, 1, sizeof(buf), f)) > 0) {
+    while (1) {
+        if (sd_mutex) xSemaphoreTake(sd_mutex, portMAX_DELAY);
+        read_bytes = fread(buf, 1, sizeof(buf), f);
+        if (sd_mutex) xSemaphoreGive(sd_mutex);
+
+        if (read_bytes == 0) break;
+
         ret = esp_ota_write(update_handle, buf, read_bytes);
         if (ret != ESP_OK) {
             ESP_LOGE(OTA_TAG, "esp_ota_write failed: %s", esp_err_to_name(ret));

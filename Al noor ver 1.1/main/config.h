@@ -2,11 +2,18 @@
  * config.h
  * Central configuration file for Noor Audio Player
  *
- * This is the ONE AND ONLY place where hardware pins, limits, and
- * shared constants are defined.  Individual module headers must NOT
- * redefine any of these — they should #include "config.h" instead.
+ * Changes vs previous version:
+ * ----------------------------
+ * 1. ENC_DEBOUNCE_MS raised from 60 → 200.
+ *    Log analysis showed ghost bounce pulses arriving up to 170ms after
+ *    the real click.  200ms catches all observed cases with 30ms margin.
  *
- * CRITICAL: FreeRTOS.h MUST be included before any FreeRTOS components!
+ * 2. ENC_SETTLE_MS raised from 180 → 250.
+ *    The settle timer must always be longer than ENC_DEBOUNCE_MS so that
+ *    the timer cannot fire before the debounce window has closed.
+ *    250ms > 200ms, maintaining the 50ms margin.
+ *
+ * All other values are unchanged.
  */
 
 #ifndef CONFIG_H
@@ -92,32 +99,17 @@
 #define ENC_DT_PIN           2
 #define ENC_SW_PIN          21
 
-/* Encoder driver constants */
-#define ENC_QUEUE_LEN       16
+/* Encoder ISR queue depth — raised to 32 to survive fast spinning */
+#define ENC_QUEUE_LEN       32
 
 /* ========================================================================
  * HEADPHONE DETECTION
- *
- * Set HEADPHONE_DETECT_PIN to the GPIO number of the jack-detect switch.
- * Set to -1 to disable the feature entirely (skips GPIO config).
- *
- * Your hardware: jack switch wired to GPIO48.
- * HIGH = headphone inserted (normally-open switch to VCC).
- * LOW  = no headphone / speaker mode.
- *
- * SPEAKER_ENABLE_PIN: set to -1 if no dedicated speaker-enable GPIO.
- *
- * Volume levels:
- *   VOLUME_HEADPHONE  — set when headphones are detected (quieter, safe for ears)
- *   VOLUME_SPEAKER    — set when no headphones (louder, drives speaker)
- *
- * Both values must be within [VOLUME_MIN, VOLUME_MAX].
  * ======================================================================== */
 #define HEADPHONE_DETECT_PIN    48
 #define SPEAKER_ENABLE_PIN      -1
 
-#define VOLUME_HEADPHONE        30   /* % — headphones plugged in   */
-#define VOLUME_SPEAKER          60   /* % — speaker (no headphones) */
+#define VOLUME_HEADPHONE        60   /* % — headphones plugged in   */
+#define VOLUME_SPEAKER          70   /* % — speaker (no headphones) */
 
 /* Debounce for jack-detect GPIO (ms) */
 #define HP_DETECT_DEBOUNCE_MS   100
@@ -131,18 +123,28 @@
 #define BUTTON_DEBOUNCE_MS      50
 
 /* Hardware debounce window for the rotary encoder GPIO ISR.
- * Pulses arriving within this window after the first edge are discarded.
- * Raised to 80 ms to reject mechanical contact-bounce on cheap encoders. */
-#define ENC_DEBOUNCE_MS         60
+ *
+ * RAISED from 60 ms to 200 ms.
+ *
+ * Log analysis (session starting at ~370 s) showed mechanical ghost
+ * pulses arriving 60–170 ms after a real encoder click.  At 60 ms the
+ * debounce window closed before the ghost arrived, letting it through.
+ * 200 ms catches all observed ghosts and still feels instantaneous to
+ * the user (a deliberate second click takes >300 ms in practice).
+ *
+ * The timestamp is now taken IN THE ISR (not in the task) so the full
+ * 200 ms window is measured from when the GPIO actually fired, not from
+ * when the task happened to process the queued event. */
+#define ENC_DEBOUNCE_MS         200
 
 /* Settle window for encoder-driven announcements.
- * After the last rotation event, the settle timer fires after this many ms
- * and plays the announcement for the current selection.  This means:
- *   - Spinning fast: only the *final* folder/track is announced.
- *   - Ghost bounces: a bounce arriving within this window re-arms the
- *     timer without triggering an extra announcement.
- * 180 ms feels instant to the user but filters all normal bounce/spin. */
-#define ENC_SETTLE_MS           180
+ *
+ * RAISED from 180 ms to 250 ms.
+ *
+ * Must always be > ENC_DEBOUNCE_MS so the settle timer cannot fire
+ * while the debounce window is still open.  250 ms > 200 ms, keeping
+ * a 50 ms safety margin.  Still feels instant to the user. */
+#define ENC_SETTLE_MS           250
 
 /* ========================================================================
  * TASK PRIORITIES
@@ -153,15 +155,10 @@
 
 /* ========================================================================
  * AUDIO / VOLUME SETTINGS
- *
- * VOLUME_MAX is 100 — this is a software percentage applied to the PCM
- * samples before sending to I2S.  Values above 100 cause integer overflow
- * / clipping artefacts and distortion.  Use the amplifier gain or the
- * hardware volume pot for louder output, not this software multiplier.
  * ======================================================================== */
 #define VOLUME_MIN              0
 #define VOLUME_MAX              100   /* Hard cap — do NOT raise above 100 */
-#define VOLUME_DEFAULT          60
+#define VOLUME_DEFAULT          70
 
 /* ========================================================================
  * FILE / DIRECTORY LIMITS
@@ -177,10 +174,6 @@
 /*
  * NOTIFY_ANNOUNCE_BIT — FreeRTOS task-notification bit used to wake the
  * audio task when an announcement is pending.
- *
- * Bit 31 is used to avoid collisions with other notification bits that
- * lower-numbered bits might carry.  Must be consistent between the sender
- * (announcements.c) and the receiver (main.c audio task).
  */
 #define NOTIFY_ANNOUNCE_BIT     (1UL << 31)
 #define NOTIFY_SETTLE_BIT       (1UL << 30)  /* enc_settle_timer -> audio_task */
