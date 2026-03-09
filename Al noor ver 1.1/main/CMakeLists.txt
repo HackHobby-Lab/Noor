@@ -10,5 +10,7 @@ idf_component_register(
         "headphone_detect.c"
         "usb_msc.c"
         "SD_CARD_OTA.c"
+        "battery.c"
+        "quiz.c"
     INCLUDE_DIRS "."
 )

@@ -3,16 +3,16 @@
 193	274	7943965792100654	project_elf_src_esp32s3.c	27b0d71a2075790
 43469	44174	7945727537032567	esp-idf/newlib/CMakeFiles/__idf_newlib.dir/reent_init.c.obj	5bf41bb829881cce
 46866	47812	7945727571004361	esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/rtc_module.c.obj	815f2c0fb7e0d0a7
-193	274	7943965792100654	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/project_elf_src_esp32s3.c	27b0d71a2075790
 35074	36180	7945727453078865	esp-idf/esp_driver_mcpwm/CMakeFiles/__idf_esp_driver_mcpwm.dir/src/mcpwm_gen.c.obj	2a21fb49eca25264
+193	274	7943965792100654	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/project_elf_src_esp32s3.c	27b0d71a2075790
 65128	66084	7945727753630331	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common_loader.c.obj	ed38407a105aa014
 24392	25477	7945727346266204	esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/magic.c.obj	7b0508cb7bec7952
 2137	2906	7945727123720260	esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/deprecated/esp_adc_cal_common_legacy.c.obj	2e1a694e68a7fa43
 63879	64760	7945727741130582	esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_wrap.c.obj	43dc0e50a25c87da
 78774	79494	7945727890080784	esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/C_/Users/HP/esp/v5.4.3/esp-idf/components/mbedtls/port/sha/dma/esp_sha_gdma_impl.c.obj	7e8357c59f5ec6b
-2673	3761	7945727129078744	esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/adc_filter.c.obj	4db85a889b117e3e
-2729	3338	7945727129637494	esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/deprecated/esp32s3/esp_adc_cal_legacy.c.obj	d37622f518d4d3df
 15621	15889	7943965945704125	esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa/expression_with_stack_asm.S.obj	61017a346d1fc0e1
+2729	3338	7945727129637494	esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/deprecated/esp32s3/esp_adc_cal_legacy.c.obj	d37622f518d4d3df
+2673	3761	7945727129078744	esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/adc_filter.c.obj	4db85a889b117e3e
 137	247	7945727104729422	esp-idf/esp_system/ld/memory.ld	5cf6abb93e81e867
 16415	18111	7945727266500410	esp-idf/wpa_supplicant/libwpa_supplicant.a	5c149ed1121a4e3d
 16067	17333	7945727263015204	esp-idf/esp_netif/CMakeFiles/__idf_esp_netif.dir/lwip/esp_netif_lwip_defaults.c.obj	cac3c70601517565
@@ -70,7 +70,7 @@
 297	1327	7945727105314298	esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/util/ctrl_sock.c.obj	b0fa967170915777
 71449	72380	7945727816834730	esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/aria.c.obj	fbb20345470d0421
 18733	19916	7945727289676921	esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/memp.c.obj	5969b24e34f4d6da
-163	1012	7945757246051333	esp-idf/main/CMakeFiles/__idf_main.dir/buttons.c.obj	31e382022e2b7aef
+155	1009	7947324832641971	esp-idf/main/CMakeFiles/__idf_main.dir/buttons.c.obj	31e382022e2b7aef
 3918	4378	7945727141530630	esp-idf/esp_gdbstub/CMakeFiles/__idf_esp_gdbstub.dir/src/port/xtensa/gdbstub-entry.S.obj	c61e454c84826715
 45551	46390	7945727557853561	esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/xtensa_overlay_os_hook.c.obj	4d7db00293f6126
 304	1655	7945727105388348	esp-idf/esp_http_client/CMakeFiles/__idf_esp_http_client.dir/esp_http_client.c.obj	556db95d54d03312
@@ -88,7 +88,7 @@
 1307	2524	7945727115412649	esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_internal.c.obj	6f8eded116d6d595
 53663	54283	7945727638975396	esp-idf/log/CMakeFiles/__idf_log.dir/src/log_level/tag_log_level/cache/log_binary_heap.c.obj	8cac6eadfe1346f
 4546	5217	7945727147803006	esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_default_ap.c.obj	8970470cf58d7f5e
-875	1002	7945770743067982	esp-idf/main/libmain.a	5c004a6c0de87704
+924	1040	7947373814165554	esp-idf/main/libmain.a	5c004a6c0de87704
 52623	53576	7945727628570163	esp-idf/heap/CMakeFiles/__idf_heap.dir/heap_caps_init.c.obj	e4aedc26891f3ecd
 4503	5617	7945727147369005	esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_default.c.obj	43b5287a6aec317e
 8516	9451	7945727187510576	esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/md4-internal.c.obj	bd25f1680d7e20fc
@@ -104,7 +104,7 @@
 20099	21322	7945727303333406	esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv4/autoip.c.obj	e8210aa636c9659d
 45859	46736	7945727560939117	esp-idf/freertos/CMakeFiles/__idf_freertos.dir/esp_additions/freertos_compatibility.c.obj	a019d644c36de54d
 46802	47680	7945727570370611	esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/periph_ctrl.c.obj	4f3b54e2b8d4e5cc
-351	434	7945792316771313	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
+343	432	7947427340354752	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
 58937	59871	7945727691708166	esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/esp_err.c.obj	e34ebebb04473ca7
 2524	3582	7945727127571750	esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/adc_continuous.c.obj	779f822afb38f38e
 93402	94389	7945728036365703	esp-idf/app_trace/CMakeFiles/__idf_app_trace.dir/port/port_uart.c.obj	f4892cc4bddd7005
@@ -137,7 +137,7 @@
 76794	77935	7945727870289344	esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_hash.c.obj	72adb47a9ab1fe5b
 17333	18389	7945727275676568	esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/api/err.c.obj	eb24ad048060781a
 3582	4502	7945727138156201	esp-idf/esp_gdbstub/CMakeFiles/__idf_esp_gdbstub.dir/src/gdbstub.c.obj	a1619c7fe0e7345
-141	250	7945792313975751	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
+11744	11852	7947427453531883	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
 3761	4513	7945727139962057	esp-idf/esp_gdbstub/CMakeFiles/__idf_esp_gdbstub.dir/src/packet.c.obj	5e70bc3792dcc46f
 33912	35085	7945727441471049	esp-idf/esp_driver_i2s/CMakeFiles/__idf_esp_driver_i2s.dir/i2s_common.c.obj	bbc317ca22d6d778
 13318	13470	7943965922687265	esp-idf/log/CMakeFiles/__idf_log.dir/src/util.c.obj	b25494dc14e34ee5
@@ -194,7 +194,7 @@
 59709	60488	7945727699425538	esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/startup.c.obj	980eb0687ab1697b
 7536	8516	7945727177711602	esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/dh_group5.c.obj	f7ea2dabb1033fb
 54610	55257	7945727648438105	esp-idf/hal/CMakeFiles/__idf_hal.dir/uart_hal_iram.c.obj	492b301dbed63a
-186	1158	7945757246288149	esp-idf/main/CMakeFiles/__idf_main.dir/sd_card.c.obj	9daca1742d1ad5c9
+176	1042	7947324832839875	esp-idf/main/CMakeFiles/__idf_main.dir/sd_card.c.obj	9daca1742d1ad5c9
 38323	39318	7945727485570474	esp-idf/esp_driver_tsens/libesp_driver_tsens.a	a5dc09b45c1a75cb
 7652	8709	7945727178871186	esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/dh_groups.c.obj	c5bb8119a45b876a
 6804	7832	7945727170383033	esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-siv.c.obj	c790caf66a5db89
@@ -427,7 +427,7 @@
 21112	22343	7945727313464678	esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv4/ip4_frag.c.obj	49b65b173487ea6f
 21103	22289	7945727313378954	esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv4/ip4_addr.c.obj	f4df564f4b99994e
 42128	43203	7945727523629053	esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread.c.obj	e1101c27ab661e3a
-103719	105136	7945728139531054	esp-idf/main/CMakeFiles/__idf_main.dir/usb_msc.c.obj	b540b8cff439aade
+252	386	7947283657663959	esp-idf/main/CMakeFiles/__idf_main.dir/usb_msc.c.obj	b540b8cff439aade
 21209	22353	7945727314434401	esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv6/dhcp6.c.obj	7c812b478e630006
 28301	29340	7945727385361444	esp-idf/esp_vfs_console/CMakeFiles/__idf_esp_vfs_console.dir/vfs_console.c.obj	254a1c0250982463
 5327	6315	7945727155617269	esp-idf/esp_adc/libesp_adc.a	637d5a50fea49f8d
@@ -463,7 +463,7 @@
 12784	13020	7943965917343248	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/lcd_periph.c.obj	64ef8aa0d7add164
 69616	70499	7945727798503568	esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_tls13_server.c.obj	70099161a330d488
 23935	25117	7945727341694118	esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/ipv6cp.c.obj	fdc88f2b380962c5
-131	311	7945792313889635	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
+141	306	7947427337480536	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
 36639	39477	7945727468736552	esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_page.cpp.obj	aa73a093522b9134
 23432	24578	7945727336657646	esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/eap.c.obj	a3d32a0bd46467dc
 57246	58005	7945727674809199	esp-idf/hal/CMakeFiles/__idf_hal.dir/cam_hal.c.obj	caa9c21ca69c96a9
@@ -507,7 +507,7 @@
 99914	100639	7945728101486721	esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/wifi_ctrl.c.obj	19396f8b75f00da0
 94787	95966	7945728050216552	esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_nt35510.c.obj	ffaf1c11c8ed6d11
 26914	28047	7945727371490935	esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/polarssl/arc4.c.obj	3a0c878c8e86bfe
-199	1108	7945757246410276	esp-idf/main/CMakeFiles/__idf_main.dir/announcements.c.obj	e8877fff18e79488
+132	924	7947373806216965	esp-idf/main/CMakeFiles/__idf_main.dir/announcements.c.obj	e8877fff18e79488
 83816	84754	7945727940510701	esp-idf/mbedtls/libmbedtls.a	64f807a68dc27dfd
 26807	28269	7945727370410005	esp-idf/lwip/CMakeFiles/__idf_lwip.dir/apps/ping/ping_sock.c.obj	90b7b869387dc143
 35896	37142	7945727461297268	esp-idf/esp_driver_spi/CMakeFiles/__idf_esp_driver_spi.dir/src/gpspi/spi_slave_hd.c.obj	56554294b4bf3656
@@ -581,7 +581,7 @@
 249	355	7945772859479040	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/ota_data_initial.bin	d34cbf4ac0504a4
 40755	41830	7945727509904337	esp-idf/esp_driver_gptimer/CMakeFiles/__idf_esp_driver_gptimer.dir/src/gptimer_common.c.obj	92a9253721951e7b
 64760	65574	7945727749946302	esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_cache_utils.c.obj	1921c4b589959c13
-351	434	7945792316771313	CMakeFiles/bootloader-complete	89d1ea52960daa44
+343	432	7947427340354752	CMakeFiles/bootloader-complete	89d1ea52960daa44
 36242	38655	7945727464777913	esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_cxx_api.cpp.obj	28e34895fee8d1db
 36256	38641	7945727464908417	esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_item_hash_list.cpp.obj	653410b42f9acb82
 36181	39145	7945727464147095	esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_api.cpp.obj	a7eed222592caa19
@@ -590,7 +590,7 @@
 36888	39505	7945727471228281	esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_handle_simple.cpp.obj	82ed17e2651461e
 12861	12984	7943965918118991	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/touch_sensor_periph.c.obj	ed537908e4d541bc
 37232	38690	7945727474672155	esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition.cpp.obj	bdf6b20a0bd3d0d3
-131	311	7945792313889635	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
+141	306	7947427337480536	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
 51978	52562	7945727622125361	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/temperature_sensor_periph.c.obj	6fe6b5f9ab74d26c
 38656	41468	7945727488904412	esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition_manager.cpp.obj	e233b47829975825
 39477	42259	7945727497112860	esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_encrypted_partition.cpp.obj	6e89f776d2fa0c26
@@ -599,7 +599,7 @@
 54592	55313	7945727648268769	esp-idf/hal/CMakeFiles/__idf_hal.dir/systimer_hal.c.obj	e2948c3329db3725
 39146	40013	7945727493801980	esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_bootloader.c.obj	617cce5298b26a8e
 38690	41425	7945727489243734	esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_types.cpp.obj	4a5992c36216b553
-131	311	7945792313889635	bootloader/bootloader.elf	61ede1e749d91df0
+141	306	7947427337480536	bootloader/bootloader.elf	61ede1e749d91df0
 55934	56419	7945727661680817	esp-idf/hal/CMakeFiles/__idf_hal.dir/sdm_hal.c.obj	a9feeda28f21d96e
 42674	43468	7945727529093360	esp-idf/newlib/CMakeFiles/__idf_newlib.dir/assert.c.obj	7bbdd4ac74333163
 39505	40483	7945727497398406	esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/esp_event.c.obj	56eedca099ec23bc
@@ -646,7 +646,7 @@
 44453	45309	7945727546863681	esp-idf/freertos/CMakeFiles/__idf_freertos.dir/heap_idf.c.obj	61f1d155822ce9c3
 45113	46007	7945727553473401	esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/event_groups.c.obj	4e3a6cd0fc0361d3
 44560	45497	7945727547936708	esp-idf/freertos/CMakeFiles/__idf_freertos.dir/port_common.c.obj	db0a8102303a9c87
-73467	74499	7945727837013951	esp-idf/esp_app_format/libesp_app_format.a	a92609c3e1a54b09
+461	558	7947427340715852	esp-idf/esp_app_format/libesp_app_format.a	a92609c3e1a54b09
 89410	90285	7945727996445859	esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/port/freertos/ffsystem.c.obj	8155d024fa8520d
 45498	46058	7945727557324590	esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/portasm.S.obj	ec895308995585a8
 87689	88510	7945727979235273	esp-idf/protobuf-c/libprotobuf-c.a	cdfd8630ec53df0b
@@ -746,7 +746,7 @@
 55943	56569	7945727661777505	esp-idf/hal/CMakeFiles/__idf_hal.dir/sdmmc_hal.c.obj	3ebb7c6fda79aa62
 67708	68541	7945727779425593	esp-idf/app_update/CMakeFiles/__idf_app_update.dir/esp_ota_ops.c.obj	b2a32757f5d8fc6a
 84451	85149	7945727946860979	esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_dbl.c.obj	68e18d561e286177
-141	250	7945792313975751	esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
+11744	11852	7947427453531883	esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
 55851	56301	7945727660860375	esp-idf/hal/CMakeFiles/__idf_hal.dir/gdma_hal_top.c.obj	5eda01b32794ec77
 56411	57156	7945727666450765	esp-idf/hal/CMakeFiles/__idf_hal.dir/adc_hal.c.obj	a187fc7a4fbefacc
 101653	102840	7945728118877803	esp-idf/espressif__esp_tinyusb/CMakeFiles/__idf_espressif__esp_tinyusb.dir/tusb_msc_storage.c.obj	958666e5d6d30f9b
@@ -846,7 +846,7 @@
 66272	67367	7945727765068945	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.obj	79e72ca78a13bf61
 66164	66838	7945727763979188	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.obj	8431b9e50843f50b
 66482	67210	7945727767161067	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32s3/secure_boot_secure_features.c.obj	d5fb4728901857c3
-80	13082	7947259170226025	build.ninja	2a00e5858b7784e1
+53	15033	7947483578495057	build.ninja	2a00e5858b7784e1
 67013	67864	7945727772480635	esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32s3/esp_efuse_utility.c.obj	fd117f0e95097cbb
 66822	67661	7945727770565674	esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32s3/esp_efuse_fields.c.obj	5bfcf191b951f43d
 87082	87831	7945727973157827	esp-idf/unity/CMakeFiles/__idf_unity.dir/port/esp/unity_utils_memory_esp.c.obj	5abe0cd924647ff
@@ -895,7 +895,7 @@
 95276	96499	7945728055107165	esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/spi/esp_lcd_panel_io_spi.c.obj	2e5562e9f189a4dc
 72254	72861	7945727824892227	esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/block_cipher.c.obj	5652b17f610f7b0c
 67864	69237	7945727780985292	esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/esp_bootloader_desc.c.obj	cebe9d4c28c565e5
-68042	69375	7945727782765912	esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj	401cebd7b5d69b5f
+137	461	7947427337466418	esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj	f12d0943eecb64b4
 74601	75579	7945727848356185	esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/md.c.obj	6d7536db51d3b9cd
 92355	93588	7945728025890870	esp-idf/espressif__tinyusb/CMakeFiles/__idf_espressif__tinyusb.dir/src/portable/synopsys/dwc2/dwc2_common.c.obj	5b45295f5a029e86
 73878	74973	7945727841114731	esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/error.c.obj	f0d388932c26dc3d
@@ -1017,7 +1017,7 @@
 88476	89977	7945727987108209	esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security2.c.obj	1252b680b93c16f0
 89320	90267	7945727995537481	esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/src/ff.c.obj	e4a22d12374df0d5
 84755	85663	7945727949887134	esp-idf/esp_pm/libesp_pm.a	12173ea1e4c456c8
-351	434	7945792316771313	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
+343	432	7947427340354752	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
 89799	91198	7945728000329437	esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs/vfs_fat_sdmmc.c.obj	2dcf0b0f6583e793
 90267	90918	7945728005017771	esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON_Utils.c.obj	46d5450af47cc78d
 90298	91447	7945728005321107	esp-idf/usb/CMakeFiles/__idf_usb.dir/hub.c.obj	e08dac003ccb801b
@@ -1070,7 +1070,7 @@
 100824	101458	7945728110577445	esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_scan.pb-c.c.obj	3eec24bd52e9338d
 100741	101352	7945728109760297	esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_config.pb-c.c.obj	7cc00c6a30364bf9
 100911	101653	7945728111448712	esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_constants.pb-c.c.obj	700fc9a3874b02d3
-152	1046	7945757245883549	esp-idf/main/CMakeFiles/__idf_main.dir/audio.c.obj	7a3e6f5fda7c319a
+135	876	7947345502922942	esp-idf/main/CMakeFiles/__idf_main.dir/audio.c.obj	7a3e6f5fda7c319a
 100875	101591	7945728111091689	esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_ctrl.pb-c.c.obj	603942131fde3838
 97402	98291	7945728076358041	esp-idf/fatfs/libfatfs.a	8c03f8907662373e
 95966	97009	7945728062000276	esp-idf/protocomm/libprotocomm.a	2aa674018fe24da8
@@ -1083,702 +1083,187 @@
 102336	103033	7945728125702690	esp-idf/esp_hid/libesp_hid.a	7329c43d0e02fd76
 101154	102147	7945728113882291	esp-idf/espressif__tinyusb/libespressif__tinyusb.a	33a1ed4f8c8e403d
 102517	103116	7945728127520694	esp-idf/espcoredump/libespcoredump.a	d24679bc3b931df0
-143	1708	7945757245849447	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	738640912ca8a09a
+121	1076	7947371087184130	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	738640912ca8a09a
 102715	103264	7945728129496719	esp-idf/rt/librt.a	bce337a7ffee9450
 102574	103205	7945728128091094	esp-idf/mqtt/libmqtt.a	7b9301b7e68d7b32
 102695	103248	7945728129301742	esp-idf/perfmon/libperfmon.a	22b482d32aba982
-174	1581	7945757246158400	esp-idf/main/CMakeFiles/__idf_main.dir/encoder.c.obj	344cc43610242f9d
+164	1012	7947324832728637	esp-idf/main/CMakeFiles/__idf_main.dir/encoder.c.obj	344cc43610242f9d
 103264	103921	7945728134982401	esp-idf/main/CMakeFiles/__idf_main.dir/navigation.c.obj	11abe6e100c30a28
-143	875	7945770735712853	esp-idf/main/CMakeFiles/__idf_main.dir/headphone_detect.c.obj	60577e40fb86c3f4
+201	1522	7947324833097834	esp-idf/main/CMakeFiles/__idf_main.dir/headphone_detect.c.obj	60577e40fb86c3f4
 103033	103638	7945728132675596	esp-idf/espressif__esp_tinyusb/libespressif__esp_tinyusb.a	27fdaf5daddd7eca
-10265	11880	7945770836973597	app-template.elf	c38555dc68ddb5e9
+9697	11249	7947427433064096	app-template.elf	c38555dc68ddb5e9
 102973	103719	7945728132075201	esp-idf/wifi_provisioning/libwifi_provisioning.a	d2a3db6cf5122af0
 21446	44859	7943966237984110	bootloader-prefix/src/bootloader-stamp/bootloader-configure	43af81d5c6aa1b99
 21446	44859	7943966237984110	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure	43af81d5c6aa1b99
-131	311	7945792313889635	bootloader/bootloader.bin	61ede1e749d91df0
-131	311	7945792313889635	bootloader/bootloader.map	61ede1e749d91df0
-131	311	7945792313889635	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-131	311	7945792313889635	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-131	311	7945792313889635	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-312	351	7945792315699712	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-312	351	7945792315699712	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-351	434	7945792316771313	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-1002	10264	7945770836550078	esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-1002	10264	7945770836550078	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
+141	306	7947427337480536	bootloader/bootloader.bin	61ede1e749d91df0
+141	306	7947427337480536	bootloader/bootloader.map	61ede1e749d91df0
+141	306	7947427337480536	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
+141	306	7947427337480536	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
+141	306	7947427337480536	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
+307	343	7947427339165233	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
+307	343	7947427339165233	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
+343	432	7947427340354752	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
+559	9697	7947427432709113	esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
+559	9697	7947427432709113	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
 63260	63315	7943966422094011	CMakeFiles/app-template.elf.dir/project_elf_src_esp32s3.c.obj	bbff9c5871d71f6f
-11880	12214	7945770856400787	.bin_timestamp	930f6d35b826b9b0
-11880	12214	7945770856400787	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/.bin_timestamp	930f6d35b826b9b0
-434	8495	7945792316927614	CMakeFiles/flash	26ae3d211c276dba
-434	8495	7945792316927614	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/flash	26ae3d211c276dba
+11250	11744	7947427453473706	.bin_timestamp	930f6d35b826b9b0
+11250	11744	7947427453473706	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/.bin_timestamp	930f6d35b826b9b0
+11852	20101	7947427454615776	CMakeFiles/flash	26ae3d211c276dba
+11852	20101	7947427454615776	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/flash	26ae3d211c276dba
 216	1034	7945741626054235	esp-idf/main/CMakeFiles/__idf_main.dir/SD_CARD_OTA.c.obj	56398588b14e3cfc
 249	355	7945772859479040	ota_data_initial.bin	d34cbf4ac0504a4
 80	7124796	7945726686116239	CMakeFiles/confserver	89ae86eba7e30b8c
 80	7124796	7945726686116239	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/confserver	89ae86eba7e30b8c
-228	30159	7947259170226025	build.ninja	2a00e5858b7784e1
-232	536	7947259174186489	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-232	536	7947259174186489	bootloader/bootloader.elf	61ede1e749d91df0
-232	536	7947259174186489	bootloader/bootloader.bin	61ede1e749d91df0
-232	536	7947259174186489	bootloader/bootloader.map	61ede1e749d91df0
-232	536	7947259174186489	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-232	536	7947259174186489	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-232	536	7947259174186489	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-232	536	7947259174186489	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-537	606	7947259177226813	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-537	606	7947259177226813	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-606	761	7947259179349278	CMakeFiles/bootloader-complete	89d1ea52960daa44
-606	761	7947259179349278	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-606	761	7947259179349278	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-606	761	7947259179349278	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-224	4930	7947259174064498	esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj	936a7869bcc01efb
-4931	5603	7947259221138531	esp-idf/esp_app_format/libesp_app_format.a	a92609c3e1a54b09
-5603	23941	7947259410580467	esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-5603	23941	7947259410580467	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-23941	27375	7947259411252511	app-template.elf	c38555dc68ddb5e9
-27376	27955	7947259451286238	.bin_timestamp	930f6d35b826b9b0
-27376	27955	7947259451286238	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/.bin_timestamp	930f6d35b826b9b0
-27955	28130	7947259451356478	esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
-27955	28130	7947259451356478	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
-370	929	7947270187924124	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-370	929	7947270187924124	bootloader/bootloader.elf	61ede1e749d91df0
-370	929	7947270187924124	bootloader/bootloader.bin	61ede1e749d91df0
-370	929	7947270187924124	bootloader/bootloader.map	61ede1e749d91df0
-370	929	7947270187924124	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-370	929	7947270187924124	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-370	929	7947270187924124	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-370	929	7947270187924124	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-930	1014	7947270193553884	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-930	1014	7947270193553884	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-1015	1194	7947270196060008	CMakeFiles/bootloader-complete	89d1ea52960daa44
-1015	1194	7947270196060008	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-1015	1194	7947270196060008	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-1015	1194	7947270196060008	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-333	3179	7947270187579457	esp-idf/main/CMakeFiles/__idf_main.dir/announcements.c.obj	e8877fff18e79488
-297	3249	7947270187216074	esp-idf/main/CMakeFiles/__idf_main.dir/encoder.c.obj	344cc43610242f9d
-316	3258	7947270187412286	esp-idf/main/CMakeFiles/__idf_main.dir/sd_card.c.obj	9daca1742d1ad5c9
-254	3273	7947270186781114	esp-idf/main/CMakeFiles/__idf_main.dir/audio.c.obj	7a3e6f5fda7c319a
-236	3284	7947270186617663	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	738640912ca8a09a
-277	3317	7947270187016949	esp-idf/main/CMakeFiles/__idf_main.dir/buttons.c.obj	31e382022e2b7aef
-352	4096	7947270187772964	esp-idf/main/CMakeFiles/__idf_main.dir/headphone_detect.c.obj	60577e40fb86c3f4
-4096	4853	7947270225194175	esp-idf/main/libmain.a	5c004a6c0de87704
-4853	25099	7947270434835171	esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-4853	25099	7947270434835171	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-25099	28206	7947270435236550	app-template.elf	c38555dc68ddb5e9
-28207	28770	7947270471844479	.bin_timestamp	930f6d35b826b9b0
-28207	28770	7947270471844479	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/.bin_timestamp	930f6d35b826b9b0
-28770	28952	7947270471943203	esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
-28770	28952	7947270471943203	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
-28952	37552	7947270473774522	CMakeFiles/flash	26ae3d211c276dba
-28952	37552	7947270473774522	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/flash	26ae3d211c276dba
-267	709	7947279435513147	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-267	709	7947279435513147	bootloader/bootloader.elf	61ede1e749d91df0
-267	709	7947279435513147	bootloader/bootloader.bin	61ede1e749d91df0
-267	709	7947279435513147	bootloader/bootloader.map	61ede1e749d91df0
-267	709	7947279435513147	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-267	709	7947279435513147	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-267	709	7947279435513147	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-267	709	7947279435513147	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-710	788	7947279439953306	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-710	788	7947279439953306	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-788	979	7947279442466399	CMakeFiles/bootloader-complete	89d1ea52960daa44
-788	979	7947279442466399	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-788	979	7947279442466399	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-788	979	7947279442466399	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-248	1757	7947279435330228	esp-idf/main/CMakeFiles/__idf_main.dir/usb_msc.c.obj	b540b8cff439aade
-213	2109	7947279434975789	esp-idf/main/CMakeFiles/__idf_main.dir/audio.c.obj	7a3e6f5fda7c319a
-196	2115	7947279434792591	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	738640912ca8a09a
-231	2167	7947279435154561	esp-idf/main/CMakeFiles/__idf_main.dir/sd_card.c.obj	9daca1742d1ad5c9
-2167	2385	7947279454511180	esp-idf/main/libmain.a	5c004a6c0de87704
-2386	15526	7947279587585329	esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-2386	15526	7947279587585329	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-15526	17664	7947279588097063	app-template.elf	c38555dc68ddb5e9
-17665	18170	7947279614396855	.bin_timestamp	930f6d35b826b9b0
-17665	18170	7947279614396855	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/.bin_timestamp	930f6d35b826b9b0
-18171	18347	7947279614548198	esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
-18171	18347	7947279614548198	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
-18347	26786	7947279616306138	CMakeFiles/flash	26ae3d211c276dba
-18347	26786	7947279616306138	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/flash	26ae3d211c276dba
-305	449	7947282474918266	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	738640912ca8a09a
-339	494	7947282475246781	esp-idf/main/CMakeFiles/__idf_main.dir/sd_card.c.obj	9daca1742d1ad5c9
-322	496	7947282475086771	esp-idf/main/CMakeFiles/__idf_main.dir/audio.c.obj	7a3e6f5fda7c319a
-358	507	7947282475438857	esp-idf/main/CMakeFiles/__idf_main.dir/usb_msc.c.obj	b540b8cff439aade
-508	829	7947282476933203	esp-idf/main/libmain.a	5c004a6c0de87704
-378	916	7947282475639627	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-378	916	7947282475639627	bootloader/bootloader.elf	61ede1e749d91df0
-378	916	7947282475639627	bootloader/bootloader.bin	61ede1e749d91df0
-378	916	7947282475639627	bootloader/bootloader.map	61ede1e749d91df0
-378	916	7947282475639627	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-378	916	7947282475639627	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-378	916	7947282475639627	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-378	916	7947282475639627	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-916	992	7947282481034779	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-916	992	7947282481034779	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-992	1157	7947282483326171	CMakeFiles/bootloader-complete	89d1ea52960daa44
-992	1157	7947282483326171	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-992	1157	7947282483326171	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-992	1157	7947282483326171	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-829	13892	7947282610382518	esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-829	13892	7947282610382518	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-13893	16070	7947282610795725	app-template.elf	c38555dc68ddb5e9
-16071	16608	7947282637774350	.bin_timestamp	930f6d35b826b9b0
-16071	16608	7947282637774350	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/.bin_timestamp	930f6d35b826b9b0
-16609	16777	7947282637934482	esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
-16609	16777	7947282637934482	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
-16777	25242	7947282639637467	CMakeFiles/flash	26ae3d211c276dba
-16777	25242	7947282639637467	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/flash	26ae3d211c276dba
-192	314	7947283657077553	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	738640912ca8a09a
-211	359	7947283657270232	esp-idf/main/CMakeFiles/__idf_main.dir/audio.c.obj	7a3e6f5fda7c319a
-232	375	7947283657475682	esp-idf/main/CMakeFiles/__idf_main.dir/sd_card.c.obj	9daca1742d1ad5c9
-252	386	7947283657663959	esp-idf/main/CMakeFiles/__idf_main.dir/usb_msc.c.obj	b540b8cff439aade
-386	607	7947283659015168	esp-idf/main/libmain.a	5c004a6c0de87704
-270	648	7947283657857857	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-270	648	7947283657857857	bootloader/bootloader.elf	61ede1e749d91df0
-270	648	7947283657857857	bootloader/bootloader.bin	61ede1e749d91df0
-270	648	7947283657857857	bootloader/bootloader.map	61ede1e749d91df0
-270	648	7947283657857857	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-270	648	7947283657857857	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-270	648	7947283657857857	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-270	648	7947283657857857	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-648	724	7947283661589519	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-648	724	7947283661589519	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-724	880	7947283663844178	CMakeFiles/bootloader-complete	89d1ea52960daa44
-724	880	7947283663844178	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-724	880	7947283663844178	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-724	880	7947283663844178	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-607	13657	7947283791319055	esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-607	13657	7947283791319055	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-13657	15753	7947283791712124	app-template.elf	c38555dc68ddb5e9
-15754	16324	7947283818275627	.bin_timestamp	930f6d35b826b9b0
-15754	16324	7947283818275627	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/.bin_timestamp	930f6d35b826b9b0
-16324	16493	7947283818393820	esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
-16324	16493	7947283818393820	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
-16493	24972	7947283820088278	CMakeFiles/flash	26ae3d211c276dba
-16493	24972	7947283820088278	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/flash	26ae3d211c276dba
-329	1127	7947292532416293	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-329	1127	7947292532416293	bootloader/bootloader.elf	61ede1e749d91df0
-329	1127	7947292532416293	bootloader/bootloader.bin	61ede1e749d91df0
-329	1127	7947292532416293	bootloader/bootloader.map	61ede1e749d91df0
-329	1127	7947292532416293	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-329	1127	7947292532416293	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-329	1127	7947292532416293	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-329	1127	7947292532416293	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-1128	1288	7947292540410549	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-1128	1288	7947292540410549	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-1288	1904	7947292548006076	CMakeFiles/bootloader-complete	89d1ea52960daa44
-1288	1904	7947292548006076	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-1288	1904	7947292548006076	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-1288	1904	7947292548006076	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-250	2651	7947292531622019	esp-idf/main/CMakeFiles/__idf_main.dir/encoder.c.obj	344cc43610242f9d
-232	2655	7947292531444678	esp-idf/main/CMakeFiles/__idf_main.dir/buttons.c.obj	31e382022e2b7aef
-307	2831	7947292532193700	esp-idf/main/CMakeFiles/__idf_main.dir/headphone_detect.c.obj	60577e40fb86c3f4
-286	2868	7947292531978199	esp-idf/main/CMakeFiles/__idf_main.dir/announcements.c.obj	e8877fff18e79488
-267	2910	7947292531791167	esp-idf/main/CMakeFiles/__idf_main.dir/sd_card.c.obj	9daca1742d1ad5c9
-210	2933	7947292531220160	esp-idf/main/CMakeFiles/__idf_main.dir/audio.c.obj	7a3e6f5fda7c319a
-192	2999	7947292531010165	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	738640912ca8a09a
-2999	3270	7947292559087493	esp-idf/main/libmain.a	5c004a6c0de87704
-3270	21471	7947292742991850	esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-3270	21471	7947292742991850	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-21472	23723	7947292743832775	app-template.elf	c38555dc68ddb5e9
-23724	24278	7947292771803076	.bin_timestamp	930f6d35b826b9b0
-23724	24278	7947292771803076	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/.bin_timestamp	930f6d35b826b9b0
-24278	24442	7947292771903890	esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
-24278	24442	7947292771903890	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
-24442	32880	7947292773432253	CMakeFiles/flash	26ae3d211c276dba
-24442	32880	7947292773432253	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/flash	26ae3d211c276dba
-222	580	7947303562597912	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-222	580	7947303562597912	bootloader/bootloader.elf	61ede1e749d91df0
-222	580	7947303562597912	bootloader/bootloader.bin	61ede1e749d91df0
-222	580	7947303562597912	bootloader/bootloader.map	61ede1e749d91df0
-222	580	7947303562597912	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-222	580	7947303562597912	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-222	580	7947303562597912	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-222	580	7947303562597912	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-580	652	7947303566167690	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-580	652	7947303566167690	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-652	813	7947303568402720	CMakeFiles/bootloader-complete	89d1ea52960daa44
-652	813	7947303568402720	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-652	813	7947303568402720	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-652	813	7947303568402720	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-207	1705	7947303562410129	esp-idf/main/CMakeFiles/__idf_main.dir/audio.c.obj	7a3e6f5fda7c319a
-194	1792	7947303562308424	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	738640912ca8a09a
-1792	2042	7947303578269919	esp-idf/main/libmain.a	5c004a6c0de87704
-2042	15119	7947303711120632	esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-2042	15119	7947303711120632	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-15119	17267	7947303711549739	app-template.elf	c38555dc68ddb5e9
-17268	17835	7947303738586940	.bin_timestamp	930f6d35b826b9b0
-17268	17835	7947303738586940	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/.bin_timestamp	930f6d35b826b9b0
-17835	17992	7947303738718098	esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
-17835	17992	7947303738718098	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
-17992	26502	7947303740297467	CMakeFiles/flash	26ae3d211c276dba
-17992	26502	7947303740297467	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/flash	26ae3d211c276dba
-246	703	7947318325393204	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-246	703	7947318325393204	bootloader/bootloader.elf	61ede1e749d91df0
-246	703	7947318325393204	bootloader/bootloader.bin	61ede1e749d91df0
-246	703	7947318325393204	bootloader/bootloader.map	61ede1e749d91df0
-246	703	7947318325393204	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-246	703	7947318325393204	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-246	703	7947318325393204	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-246	703	7947318325393204	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-704	785	7947318329974074	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-704	785	7947318329974074	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-785	950	7947318332318226	CMakeFiles/bootloader-complete	89d1ea52960daa44
-785	950	7947318332318226	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-785	950	7947318332318226	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-785	950	7947318332318226	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-228	1882	7947318325217772	esp-idf/main/CMakeFiles/__idf_main.dir/announcements.c.obj	e8877fff18e79488
-194	2014	7947318324855230	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	738640912ca8a09a
-197	499	7947318813641092	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-197	499	7947318813641092	bootloader/bootloader.elf	61ede1e749d91df0
-197	499	7947318813641092	bootloader/bootloader.bin	61ede1e749d91df0
-197	499	7947318813641092	bootloader/bootloader.map	61ede1e749d91df0
-197	499	7947318813641092	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-197	499	7947318813641092	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-197	499	7947318813641092	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-197	499	7947318813641092	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-500	572	7947318816643187	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-500	572	7947318816643187	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-572	731	7947318818858933	CMakeFiles/bootloader-complete	89d1ea52960daa44
-572	731	7947318818858933	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-572	731	7947318818858933	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-572	731	7947318818858933	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-180	1517	7947318813461358	esp-idf/main/CMakeFiles/__idf_main.dir/audio.c.obj	7a3e6f5fda7c319a
-1517	1782	7947318826844802	esp-idf/main/libmain.a	5c004a6c0de87704
-1782	14745	7947318958596199	esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-1782	14745	7947318958596199	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-14745	16916	7947318959111710	app-template.elf	c38555dc68ddb5e9
-16917	17692	7947318988401382	.bin_timestamp	930f6d35b826b9b0
-16917	17692	7947318988401382	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/.bin_timestamp	930f6d35b826b9b0
-17692	17892	7947318988569371	esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
-17692	17892	7947318988569371	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
-17893	26408	7947318990585604	CMakeFiles/flash	26ae3d211c276dba
-17893	26408	7947318990585604	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/flash	26ae3d211c276dba
-228	524	7947320084964863	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-228	524	7947320084964863	bootloader/bootloader.elf	61ede1e749d91df0
-228	524	7947320084964863	bootloader/bootloader.bin	61ede1e749d91df0
-228	524	7947320084964863	bootloader/bootloader.map	61ede1e749d91df0
-228	524	7947320084964863	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-228	524	7947320084964863	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-228	524	7947320084964863	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-228	524	7947320084964863	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-525	587	7947320087924832	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-525	587	7947320087924832	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-587	685	7947320089465266	CMakeFiles/bootloader-complete	89d1ea52960daa44
-587	685	7947320089465266	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-587	685	7947320089465266	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-587	685	7947320089465266	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-179	1564	7947320084477043	esp-idf/main/CMakeFiles/__idf_main.dir/encoder.c.obj	344cc43610242f9d
-215	1565	7947320084837314	esp-idf/main/CMakeFiles/__idf_main.dir/headphone_detect.c.obj	60577e40fb86c3f4
-191	1566	7947320084597378	esp-idf/main/CMakeFiles/__idf_main.dir/sd_card.c.obj	9daca1742d1ad5c9
-169	1567	7947320084359901	esp-idf/main/CMakeFiles/__idf_main.dir/buttons.c.obj	31e382022e2b7aef
-203	1600	7947320084716337	esp-idf/main/CMakeFiles/__idf_main.dir/announcements.c.obj	e8877fff18e79488
-150	1614	7947320084140510	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	738640912ca8a09a
-158	2110	7947320084272069	esp-idf/main/CMakeFiles/__idf_main.dir/audio.c.obj	7a3e6f5fda7c319a
-2110	2512	7947320103783314	esp-idf/main/libmain.a	5c004a6c0de87704
-2512	12974	7947320212033195	esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-2512	12974	7947320212033195	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-12974	14868	7947320212422958	app-template.elf	c38555dc68ddb5e9
-14868	15265	7947320235217464	.bin_timestamp	930f6d35b826b9b0
-14868	15265	7947320235217464	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/.bin_timestamp	930f6d35b826b9b0
-15265	15353	7947320235337734	esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
-15265	15353	7947320235337734	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
-15353	23599	7947320236217084	CMakeFiles/flash	26ae3d211c276dba
-15353	23599	7947320236217084	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/flash	26ae3d211c276dba
-214	841	7947324833230905	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-214	841	7947324833230905	bootloader/bootloader.elf	61ede1e749d91df0
-214	841	7947324833230905	bootloader/bootloader.bin	61ede1e749d91df0
-214	841	7947324833230905	bootloader/bootloader.map	61ede1e749d91df0
-214	841	7947324833230905	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-214	841	7947324833230905	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-214	841	7947324833230905	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-214	841	7947324833230905	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-155	1009	7947324832641971	esp-idf/main/CMakeFiles/__idf_main.dir/buttons.c.obj	31e382022e2b7aef
-164	1012	7947324832728637	esp-idf/main/CMakeFiles/__idf_main.dir/encoder.c.obj	344cc43610242f9d
-842	1029	7947324839502192	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-842	1029	7947324839502192	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-176	1042	7947324832839875	esp-idf/main/CMakeFiles/__idf_main.dir/sd_card.c.obj	9daca1742d1ad5c9
-135	1043	7947324832442573	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	738640912ca8a09a
-145	1098	7947324832516783	esp-idf/main/CMakeFiles/__idf_main.dir/audio.c.obj	7a3e6f5fda7c319a
-1029	1154	7947324842538639	CMakeFiles/bootloader-complete	89d1ea52960daa44
-1029	1154	7947324842538639	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-1029	1154	7947324842538639	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-1029	1154	7947324842538639	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-201	1522	7947324833097834	esp-idf/main/CMakeFiles/__idf_main.dir/headphone_detect.c.obj	60577e40fb86c3f4
-141	394	7947325751168093	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-141	394	7947325751168093	bootloader/bootloader.elf	61ede1e749d91df0
-141	394	7947325751168093	bootloader/bootloader.bin	61ede1e749d91df0
-141	394	7947325751168093	bootloader/bootloader.map	61ede1e749d91df0
-141	394	7947325751168093	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-141	394	7947325751168093	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-141	394	7947325751168093	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-141	394	7947325751168093	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-394	483	7947325753737541	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-394	483	7947325753737541	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-483	581	7947325755549767	CMakeFiles/bootloader-complete	89d1ea52960daa44
-483	581	7947325755549767	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-483	581	7947325755549767	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-483	581	7947325755549767	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-128	301	7947326259103813	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-128	301	7947326259103813	bootloader/bootloader.elf	61ede1e749d91df0
-128	301	7947326259103813	bootloader/bootloader.bin	61ede1e749d91df0
-128	301	7947326259103813	bootloader/bootloader.map	61ede1e749d91df0
-128	301	7947326259103813	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-128	301	7947326259103813	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-128	301	7947326259103813	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-128	301	7947326259103813	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-301	338	7947326260871871	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-301	338	7947326260871871	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-338	419	7947326262001538	CMakeFiles/bootloader-complete	89d1ea52960daa44
-338	419	7947326262001538	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-338	419	7947326262001538	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-338	419	7947326262001538	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-130	305	7947327055941416	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-130	305	7947327055941416	bootloader/bootloader.elf	61ede1e749d91df0
-130	305	7947327055941416	bootloader/bootloader.bin	61ede1e749d91df0
-130	305	7947327055941416	bootloader/bootloader.map	61ede1e749d91df0
-130	305	7947327055941416	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-130	305	7947327055941416	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-130	305	7947327055941416	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-130	305	7947327055941416	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-305	344	7947327057692082	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-305	344	7947327057692082	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-344	425	7947327058833069	CMakeFiles/bootloader-complete	89d1ea52960daa44
-344	425	7947327058833069	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-344	425	7947327058833069	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-344	425	7947327058833069	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-138	312	7947327535364300	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-138	312	7947327535364300	bootloader/bootloader.elf	61ede1e749d91df0
-138	312	7947327535364300	bootloader/bootloader.bin	61ede1e749d91df0
-138	312	7947327535364300	bootloader/bootloader.map	61ede1e749d91df0
-138	312	7947327535364300	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-138	312	7947327535364300	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-138	312	7947327535364300	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-138	312	7947327535364300	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-312	353	7947327537110216	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-312	353	7947327537110216	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-353	435	7947327538284206	CMakeFiles/bootloader-complete	89d1ea52960daa44
-353	435	7947327538284206	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-353	435	7947327538284206	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-353	435	7947327538284206	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-130	299	7947327820448717	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-130	299	7947327820448717	bootloader/bootloader.elf	61ede1e749d91df0
-130	299	7947327820448717	bootloader/bootloader.bin	61ede1e749d91df0
-130	299	7947327820448717	bootloader/bootloader.map	61ede1e749d91df0
-130	299	7947327820448717	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-130	299	7947327820448717	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-130	299	7947327820448717	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-130	299	7947327820448717	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-300	337	7947327822145699	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-300	337	7947327822145699	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-337	415	7947327823247022	CMakeFiles/bootloader-complete	89d1ea52960daa44
-337	415	7947327823247022	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-337	415	7947327823247022	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-337	415	7947327823247022	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-125	291	7947328831773690	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-125	291	7947328831773690	bootloader/bootloader.elf	61ede1e749d91df0
-125	291	7947328831773690	bootloader/bootloader.bin	61ede1e749d91df0
-125	291	7947328831773690	bootloader/bootloader.map	61ede1e749d91df0
-125	291	7947328831773690	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-125	291	7947328831773690	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-125	291	7947328831773690	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-125	291	7947328831773690	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-291	327	7947328833391873	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-291	327	7947328833391873	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-327	409	7947328834548935	CMakeFiles/bootloader-complete	89d1ea52960daa44
-327	409	7947328834548935	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-327	409	7947328834548935	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-327	409	7947328834548935	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-137	310	7947330197087238	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-137	310	7947330197087238	bootloader/bootloader.elf	61ede1e749d91df0
-137	310	7947330197087238	bootloader/bootloader.bin	61ede1e749d91df0
-137	310	7947330197087238	bootloader/bootloader.map	61ede1e749d91df0
-137	310	7947330197087238	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-137	310	7947330197087238	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-137	310	7947330197087238	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-137	310	7947330197087238	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-311	347	7947330198843635	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-311	347	7947330198843635	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-347	424	7947330199929078	CMakeFiles/bootloader-complete	89d1ea52960daa44
-347	424	7947330199929078	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-347	424	7947330199929078	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-347	424	7947330199929078	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-121	291	7947331626502917	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-121	291	7947331626502917	bootloader/bootloader.elf	61ede1e749d91df0
-121	291	7947331626502917	bootloader/bootloader.bin	61ede1e749d91df0
-121	291	7947331626502917	bootloader/bootloader.map	61ede1e749d91df0
-121	291	7947331626502917	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-121	291	7947331626502917	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-121	291	7947331626502917	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-121	291	7947331626502917	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-291	330	7947331628197293	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-291	330	7947331628197293	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-330	411	7947331629351305	CMakeFiles/bootloader-complete	89d1ea52960daa44
-330	411	7947331629351305	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-330	411	7947331629351305	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-330	411	7947331629351305	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-113	847	7947331626425773	esp-idf/main/CMakeFiles/__idf_main.dir/announcements.c.obj	e8877fff18e79488
-847	970	7947331633770676	esp-idf/main/libmain.a	5c004a6c0de87704
-970	9745	7947331722347491	esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-970	9745	7947331722347491	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-132	298	7947331925192964	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-132	298	7947331925192964	bootloader/bootloader.elf	61ede1e749d91df0
-132	298	7947331925192964	bootloader/bootloader.bin	61ede1e749d91df0
-132	298	7947331925192964	bootloader/bootloader.map	61ede1e749d91df0
-132	298	7947331925192964	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-132	298	7947331925192964	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-132	298	7947331925192964	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-132	298	7947331925192964	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-298	337	7947331926859126	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-298	337	7947331926859126	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-337	416	7947331927987273	CMakeFiles/bootloader-complete	89d1ea52960daa44
-337	416	7947331927987273	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-337	416	7947331927987273	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-337	416	7947331927987273	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-143	324	7947333262795271	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-143	324	7947333262795271	bootloader/bootloader.elf	61ede1e749d91df0
-143	324	7947333262795271	bootloader/bootloader.bin	61ede1e749d91df0
-143	324	7947333262795271	bootloader/bootloader.map	61ede1e749d91df0
-143	324	7947333262795271	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-143	324	7947333262795271	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-143	324	7947333262795271	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-143	324	7947333262795271	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-324	363	7947333264607621	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-324	363	7947333264607621	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-363	446	7947333265768321	CMakeFiles/bootloader-complete	89d1ea52960daa44
-363	446	7947333265768321	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-363	446	7947333265768321	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-363	446	7947333265768321	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-135	906	7947333262718165	esp-idf/main/CMakeFiles/__idf_main.dir/audio.c.obj	7a3e6f5fda7c319a
-907	1030	7947333270427140	esp-idf/main/libmain.a	5c004a6c0de87704
-1030	10214	7947333362904624	esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-1030	10214	7947333362904624	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-10214	11844	7947333363501034	app-template.elf	c38555dc68ddb5e9
-11844	12297	7947333384258479	.bin_timestamp	930f6d35b826b9b0
-11844	12297	7947333384258479	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/.bin_timestamp	930f6d35b826b9b0
-12297	12402	7947333384335637	esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
-12297	12402	7947333384335637	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
-12402	20647	7947333385388009	CMakeFiles/flash	26ae3d211c276dba
-12402	20647	7947333385388009	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/flash	26ae3d211c276dba
-153	382	7947343574531143	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-153	382	7947343574531143	bootloader/bootloader.elf	61ede1e749d91df0
-153	382	7947343574531143	bootloader/bootloader.bin	61ede1e749d91df0
-153	382	7947343574531143	bootloader/bootloader.map	61ede1e749d91df0
-153	382	7947343574531143	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-153	382	7947343574531143	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-153	382	7947343574531143	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-153	382	7947343574531143	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-383	427	7947343576818567	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-383	427	7947343576818567	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-427	525	7947343578181419	CMakeFiles/bootloader-complete	89d1ea52960daa44
-427	525	7947343578181419	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-427	525	7947343578181419	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-427	525	7947343578181419	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-133	1125	7947343574224261	esp-idf/main/CMakeFiles/__idf_main.dir/audio.c.obj	7a3e6f5fda7c319a
-143	1137	7947343574420918	esp-idf/main/CMakeFiles/__idf_main.dir/announcements.c.obj	e8877fff18e79488
-135	303	7947344486981570	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-135	303	7947344486981570	bootloader/bootloader.elf	61ede1e749d91df0
-135	303	7947344486981570	bootloader/bootloader.bin	61ede1e749d91df0
-135	303	7947344486981570	bootloader/bootloader.map	61ede1e749d91df0
-135	303	7947344486981570	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-135	303	7947344486981570	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-135	303	7947344486981570	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-135	303	7947344486981570	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-303	341	7947344488666606	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-303	341	7947344488666606	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-341	419	7947344489769725	CMakeFiles/bootloader-complete	89d1ea52960daa44
-341	419	7947344489769725	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-341	419	7947344489769725	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-341	419	7947344489769725	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-126	955	7947344486899915	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	738640912ca8a09a
-955	1080	7947344495182241	esp-idf/main/libmain.a	5c004a6c0de87704
-1080	9828	7947344583443261	esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-1080	9828	7947344583443261	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-143	313	7947345503049682	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-143	313	7947345503049682	bootloader/bootloader.elf	61ede1e749d91df0
-143	313	7947345503049682	bootloader/bootloader.bin	61ede1e749d91df0
-143	313	7947345503049682	bootloader/bootloader.map	61ede1e749d91df0
-143	313	7947345503049682	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-143	313	7947345503049682	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-143	313	7947345503049682	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-143	313	7947345503049682	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-314	351	7947345504748438	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-314	351	7947345504748438	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-351	434	7947345505899573	CMakeFiles/bootloader-complete	89d1ea52960daa44
-351	434	7947345505899573	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-351	434	7947345505899573	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-351	434	7947345505899573	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-135	876	7947345502922942	esp-idf/main/CMakeFiles/__idf_main.dir/audio.c.obj	7a3e6f5fda7c319a
-876	996	7947345510375193	esp-idf/main/libmain.a	5c004a6c0de87704
-996	9793	7947345599222354	esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-996	9793	7947345599222354	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-136	302	7947348312505378	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-136	302	7947348312505378	bootloader/bootloader.elf	61ede1e749d91df0
-136	302	7947348312505378	bootloader/bootloader.bin	61ede1e749d91df0
-136	302	7947348312505378	bootloader/bootloader.map	61ede1e749d91df0
-136	302	7947348312505378	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-136	302	7947348312505378	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-136	302	7947348312505378	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-136	302	7947348312505378	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-302	341	7947348314159901	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-302	341	7947348314159901	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-341	423	7947348315240268	CMakeFiles/bootloader-complete	89d1ea52960daa44
-341	423	7947348315240268	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-341	423	7947348315240268	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-341	423	7947348315240268	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-136	330	7947353187878880	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-136	330	7947353187878880	bootloader/bootloader.elf	61ede1e749d91df0
-136	330	7947353187878880	bootloader/bootloader.bin	61ede1e749d91df0
-136	330	7947353187878880	bootloader/bootloader.map	61ede1e749d91df0
-136	330	7947353187878880	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-136	330	7947353187878880	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-136	330	7947353187878880	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-136	330	7947353187878880	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-331	375	7947353189827289	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-331	375	7947353189827289	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-375	512	7947353191541621	CMakeFiles/bootloader-complete	89d1ea52960daa44
-375	512	7947353191541621	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-375	512	7947353191541621	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-375	512	7947353191541621	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-117	1085	7947353187548630	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	738640912ca8a09a
-151	346	7947355614484108	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-151	346	7947355614484108	bootloader/bootloader.elf	61ede1e749d91df0
-151	346	7947355614484108	bootloader/bootloader.bin	61ede1e749d91df0
-151	346	7947355614484108	bootloader/bootloader.map	61ede1e749d91df0
-151	346	7947355614484108	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-151	346	7947355614484108	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-151	346	7947355614484108	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-151	346	7947355614484108	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-346	388	7947355616419551	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-346	388	7947355616419551	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-388	475	7947355617664797	CMakeFiles/bootloader-complete	89d1ea52960daa44
-388	475	7947355617664797	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-388	475	7947355617664797	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-388	475	7947355617664797	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-134	344	7947359637591566	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-134	344	7947359637591566	bootloader/bootloader.elf	61ede1e749d91df0
-134	344	7947359637591566	bootloader/bootloader.bin	61ede1e749d91df0
-134	344	7947359637591566	bootloader/bootloader.map	61ede1e749d91df0
-134	344	7947359637591566	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-134	344	7947359637591566	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-134	344	7947359637591566	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-134	344	7947359637591566	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-345	387	7947359639634915	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-345	387	7947359639634915	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-387	479	7947359640979734	CMakeFiles/bootloader-complete	89d1ea52960daa44
-387	479	7947359640979734	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-387	479	7947359640979734	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-387	479	7947359640979734	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-138	346	7947360376531591	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-138	346	7947360376531591	bootloader/bootloader.elf	61ede1e749d91df0
-138	346	7947360376531591	bootloader/bootloader.bin	61ede1e749d91df0
-138	346	7947360376531591	bootloader/bootloader.map	61ede1e749d91df0
-138	346	7947360376531591	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-138	346	7947360376531591	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-138	346	7947360376531591	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-138	346	7947360376531591	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-347	388	7947360378612945	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-347	388	7947360378612945	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-388	477	7947360379843280	CMakeFiles/bootloader-complete	89d1ea52960daa44
-388	477	7947360379843280	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-388	477	7947360379843280	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-388	477	7947360379843280	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-193	386	7947364178994535	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-193	386	7947364178994535	bootloader/bootloader.elf	61ede1e749d91df0
-193	386	7947364178994535	bootloader/bootloader.bin	61ede1e749d91df0
-193	386	7947364178994535	bootloader/bootloader.map	61ede1e749d91df0
-193	386	7947364178994535	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-193	386	7947364178994535	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-193	386	7947364178994535	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-193	386	7947364178994535	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-386	428	7947364180918499	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-386	428	7947364180918499	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-428	514	7947364182151229	CMakeFiles/bootloader-complete	89d1ea52960daa44
-428	514	7947364182151229	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-428	514	7947364182151229	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-428	514	7947364182151229	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-138	333	7947367159188809	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-138	333	7947367159188809	bootloader/bootloader.elf	61ede1e749d91df0
-138	333	7947367159188809	bootloader/bootloader.bin	61ede1e749d91df0
-138	333	7947367159188809	bootloader/bootloader.map	61ede1e749d91df0
-138	333	7947367159188809	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-138	333	7947367159188809	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-138	333	7947367159188809	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-138	333	7947367159188809	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-334	374	7947367161142272	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-334	374	7947367161142272	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-374	459	7947367162324714	CMakeFiles/bootloader-complete	89d1ea52960daa44
-374	459	7947367162324714	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-374	459	7947367162324714	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-374	459	7947367162324714	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-149	347	7947367991525694	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-149	347	7947367991525694	bootloader/bootloader.elf	61ede1e749d91df0
-149	347	7947367991525694	bootloader/bootloader.bin	61ede1e749d91df0
-149	347	7947367991525694	bootloader/bootloader.map	61ede1e749d91df0
-149	347	7947367991525694	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-149	347	7947367991525694	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-149	347	7947367991525694	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-149	347	7947367991525694	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-348	388	7947367993516654	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-348	388	7947367993516654	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-388	481	7947367994767293	CMakeFiles/bootloader-complete	89d1ea52960daa44
-388	481	7947367994767293	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-388	481	7947367994767293	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-388	481	7947367994767293	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-142	357	7947371087393454	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-142	357	7947371087393454	bootloader/bootloader.elf	61ede1e749d91df0
-142	357	7947371087393454	bootloader/bootloader.bin	61ede1e749d91df0
-142	357	7947371087393454	bootloader/bootloader.map	61ede1e749d91df0
-142	357	7947371087393454	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-142	357	7947371087393454	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-142	357	7947371087393454	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-142	357	7947371087393454	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-358	402	7947371089543215	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-358	402	7947371089543215	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-402	497	7947371090863009	CMakeFiles/bootloader-complete	89d1ea52960daa44
-402	497	7947371090863009	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-402	497	7947371090863009	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-402	497	7947371090863009	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-130	1001	7947371087270592	esp-idf/main/CMakeFiles/__idf_main.dir/announcements.c.obj	e8877fff18e79488
-121	1076	7947371087184130	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	738640912ca8a09a
-1076	1200	7947371096726090	esp-idf/main/libmain.a	5c004a6c0de87704
-1200	10099	7947371186559132	esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-1200	10099	7947371186559132	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-140	316	7947373806285334	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-140	316	7947373806285334	bootloader/bootloader.elf	61ede1e749d91df0
-140	316	7947373806285334	bootloader/bootloader.bin	61ede1e749d91df0
-140	316	7947373806285334	bootloader/bootloader.map	61ede1e749d91df0
-140	316	7947373806285334	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-140	316	7947373806285334	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-140	316	7947373806285334	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-140	316	7947373806285334	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-316	352	7947373808089729	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-316	352	7947373808089729	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-352	488	7947373809749314	CMakeFiles/bootloader-complete	89d1ea52960daa44
-352	488	7947373809749314	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-352	488	7947373809749314	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-352	488	7947373809749314	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-132	924	7947373806216965	esp-idf/main/CMakeFiles/__idf_main.dir/announcements.c.obj	e8877fff18e79488
-924	1040	7947373814165554	esp-idf/main/libmain.a	5c004a6c0de87704
-1040	9797	7947373902576055	esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-1040	9797	7947373902576055	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
-9798	11305	7947373902913947	app-template.elf	c38555dc68ddb5e9
-11305	11706	7947373921920900	.bin_timestamp	930f6d35b826b9b0
-11305	11706	7947373921920900	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/.bin_timestamp	930f6d35b826b9b0
-11706	11800	7947373921991448	esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
-11706	11800	7947373921991448	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
-142	242	7947373966810620	esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
-142	242	7947373966810620	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
-135	306	7947373966719445	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-135	306	7947373966719445	bootloader/bootloader.elf	61ede1e749d91df0
-135	306	7947373966719445	bootloader/bootloader.bin	61ede1e749d91df0
-135	306	7947373966719445	bootloader/bootloader.map	61ede1e749d91df0
-135	306	7947373966719445	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
-135	306	7947373966719445	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
-135	306	7947373966719445	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
-135	306	7947373966719445	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
-306	339	7947373968443181	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-306	339	7947373968443181	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
-339	415	7947373969476736	CMakeFiles/bootloader-complete	89d1ea52960daa44
-339	415	7947373969476736	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-339	415	7947373969476736	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
-339	415	7947373969476736	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
-416	8655	7947373969508173	CMakeFiles/flash	26ae3d211c276dba
-416	8655	7947373969508173	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/flash	26ae3d211c276dba
+75	15571	7947483578495057	build.ninja	2a00e5858b7784e1
+279	504	7947483582535273	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
+279	504	7947483582535273	bootloader/bootloader.elf	61ede1e749d91df0
+279	504	7947483582535273	bootloader/bootloader.bin	61ede1e749d91df0
+279	504	7947483582535273	bootloader/bootloader.map	61ede1e749d91df0
+279	504	7947483582535273	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
+279	504	7947483582535273	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
+279	504	7947483582535273	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
+279	504	7947483582535273	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
+505	551	7947483584789347	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
+505	551	7947483584789347	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
+551	649	7947483586167446	CMakeFiles/bootloader-complete	89d1ea52960daa44
+551	649	7947483586167446	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
+551	649	7947483586167446	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
+551	649	7947483586167446	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
+255	1209	7947483582293015	esp-idf/main/CMakeFiles/__idf_main.dir/battery.c.obj	2d21494f95a2501b
+268	1232	7947483582413821	esp-idf/main/CMakeFiles/__idf_main.dir/quiz.c.obj	979b6c90c95d321f
+1232	1369	7947483592050436	esp-idf/main/libmain.a	afbe6910a4e3ccd0
+1369	13640	7947483715677428	esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
+1369	13640	7947483715677428	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
+13640	15349	7947483716137293	app-template.elf	c38555dc68ddb5e9
+15349	15845	7947483738120867	.bin_timestamp	930f6d35b826b9b0
+15349	15845	7947483738120867	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/.bin_timestamp	930f6d35b826b9b0
+15845	15937	7947483738188946	esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
+15845	15937	7947483738188946	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
+148	1353	7947487246924721	esp-idf/main/CMakeFiles/__idf_main.dir/buttons.c.obj	31e382022e2b7aef
+160	1423	7947487247038854	esp-idf/main/CMakeFiles/__idf_main.dir/encoder.c.obj	344cc43610242f9d
+199	1435	7947487247453098	esp-idf/main/CMakeFiles/__idf_main.dir/announcements.c.obj	e8877fff18e79488
+173	1496	7947487247178963	esp-idf/main/CMakeFiles/__idf_main.dir/navigation.c.obj	11abe6e100c30a28
+236	1575	7947487247810543	esp-idf/main/CMakeFiles/__idf_main.dir/battery.c.obj	2d21494f95a2501b
+212	1637	7947487247566634	esp-idf/main/CMakeFiles/__idf_main.dir/headphone_detect.c.obj	60577e40fb86c3f4
+1423	1989	7947487259689339	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
+1423	1989	7947487259689339	bootloader/bootloader.elf	61ede1e749d91df0
+1423	1989	7947487259689339	bootloader/bootloader.bin	61ede1e749d91df0
+1423	1989	7947487259689339	bootloader/bootloader.map	61ede1e749d91df0
+1423	1989	7947487259689339	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
+1423	1989	7947487259689339	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
+1423	1989	7947487259689339	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
+1423	1989	7947487259689339	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
+1990	2070	7947487265342438	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
+1990	2070	7947487265342438	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
+139	2174	7947487246828120	esp-idf/main/CMakeFiles/__idf_main.dir/audio.c.obj	7a3e6f5fda7c319a
+2070	2305	7947487268307419	CMakeFiles/bootloader-complete	89d1ea52960daa44
+2070	2305	7947487268307419	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
+2070	2305	7947487268307419	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
+2070	2305	7947487268307419	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
+130	2365	7947487246705228	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	738640912ca8a09a
+186	2409	7947487247308749	esp-idf/main/CMakeFiles/__idf_main.dir/sd_card.c.obj	9daca1742d1ad5c9
+224	2437	7947487247695023	esp-idf/main/CMakeFiles/__idf_main.dir/usb_msc.c.obj	b540b8cff439aade
+1353	2722	7947487258989103	esp-idf/main/CMakeFiles/__idf_main.dir/quiz.c.obj	979b6c90c95d321f
+2722	2842	7947487272664263	esp-idf/main/libmain.a	afbe6910a4e3ccd0
+2842	11711	7947487362235991	esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
+2842	11711	7947487362235991	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
+11711	13109	7947487362570647	app-template.elf	c38555dc68ddb5e9
+13110	13382	7947487379177382	.bin_timestamp	930f6d35b826b9b0
+13110	13382	7947487379177382	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/.bin_timestamp	930f6d35b826b9b0
+13382	13471	7947487379275157	esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
+13382	13471	7947487379275157	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
+128	224	7947487853953304	esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
+128	224	7947487853953304	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
+120	279	7947487853752292	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
+120	279	7947487853752292	bootloader/bootloader.elf	61ede1e749d91df0
+120	279	7947487853752292	bootloader/bootloader.bin	61ede1e749d91df0
+120	279	7947487853752292	bootloader/bootloader.map	61ede1e749d91df0
+120	279	7947487853752292	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
+120	279	7947487853752292	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
+120	279	7947487853752292	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
+120	279	7947487853752292	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
+279	362	7947487855481264	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
+279	362	7947487855481264	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
+362	443	7947487857068406	CMakeFiles/bootloader-complete	89d1ea52960daa44
+362	443	7947487857068406	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
+362	443	7947487857068406	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
+362	443	7947487857068406	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
+443	8017	7947487857113152	CMakeFiles/flash	26ae3d211c276dba
+443	8017	7947487857113152	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/flash	26ae3d211c276dba
+131	305	7947489630169331	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
+131	305	7947489630169331	bootloader/bootloader.elf	61ede1e749d91df0
+131	305	7947489630169331	bootloader/bootloader.bin	61ede1e749d91df0
+131	305	7947489630169331	bootloader/bootloader.map	61ede1e749d91df0
+131	305	7947489630169331	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
+131	305	7947489630169331	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
+131	305	7947489630169331	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
+131	305	7947489630169331	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
+306	343	7947489631919561	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
+306	343	7947489631919561	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
+343	424	7947489633032875	CMakeFiles/bootloader-complete	89d1ea52960daa44
+343	424	7947489633032875	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
+343	424	7947489633032875	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
+343	424	7947489633032875	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
+122	1002	7947489629990483	esp-idf/main/CMakeFiles/__idf_main.dir/sd_card.c.obj	9daca1742d1ad5c9
+1003	1186	7947489638896453	esp-idf/main/libmain.a	afbe6910a4e3ccd0
+1186	13698	7947489765390738	esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
+1186	13698	7947489765390738	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esp_system/ld/sections.ld	3a0f04c01de48215
+13699	15305	7947489765843352	app-template.elf	c38555dc68ddb5e9
+15305	15737	7947489786156121	.bin_timestamp	930f6d35b826b9b0
+15305	15737	7947489786156121	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/.bin_timestamp	930f6d35b826b9b0
+15737	15831	7947489786222706	esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
+15737	15831	7947489786222706	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
+137	233	7947490271014780	esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
+137	233	7947490271014780	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
+130	292	7947490271014780	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
+130	292	7947490271014780	bootloader/bootloader.elf	61ede1e749d91df0
+130	292	7947490271014780	bootloader/bootloader.bin	61ede1e749d91df0
+130	292	7947490271014780	bootloader/bootloader.map	61ede1e749d91df0
+130	292	7947490271014780	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
+130	292	7947490271014780	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
+130	292	7947490271014780	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
+130	292	7947490271014780	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
+292	329	7947490272651980	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
+292	329	7947490272651980	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
+329	405	7947490273724729	CMakeFiles/bootloader-complete	89d1ea52960daa44
+329	405	7947490273724729	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
+329	405	7947490273724729	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
+329	405	7947490273724729	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
+405	8624	7947490273724729	CMakeFiles/flash	26ae3d211c276dba
+405	8624	7947490273724729	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/flash	26ae3d211c276dba
+126	222	7947495809921138	esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
+126	222	7947495809921138	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
+117	280	7947495809856856	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
+117	280	7947495809856856	bootloader/bootloader.elf	61ede1e749d91df0
+117	280	7947495809856856	bootloader/bootloader.bin	61ede1e749d91df0
+117	280	7947495809856856	bootloader/bootloader.map	61ede1e749d91df0
+117	280	7947495809856856	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
+117	280	7947495809856856	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
+117	280	7947495809856856	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
+117	280	7947495809856856	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
+281	315	7947495811483116	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
+281	315	7947495811483116	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
+315	391	7947495812538778	CMakeFiles/bootloader-complete	89d1ea52960daa44
+315	391	7947495812538778	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
+315	391	7947495812538778	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
+315	391	7947495812538778	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
+391	8418	7947495812587142	CMakeFiles/flash	26ae3d211c276dba
+391	8418	7947495812587142	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/flash	26ae3d211c276dba
+184	281	7947500449291444	esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
+184	281	7947500449291444	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/esptool_py/CMakeFiles/app_check_size	72be8464065c41ad
+176	337	7947500449229050	bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
+176	337	7947500449229050	bootloader/bootloader.elf	61ede1e749d91df0
+176	337	7947500449229050	bootloader/bootloader.bin	61ede1e749d91df0
+176	337	7947500449229050	bootloader/bootloader.map	61ede1e749d91df0
+176	337	7947500449229050	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	61ede1e749d91df0
+176	337	7947500449229050	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.elf	61ede1e749d91df0
+176	337	7947500449229050	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.bin	61ede1e749d91df0
+176	337	7947500449229050	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader/bootloader.map	61ede1e749d91df0
+337	370	7947500450837854	bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
+337	370	7947500450837854	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	fae7716f55a8426
+370	443	7947500451859162	CMakeFiles/bootloader-complete	89d1ea52960daa44
+370	443	7947500451859162	bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
+370	443	7947500451859162	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/bootloader-complete	89d1ea52960daa44
+370	443	7947500451859162	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	89d1ea52960daa44
+443	6193	7947500451902586	CMakeFiles/flash	26ae3d211c276dba
+443	6193	7947500451902586	C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/CMakeFiles/flash	26ae3d211c276dba

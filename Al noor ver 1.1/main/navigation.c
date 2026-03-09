@@ -3,12 +3,16 @@
  * Navigation state machine implementation
  *
  * State flow:
- *   HOME -> FOLDER_VIEW -> SUBFOLDER_VIEW -> FILE_VIEW
+ *   HOME -> FOLDER_VIEW -> SUBFOLDER_VIEW -> FILE_VIEW -> (QUIZ)
+ *
+ * NAV_STATE_QUIZ is entered by main.c (via nav_set_state) when a story
+ * ends naturally and a quiz exists.  nav_go_back() from QUIZ returns to
+ * FILE_VIEW.  nav_go_forward() is a no-op in QUIZ (main.c uses
+ * nav_set_state directly).
  *
  * For folders that contain files directly (no subfolders, e.g. TAWID),
  * pressing Play in FOLDER_VIEW transitions straight to FILE_VIEW
- * via nav_go_to_files_direct().  The caller detects this by checking
- * sd_get_subfolder_count() == 0 after scanning.
+ * via nav_go_to_files_direct().
  */
 
 #include "navigation.h"
@@ -25,10 +29,10 @@ static int selected_subfolder = 0;
 static int selected_track     = 0;
 
 void nav_init(void) {
-    current_state     = NAV_STATE_HOME;
-    selected_folder   = 0;
+    current_state      = NAV_STATE_HOME;
+    selected_folder    = 0;
     selected_subfolder = 0;
-    selected_track    = 0;
+    selected_track     = 0;
     ESP_LOGI(TAG, "Navigation initialized at HOME");
 }
 
@@ -130,6 +134,11 @@ int nav_prev_subfolder(int total_subfolders) {
 
 bool nav_go_back(void) {
     switch (current_state) {
+        case NAV_STATE_QUIZ:
+            current_state = NAV_STATE_FILE_VIEW;
+            ESP_LOGI(TAG, "Back: QUIZ -> FILE_VIEW");
+            return true;
+
         case NAV_STATE_FILE_VIEW:
             current_state = NAV_STATE_SUBFOLDER_VIEW;
             ESP_LOGI(TAG, "Back: FILE_VIEW -> SUBFOLDER_VIEW");
@@ -162,7 +171,7 @@ bool nav_go_forward(void) {
             return true;
 
         case NAV_STATE_FOLDER_VIEW:
-            current_state  = NAV_STATE_SUBFOLDER_VIEW;
+            current_state      = NAV_STATE_SUBFOLDER_VIEW;
             selected_subfolder = 0;
             ESP_LOGI(TAG, "Forward: FOLDER_VIEW -> SUBFOLDER_VIEW");
             return true;
@@ -177,6 +186,10 @@ bool nav_go_forward(void) {
             ESP_LOGI(TAG, "Already at FILE_VIEW");
             return false;
 
+        case NAV_STATE_QUIZ:
+            ESP_LOGI(TAG, "In QUIZ — use nav_set_state() to transition");
+            return false;
+
         default:
             return false;
     }
@@ -184,27 +197,23 @@ bool nav_go_forward(void) {
 
 /**
  * nav_go_to_files_direct
- *
- * Used when a top-level folder contains WAV files directly (no subfolders),
- * e.g. TAWID.  Jumps from FOLDER_VIEW straight to FILE_VIEW,
- * skipping SUBFOLDER_VIEW.
+ * FOLDER_VIEW -> FILE_VIEW directly (no subfolders, e.g. TAWID).
  */
 bool nav_go_to_files_direct(void) {
     if (current_state != NAV_STATE_FOLDER_VIEW) {
-        ESP_LOGW(TAG, "nav_go_to_files_direct: not in FOLDER_VIEW (state=%d)", current_state);
+        ESP_LOGW(TAG, "nav_go_to_files_direct: not in FOLDER_VIEW (state=%d)",
+                 current_state);
         return false;
     }
     current_state  = NAV_STATE_FILE_VIEW;
     selected_track = 0;
-    ESP_LOGI(TAG, "Forward (direct): FOLDER_VIEW -> FILE_VIEW (no subfolders)");
+    ESP_LOGI(TAG, "Forward (direct): FOLDER_VIEW -> FILE_VIEW");
     return true;
 }
 
 /**
  * nav_go_back_from_files_direct
- *
- * Reverse of nav_go_to_files_direct: FILE_VIEW -> FOLDER_VIEW,
- * skipping SUBFOLDER_VIEW.
+ * FILE_VIEW -> FOLDER_VIEW directly (pair with nav_go_to_files_direct).
  */
 bool nav_go_back_from_files_direct(void) {
     if (current_state != NAV_STATE_FILE_VIEW) return false;

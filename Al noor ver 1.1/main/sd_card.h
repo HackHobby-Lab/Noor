@@ -1,75 +1,64 @@
 /**
  * sd_card.h
- * SD Card operations header
- *
- * Changes vs previous version:
- * ----------------------------
- * 1. Added sd_get_access_mutex() — returns the shared FreeRTOS mutex
- *    that serialises ALL SD card access across audio.c, usb_msc.c, and
- *    the scan functions in sd_card.c itself.
+ * SD Card operations interface
  */
 
-#ifndef SD_CARD_H
-#define SD_CARD_H
+#pragma once
 
 #include <stdbool.h>
 #include "sdmmc_cmd.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/semphr.h"
+#include "config.h"
 
-/* -------------------------------------------------------------------------
- * Shared SD access mutex
- *
- * Created in sd_card_init().  Every module that performs SD card I/O
- * (fopen, fread, fclose, opendir, readdir, sdmmc_read_sectors, etc.)
- * must hold this mutex for the duration of each individual operation.
- *
- * Pattern:
- *   SemaphoreHandle_t m = sd_get_access_mutex();
- *   if (m) xSemaphoreTake(m, portMAX_DELAY);
- *   // ... SD operation ...
- *   if (m) xSemaphoreGive(m);
- *
- * Returns NULL if sd_card_init() has not been called yet or failed.
- * ---------------------------------------------------------------------- */
-SemaphoreHandle_t sd_get_access_mutex(void);
+/* -----------------------------------------------------------------------
+ * Hardware init
+ * ----------------------------------------------------------------------- */
 
-/* -------------------------------------------------------------------------
- * Initialisation
- * ---------------------------------------------------------------------- */
+/**
+ * Initialise SPI bus + SD card hardware.
+ * Does NOT mount FAT — that is done by usb_manager_init() via
+ * tinyusb_msc_storage_mount("/sdcard").
+ */
 bool sd_card_init(void);
 
-/* -------------------------------------------------------------------------
- * Folder / subfolder / WAV scanning
- * ---------------------------------------------------------------------- */
-void sd_scan_folders(const char *path);
-void sd_scan_subfolders(const char *folder_path);
-void sd_scan_wav_files(const char *folder_path);
+/** Return the raw card handle (used by usb_manager to register with MSC). */
+sdmmc_card_t *sd_get_card_handle(void);
 
-/* -------------------------------------------------------------------------
- * Free cached lists
- * ---------------------------------------------------------------------- */
-void sd_free_folders(void);
-void sd_free_subfolders(void);
-void sd_free_wavs(void);
+/**
+ * Return the shared SD access mutex.
+ *
+ * This mutex serialises ALL FAT-layer access system-wide:
+ *   - audio.c  fread() during playback
+ *   - sd_card.c opendir/readdir/stat during folder scans
+ *   - usb_msc  tud_msc_read10_cb / tud_msc_write10_cb sector I/O
+ *
+ * The mutex is created inside sd_card_init() and lives for the
+ * lifetime of the application.  Returns NULL before sd_card_init()
+ * has been called (callers must guard for NULL).
+ */
+SemaphoreHandle_t sd_get_access_mutex(void);
 
-/* -------------------------------------------------------------------------
- * Count getters
- * ---------------------------------------------------------------------- */
-int sd_get_folder_count(void);
-int sd_get_subfolder_count(void);
-int sd_get_wav_count(void);
+/* -----------------------------------------------------------------------
+ * Folder scanning
+ * ----------------------------------------------------------------------- */
+void        sd_scan_folders(const char *path);
+int         sd_get_folder_count(void);
+const char *sd_get_folder_path(int index);
+void        sd_free_folders(void);
 
-/* -------------------------------------------------------------------------
- * Path getters — returned pointers are valid until the next free/scan call
- * ---------------------------------------------------------------------- */
-const char* sd_get_folder_path(int index);
-const char* sd_get_subfolder_path(int index);
-const char* sd_get_wav_path(int index);
+/* -----------------------------------------------------------------------
+ * Subfolder scanning
+ * ----------------------------------------------------------------------- */
+void        sd_scan_subfolders(const char *folder_path);
+int         sd_get_subfolder_count(void);
+const char *sd_get_subfolder_path(int index);
+void        sd_free_subfolders(void);
 
-/* -------------------------------------------------------------------------
- * Raw card handle — used by usb_msc.c to register the card with TinyUSB
- * ---------------------------------------------------------------------- */
-sdmmc_card_t* sd_get_card_handle(void);
-
-#endif /* SD_CARD_H */
+/* -----------------------------------------------------------------------
+ * WAV file scanning
+ * ----------------------------------------------------------------------- */
+void        sd_scan_wav_files(const char *folder_path);
+int         sd_get_wav_count(void);
+const char *sd_get_wav_path(int index);
+void        sd_free_wavs(void);

@@ -15,6 +15,7 @@ typedef enum {
     NAV_STATE_FOLDER_VIEW    = 1,  /* Browsing top-level folders */
     NAV_STATE_SUBFOLDER_VIEW = 2,  /* Browsing subfolders of selected folder */
     NAV_STATE_FILE_VIEW      = 3,  /* Browsing / playing files */
+    NAV_STATE_QUIZ           = 4,  /* Post-story quiz active */
 } nav_state_t;
 
 /* -----------------------------------------------------------------------
@@ -74,3 +75,4 @@ bool nav_go_to_files_direct(void);
  * Pair with nav_go_to_files_direct().
  */
 bool nav_go_back_from_files_direct(void);
+

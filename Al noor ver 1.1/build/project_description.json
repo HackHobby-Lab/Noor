@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "app-template",
-    "project_version":    "4229858-dirty",
+    "project_version":    "a5b698d-dirty",
     "project_path":       "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1",
     "idf_path":           "C:/Users/HP/esp/v5.4.3/esp-idf",
     "build_dir":          "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build",
@@ -1225,7 +1225,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [ "espressif__esp_tinyusb" ],
             "file": "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/build/esp-idf/main/libmain.a",
-            "sources": [ "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/main.c", "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/audio.c", "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/buttons.c", "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/encoder.c", "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/navigation.c", "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/sd_card.c", "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/announcements.c", "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/headphone_detect.c", "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/usb_msc.c", "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/SD_CARD_OTA.c" ],
+            "sources": [ "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/main.c", "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/audio.c", "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/buttons.c", "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/encoder.c", "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/navigation.c", "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/sd_card.c", "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/announcements.c", "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/headphone_detect.c", "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/usb_msc.c", "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/SD_CARD_OTA.c", "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/battery.c", "C:/Users/HP/Documents/GitHub/Noor2/Al noor ver 1.1/main/quiz.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {

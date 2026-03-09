@@ -4,16 +4,16 @@
  *
  * Changes vs previous version:
  * ----------------------------
- * 1. ENC_DEBOUNCE_MS raised from 60 → 200.
- *    Log analysis showed ghost bounce pulses arriving up to 170ms after
- *    the real click.  200ms catches all observed cases with 30ms margin.
- *
- * 2. ENC_SETTLE_MS raised from 180 → 250.
- *    The settle timer must always be longer than ENC_DEBOUNCE_MS so that
- *    the timer cannot fire before the debounce window has closed.
- *    250ms > 200ms, maintaining the 50ms margin.
- *
- * All other values are unchanged.
+ * 1. ENC_DEBOUNCE_MS raised from 60 -> 200 (ghost bounce fix).
+ * 2. ENC_SETTLE_MS raised from 180 -> 250 (must exceed ENC_DEBOUNCE_MS).
+ * 3. Added NOTIFY_USB_MSC_CHANGED_BIT (bit 27) — sent by usb_manager to
+ *    audio_task when SD card is returned from USB host so it can rescan.
+ * 4. Added NOTIFY_QUIZ_OPTS_BIT (bit 30) — sent by audio_task to itself
+ *    after the quiz question finishes, triggering the options intro.
+ *    (NOTIFY_SETTLE_BIT reused bit 30 in old firmware; quiz firmware
+ *    no longer uses a settle timer so bit 30 is safe to repurpose.)
+ * 5. Added NOTIFY_HOME_AUDIO_BIT (bit 28) — triggers welcome+rotate
+ *    playback via audio_task on boot / home-button press.
  */
 
 #ifndef CONFIG_H
@@ -122,28 +122,10 @@
  * ======================================================================== */
 #define BUTTON_DEBOUNCE_MS      50
 
-/* Hardware debounce window for the rotary encoder GPIO ISR.
- *
- * RAISED from 60 ms to 200 ms.
- *
- * Log analysis (session starting at ~370 s) showed mechanical ghost
- * pulses arriving 60–170 ms after a real encoder click.  At 60 ms the
- * debounce window closed before the ghost arrived, letting it through.
- * 200 ms catches all observed ghosts and still feels instantaneous to
- * the user (a deliberate second click takes >300 ms in practice).
- *
- * The timestamp is now taken IN THE ISR (not in the task) so the full
- * 200 ms window is measured from when the GPIO actually fired, not from
- * when the task happened to process the queued event. */
+/* Raised from 60 ms to 200 ms — ghost bounce fix (see encoder.c). */
 #define ENC_DEBOUNCE_MS         200
 
-/* Settle window for encoder-driven announcements.
- *
- * RAISED from 180 ms to 250 ms.
- *
- * Must always be > ENC_DEBOUNCE_MS so the settle timer cannot fire
- * while the debounce window is still open.  250 ms > 200 ms, keeping
- * a 50 ms safety margin.  Still feels instant to the user. */
+/* Must be > ENC_DEBOUNCE_MS.  250 ms > 200 ms (50 ms margin). */
 #define ENC_SETTLE_MS           250
 
 /* ========================================================================
@@ -157,7 +139,7 @@
  * AUDIO / VOLUME SETTINGS
  * ======================================================================== */
 #define VOLUME_MIN              0
-#define VOLUME_MAX              100   /* Hard cap — do NOT raise above 100 */
+#define VOLUME_MAX              100
 #define VOLUME_DEFAULT          70
 
 /* ========================================================================
@@ -171,11 +153,24 @@
  * ======================================================================== */
 #define ANNOUNCE_PATH_MAX       512
 
-/*
- * NOTIFY_ANNOUNCE_BIT — FreeRTOS task-notification bit used to wake the
- * audio task when an announcement is pending.
- */
-#define NOTIFY_ANNOUNCE_BIT     (1UL << 31)
-#define NOTIFY_SETTLE_BIT       (1UL << 30)  /* enc_settle_timer -> audio_task */
+/* ========================================================================
+ * TASK NOTIFICATION BITS
+ *
+ * Bit layout for audio_task notifications:
+ *   Bit 31  NOTIFY_ANNOUNCE_BIT       — announcement pending in queue
+ *   Bit 30  NOTIFY_QUIZ_OPTS_BIT      — play quiz options intro
+ *   Bit 29  (reserved)
+ *   Bit 28  NOTIFY_HOME_AUDIO_BIT     — play welcome.wav + rotate.wav
+ *   Bit 27  NOTIFY_USB_MSC_CHANGED_BIT— SD returned from USB host, rescan
+ *   Bits 0-26: direct track index + 1 for playback
+ * ======================================================================== */
+#define NOTIFY_ANNOUNCE_BIT          (1UL << 31)
+#define NOTIFY_QUIZ_OPTS_BIT         (1UL << 30)
+#define NOTIFY_HOME_AUDIO_BIT        (1UL << 28)
+#define NOTIFY_USB_MSC_CHANGED_BIT   (1UL << 27)
+
+/* NOTIFY_SETTLE_BIT kept for reference — not used in this firmware
+ * (the settle timer approach was replaced by live nav state reads) */
+#define NOTIFY_SETTLE_BIT            (1UL << 30)  /* same bit as QUIZ_OPTS */
 
 #endif /* CONFIG_H */
