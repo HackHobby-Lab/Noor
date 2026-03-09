@@ -223,3 +223,8 @@ TT4.wav  ← Record "Lesson Four"
 ```
 TAWID/t4.wav
 ```
+
+
+# Instructions
+
+https://docs.google.com/document/d/1RYAxxgP-j9_PKx_9E5XExqXV5vHtyEG8tLyEzbizOWY/edit?tab=t.0
