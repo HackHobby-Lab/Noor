@@ -36,3 +36,5 @@ bool  audio_parse_wav_header(const char *filepath, audio_wav_info_t *info);
 bool  audio_play_file(const char *filepath,
                       volatile bool *stop_flag,
                       volatile bool *pause_flag);
+void audio_volume_up_no_announce(void);
+void audio_volume_down_no_announce(void);
