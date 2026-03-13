@@ -111,7 +111,7 @@ Simple guide to organize your SD card for the Noor Audio Player.
 ##  Complete File Structure
 
 ```
-/sdcard/
+[/sdcard/
 │
 ├──  SYSTEM AUDIO
 │   ├── welcome.wav   # Plays at boot
@@ -160,7 +160,7 @@ Simple guide to organize your SD card for the Noor Audio Player.
 │   └── TAWID/
 │       ├── t1.wav
 │       ├── t2.wav
-│       └── t3.wav
+│       └── t3.wav](https://docs.google.com/document/d/1CNAYGGH7GfM6UnNTNSWZuiR_xHItNKqbroqu8t0ISbs/edit?tab=t.0)
 ```
 
 ---
