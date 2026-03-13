@@ -1,0 +1,21 @@
+Command: ninja all
+[1/10] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\Mutahar\workspace\New folder\al-noor-player\build\bootloader\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.5.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 "C:/Users/Mutahar/workspace/New folder/al-noor-player/build/bootloader/bootloader.bin""
+Bootloader binary size 0x5240 bytes. 0x2dc0 bytes (36%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/battery.c.obj
+[5/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[6/10] Linking C static library esp-idf\main\libmain.a
+[7/10] Generating esp-idf/esp_system/ld/sections.ld
+info: Trying to set symbol PARTITION_TABLE_SINGLE_APP to n, but it is currently selected by choice PARTITION_TABLE_TYPE. For setting it to n, set another choice symbol to y instead.
+info: Trying to set symbol FATFS_LFN_NONE to n, but it is currently selected by choice FATFS_LONG_FILENAMES. For setting it to n, set another choice symbol to y instead.
+[8/10] Linking CXX executable al-noor-player.elf
+[9/10] Generating binary image from built executable
+esptool.py v4.11.dev2
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated C:/Users/Mutahar/workspace/New folder/al-noor-player/build/al-noor-player.bin
+[10/10] C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\Mutahar\workspace\New folder\al-noor-player\build\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.5.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "C:/Users/Mutahar/workspace/New folder/al-noor-player/build/partition_table/partition-table.bin" "C:/Users/Mutahar/workspace/New folder/al-noor-player/build/al-noor-player.bin""
+al-noor-player.bin binary size 0x61ba0 bytes. Smallest app partition is 0x1e0000 bytes. 0x17e460 bytes (80%) free.

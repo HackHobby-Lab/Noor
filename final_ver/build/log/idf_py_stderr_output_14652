@@ -1,0 +1,3 @@
+Command: cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DPYTHON=C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe -DESP_PLATFORM=1 -DCCACHE_ENABLE=1 C:\Users\Mutahar\workspace\New folder\al-noor-player
+info: Trying to set symbol PARTITION_TABLE_SINGLE_APP to n, but it is currently selected by choice PARTITION_TABLE_TYPE. For setting it to n, set another choice symbol to y instead.
+info: Trying to set symbol FATFS_LFN_NONE to n, but it is currently selected by choice FATFS_LONG_FILENAMES. For setting it to n, set another choice symbol to y instead.
