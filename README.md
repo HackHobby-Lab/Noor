@@ -212,7 +212,67 @@ Simple guide to organize your SD card for the Noor Audio Player.
 ```
 
 ---
-
+---
+ 
+## File Count Summary
+ 
+| Folder | Navigable files | Hidden quiz files | Total |
+|---|---|---|---|
+| `announcements/` | 150 | — | **150** |
+| `STORIES/ADAM/` | 10 | 90 | **100** |
+| `STORIES/DAOUD/` | 10 | 90 | **100** |
+| `STORIES/IBRAHIM/` | 10 | 90 | **100** |
+| `STORIES/ISMAEEL/` | 10 | 90 | **100** |
+| `STORIES/ISSA/` | 10 | 90 | **100** |
+| `STORIES/MOUSSA/` | 10 | 90 | **100** |
+| `STORIES/MUHAMMAD/` | 10 | 90 | **100** |
+| `STORIES/NUH/` | 10 | 90 | **100** |
+| `STORIES/YAQOOB/` | 10 | 90 | **100** |
+| `STORIES/YOUSUF/` | 10 | 90 | **100** |
+| `TAWID/` | 20 | 300 | **320** |
+| **TOTAL** | **220** | **1,200** | **1,470** |
+ 
+---
+ 
+## File Naming Conventions
+ 
+### Prophet Stories
+ 
+| Pattern | Example | Meaning |
+|---|---|---|
+| `{p}{N}.wav` | `a1.wav` | Story N for prophet with prefix p |
+| `s{p}{N}_{Q}.wav` | `sa1_1.wav` | Story N, quiz Q — question audio |
+| `crr{p}{N}_{Q}.wav` | `crra1_1.wav` | Story N, quiz Q — correct answer |
+| `wr{p}{N}_{Q}.wav` | `wra1_1.wav` | Story N, quiz Q — wrong answer |
+ 
+**Prophet prefix table:**
+ 
+| Prophet | Prefix | Story files | Track announcement |
+|---|---|---|---|
+| Adam | `a` | `a1.wav … a10.wav` | `A1ANN.WAV … A10ANN.WAV` |
+| Daoud | `d` | `d1.wav … d10.wav` | `D1ANN.WAV … D10ANN.WAV` |
+| Ibrahim | `ib` | `ib1.wav … ib10.wav` | `IB1ANN.WAV … IB10ANN.WAV` |
+| Ismaeel | `is` | `is1.wav … is10.wav` | `IS1ANN.WAV … IS10ANN.WAV` |
+| Issa | `i` | `i1.wav … i10.wav` | `I1ANN.WAV … I10ANN.WAV` |
+| Moussa | `ms` | `ms1.wav … ms10.wav` | `MS1ANN.WAV … MS10ANN.WAV` |
+| Muhammad | `m` | `m1.wav … m10.wav` | `M1ANN.WAV … M10ANN.WAV` |
+| Nuh | `n` | `n1.wav … n10.wav` | `N1ANN.WAV … N10ANN.WAV` |
+| Yaqoob | `yq` | `yq1.wav … yq10.wav` | `YQ1ANN.WAV … YQ10ANN.WAV` |
+| Yousuf | `y` | `y1.wav … y10.wav` | `Y1ANN.WAV … Y10ANN.WAV` |
+ 
+### TAWID
+ 
+| Pattern | Example | Meaning |
+|---|---|---|
+| `T{N}.wav` | `T5.wav` | Lesson N content (shown in navigation) |
+| `TT{N}.wav` | `TT5.wav` | Lesson N announcement (in `announcements/`) |
+| `st{N}_{Q}.wav` | `st5_1.wav` | Lesson N, quiz Q — question audio |
+| `crrt{N}_{Q}.wav` | `crrt5_1.wav` | Lesson N, quiz Q — correct answer |
+| `wrt{N}_{Q}.wav` | `wrt5_1.wav` | Lesson N, quiz Q — wrong answer |
+ 
+> Quiz support files (any `.wav` containing `_`) are automatically hidden from navigation by the firmware.
+ 
+---
 
 
 ##  File Naming Rules
