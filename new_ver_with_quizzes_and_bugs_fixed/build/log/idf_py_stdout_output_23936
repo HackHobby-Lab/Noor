@@ -1,0 +1,708 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x1564
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd24
+load:0x403cb700,len:0x2ed4
+entry 0x403c8928
+[0;32mI (27) boot: ESP-IDF v5.4.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 14 2026 13:21:08[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00005000[0m
+[0;32mI (65) boot:  1 otadata          OTA data         01 00 0000e000 00002000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00070000[0m
+[0;32mI (78) boot:  3 ota_0            OTA app          00 10 00080000 00070000[0m
+[0;32mI (84) boot:  4 ota_1            OTA app          00 11 000f0000 00070000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (94) boot: Defaulting to factory image[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3c040020 size=159fch ( 88572) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=00025a24 vaddr=3fc96500 size=030cch ( 12492) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=00028af8 vaddr=40374000 size=07520h ( 29984) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=394d8h (234712) map[0m
+[0;32mI (174) esp_image: segment 4: paddr=00069500 vaddr=4037b520 size=0aee4h ( 44772) load[0m
+[0;32mI (183) esp_image: segment 5: paddr=000743ec vaddr=50000000 size=0001ch (    28) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (201) cpu_start: Multicore app[0m
+[0;32mI (210) cpu_start: Pro cpu start user code[0m
+[0;32mI (210) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (210) app_init: Application information:[0m
+[0;32mI (210) app_init: Project name:     app-template[0m
+[0;32mI (215) app_init: App version:      1[0m
+[0;32mI (218) app_init: Compile time:     Mar 14 2026 13:19:46[0m
+[0;32mI (223) app_init: ELF file SHA256:  a29c50ced...[0m
+[0;32mI (228) app_init: ESP-IDF:          v5.4.3[0m
+[0;32mI (231) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (235) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (239) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (243) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (249) heap_init: At 3FC9ACD8 len 0004EA38 (314 KiB): RAM[0m
+[0;32mI (254) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (260) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (271) spi_flash: detected chip: boya[0m
+[0;32mI (274) spi_flash: flash io: dio[0m
+[0;33mW (276) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (289) i2s(legacy): legacy i2s driver is deprecated, please migrate to use driver/i2s_std.h, driver/i2s_pdm.h or driver/i2s_tdm.h[0m
+[0;32mI (300) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (307) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (314) main_task: Started on CPU0[0m
+[0;32mI (324) main_task: Calling app_main()[0m
+[0;32mI (324) MAIN: === Noor Audio Player (4-Level Navigation + Quiz) ===[0m
+[0;32mI (324) AUDIO: ================================[0m
+[0;32mI (334) AUDIO: Audio System Initialization[0m
+[0;32mI (334) AUDIO: Default Volume: 70% (70/100)[0m
+[0;32mI (334) AUDIO: I2S Pins: BCLK=18, WS=17, DIN=16[0m
+[0;32mI (344) AUDIO: ================================[0m
+[0;32mI (344) BUTTONS: Initializing buttons...[0m
+[0;32mI (354) gpio: GPIO[4]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (354) gpio: GPIO[5]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (364) gpio: GPIO[14]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (374) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 [0m
+[0;32mI (384) BUTTONS: Buttons initialized: Play=14, Home=15, Vol+=4, Vol-=5[0m
+[0;32mI (394) NAVIGATION: Navigation initialized at HOME[0m
+[0;32mI (394) QUIZ: Quiz system initialized[0m
+[0;32mI (394) USB_MSC: ========================================[0m
+[0;32mI (404) USB_MSC: Initializing USB MSC (Mass Storage Class)[0m
+[0;32mI (404) USB_MSC: ========================================[0m
+[0;33mW (414) tusb_desc: No Device descriptor provided, using default.[0m
+[0;33mW (414) tusb_desc: No FullSpeed configuration descriptor provided, using default.[0m
+[0;33mW (424) tusb_desc: No String descriptors provided, using default.[0m
+[0;32mI (434) tusb_desc: [0m
+┌─────────────────────────────────┐
+│  USB Device Descriptor Summary  │
+├───────────────────┬─────────────┤
+│bDeviceClass       │ 0           │
+├───────────────────┼─────────────┤
+│bDeviceSubClass    │ 0           │
+├───────────────────┼─────────────┤
+│bDeviceProtocol    │ 0           │
+├───────────────────┼─────────────┤
+│bMaxPacketSize0    │ 64          │
+├───────────────────┼─────────────┤
+│idVendor           │ 0x303a      │
+├───────────────────┼─────────────┤
+│idProduct          │ 0x4002      │
+├───────────────────┼─────────────┤
+│bcdDevice          │ 0x100       │
+├───────────────────┼─────────────┤
+│iManufacturer      │ 0x1         │
+├───────────────────┼─────────────┤
+│iProduct           │ 0x2         │
+├───────────────────┼─────────────┤
+│iSerialNumber      │ 0x3         │
+├───────────────────┼─────────────┤
+│bNumConfigurations │ 0x1         │
+└───────────────────┴─────────────┘
+[0;32mI (604) TinyUSB: TinyUSB Driver installed[0m
+[0;32mI (604) USB_MSC: ========================================[0m
+[0;32mI (604) USB_MSC: USB MSC initialized successfully![0m
+[0;32mI (614) USB_MSC: - Connect second USB-C cable to ESP32S3[0m
+[0;32mI (614) USB_MSC: - SD card will appear as removable USB storage[0m
+[0;32mI (624) USB_MSC: - Audio playback continues on first USB (UART)[0m
+[0;32mI (624) USB_MSC: ========================================[0m
+[0;32mI (634) MAIN: USB MSC enabled[0m
+[0;32mI (634) SD_CARD: Initializing SD card...[0m
+[0;32mI (644) SD_CARD: SPI Pins - CS=10, MOSI=11, MISO=13, CLK=12[0m
+[0;32mI (644) SD_CARD: SD access mutex created[0m
+[0;32mI (644) SD_CARD: Initializing SPI bus...[0m
+[0;32mI (654) SD_CARD: SPI bus initialized successfully[0m
+[0;32mI (654) SD_CARD: Mounting SD card to /sdcard...[0m
+[0;32mI (664) gpio: GPIO[10]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (674) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (714) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (754) SD_CARD: SD card mounted successfully![0m
+[0;32mI (754) SD_CARD:   - Capacity: 31914983424 bytes[0m
+[0;32mI (754) SD_CARD:   - Sectors: 62333952[0m
+[0;32mI (754) SD_CARD:   - Sector Size: 512 bytes[0m
+[0;32mI (754) USB_MSC: SD card registered with USB MSC[0m
+[0;32mI (764) USB_MSC: - Capacity: 31914983424 bytes[0m
+[0;32mI (764) USB_MSC: - Sectors: 62333952[0m
+[0;32mI (774) SD_OTA: Checking for OTA firmware update...[0m
+[0;32mI (784) SD_OTA: No OTA file found on SD card.[0m
+[0;32mI (784) ANNOUNCE: Announcements directory found: /sdcard/ANNOUN~1[0m
+[0;32mI (784) ANNOUNCE: Announcements system initialized[0m
+[0;32mI (794) ANNOUNCE: Playing boot greetings from: /sdcard/ANNOUN~1[0m
+[0;32mI (804) ANNOUNCE: Playing announcement: /sdcard/ANNOUN~1/WELCOME.WAV[0m
+[0;32mI (804) AUDIO: Playing: /sdcard/ANNOUN~1/WELCOME.WAV[0m
+[0;32mI (814) AUDIO: WAV Info: 24000 Hz, 16-bit, 1 ch, 184320 bytes[0m
+[0;32mI (824) AUDIO: Format: 24000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (834) AUDIO: Starting playback loop...[0m
+[0;32mI (4674) AUDIO: End of file reached[0m
+[0;32mI (4674) AUDIO: Playback finished[0m
+[0;32mI (4684) ANNOUNCE: Playing announcement: /sdcard/ANNOUN~1/ROTATE.WAV[0m
+[0;32mI (4684) AUDIO: Playing: /sdcard/ANNOUN~1/ROTATE.WAV[0m
+[0;32mI (4694) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 192768 bytes[0m
+[0;32mI (4694) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (4714) AUDIO: Starting playback loop...[0m
+[0;32mI (10784) AUDIO: End of file reached[0m
+[0;32mI (10794) AUDIO: Playback finished[0m
+[0;32mI (10794) SD_CARD: Scanning folders in: /sdcard[0m
+[0;32mI (10794) SD_CARD:   [0] /sdcard/SYSTEM~1[0m
+[0;32mI (10794) SD_CARD:   [1] /sdcard/ANNOUN~1[0m
+[0;32mI (10794) SD_CARD:   [2] /sdcard/STORIES[0m
+[0;32mI (10804) SD_CARD:   [3] /sdcard/TAWID[0m
+[0;32mI (10804) SD_CARD: Found 4 folders[0m
+[0;32mI (10804) NAVIGATION: Selected folder: 2[0m
+[0;32mI (10814) HP_DETECT: Initializing headphone detection...[0m
+[0;32mI (10814) gpio: GPIO[48]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (10824) HP_DETECT: Initial GPIO48 state: 1 (speaker)[0m
+[0;32mI (10824) HP_DETECT: No headphones at startup (GPIO48=HIGH) -> Vol 70%[0m
+[0;32mI (10834) AUDIO: Volume set to 70%[0m
+[0;32mI (10834) ANNOUNCE: Volume announcement: v7.wav[0m
+[0;32mI (10854) ANNOUNCE: Playing announcement: /sdcard/ANNOUN~1/v7.wav[0m
+[0;32mI (10854) AUDIO: Playing: /sdcard/ANNOUN~1/v7.wav[0m
+[0;32mI (10864) AUDIO: WAV Info: 24000 Hz, 16-bit, 1 ch, 26 bytes[0m
+[0;32mI (10864) AUDIO: Format: 24000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (10884) AUDIO: Starting playback loop...[0m
+[0;32mI (13484) AUDIO: End of file reached[0m
+[0;32mI (13484) AUDIO: Playback finished[0m
+[0;32mI (13484) HP_DETECT: Headphone detection initialized (detect=48, enable=-1)[0m
+[0;32mI (13484) HP_DETECT: Headphone monitoring task started[0m
+[0;32mI (13494) HP_DETECT: Headphone monitoring task started[0m
+[0;32mI (13494) ENCODER: Initializing encoder...[0m
+[0;32mI (13504) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (13514) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (13514) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (13524) ENCODER: Encoder initialized: CLK=1, DT=2, SW=21  debounce=200ms settle=250ms[0m
+[0;32mI (13534) ENCODER: Encoder task started[0m
+[0;32mI (13534) ENCODER: Encoder task started[0m
+[0;32mI (13544) MAIN: Audio task started[0m
+[0;32mI (13544) BATTERY: ADC calibration: curve fitting[0m
+[0;32mI (13554) BATTERY: Battery monitor init: GPIO6, R1=10K R2=47K, atten=12dB[0m
+[0;32mI (13554) BATTERY: Battery: 0% [----------]  2015 mV  (ADC: 1662 mV)[0m
+[0;32mI (13564) BATTERY: Audio task registered (battery alert bit=0x04000000)[0m
+[0;32mI (13564) BATTERY: Playing flag registered (alerts deferred during playback)[0m
+[0;32mI (13574) MAIN: Init complete. Main loop running.[0m
+[0;32mI (15044) AUDIO: Volume UP (silent) -> 80%[0m
+[0;32mI (15044) MAIN: Volume announcement: v8.wav (vol=80%)[0m
+[0;32mI (15094) MAIN: Playing volume wav: /sdcard/ANNOUN~1/v8.wav[0m
+[0;32mI (15094) AUDIO: Playing: /sdcard/ANNOUN~1/v8.wav[0m
+[0;32mI (15104) AUDIO: WAV Info: 24000 Hz, 16-bit, 1 ch, 26 bytes[0m
+[0;32mI (15104) AUDIO: Format: 24000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (15114) AUDIO: Starting playback loop...[0m
+[0;32mI (15294) AUDIO: Volume UP (silent) -> 90%[0m
+[0;32mI (15294) AUDIO: Playback stopped by flag[0m
+[0;32mI (15294) AUDIO: Playback finished[0m
+[0;32mI (15294) MAIN: Volume announcement: v9.wav (vol=90%)[0m
+[0;32mI (15304) MAIN: Playing volume wav: /sdcard/ANNOUN~1/v9.wav[0m
+[0;32mI (15304) AUDIO: Playing: /sdcard/ANNOUN~1/v9.wav[0m
+[0;32mI (15314) AUDIO: WAV Info: 24000 Hz, 16-bit, 1 ch, 26 bytes[0m
+[0;32mI (15314) AUDIO: Format: 24000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (15334) AUDIO: Starting playback loop...[0m
+[0;32mI (15504) AUDIO: Volume UP (silent) -> 100%[0m
+[0;32mI (15504) AUDIO: Playback stopped by flag[0m
+[0;32mI (15504) AUDIO: Playback finished[0m
+[0;32mI (15504) MAIN: Volume announcement: v10.wav (vol=100%)[0m
+[0;32mI (15514) MAIN: Playing volume wav: /sdcard/ANNOUN~1/v10.wav[0m
+[0;32mI (15514) AUDIO: Playing: /sdcard/ANNOUN~1/v10.wav[0m
+[0;32mI (15524) AUDIO: WAV Info: 24000 Hz, 16-bit, 1 ch, 26 bytes[0m
+[0;32mI (15534) AUDIO: Format: 24000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (15544) AUDIO: Starting playback loop...[0m
+[0;32mI (15714) AUDIO: Volume UP (silent) -> 100%[0m
+[0;32mI (15714) AUDIO: Playback stopped by flag[0m
+[0;32mI (15714) AUDIO: Playback finished[0m
+[0;32mI (15714) MAIN: Volume announcement: v10.wav (vol=100%)[0m
+[0;32mI (15724) MAIN: Playing volume wav: /sdcard/ANNOUN~1/v10.wav[0m
+[0;32mI (15724) AUDIO: Playing: /sdcard/ANNOUN~1/v10.wav[0m
+[0;32mI (15734) AUDIO: WAV Info: 24000 Hz, 16-bit, 1 ch, 26 bytes[0m
+[0;32mI (15744) AUDIO: Format: 24000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (15754) AUDIO: Starting playback loop...[0m
+[0;32mI (18484) AUDIO: End of file reached[0m
+[0;32mI (18484) AUDIO: Playback finished[0m
+[0;32mI (20794) NAVIGATION: Next folder: 3 (of 4)[0m
+[0;32mI (21104) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/TA.wav[0m
+[0;32mI (21104) MAIN: Playing announcement: /sdcard/ANNOUN~1/TA.wav[0m
+[0;32mI (21104) AUDIO: Playing: /sdcard/ANNOUN~1/TA.wav[0m
+[0;32mI (21114) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 26 bytes[0m
+[0;32mI (21114) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (21134) AUDIO: Starting playback loop...[0m
+[0;32mI (23064) NAVIGATION: Next folder: 0 (of 4)[0m
+[0;32mI (23064) NAVIGATION: Next folder: 1 (of 4)[0m
+[0;32mI (23064) NAVIGATION: Next folder: 2 (of 4)[0m
+[0;32mI (23114) AUDIO: Playback stopped by flag[0m
+[0;32mI (23114) AUDIO: Playback finished[0m
+[0;32mI (23324) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/STORIES.WAV[0m
+[0;32mI (23324) MAIN: Playing announcement: /sdcard/ANNOUN~1/STORIES.WAV[0m
+[0;32mI (23324) AUDIO: Playing: /sdcard/ANNOUN~1/STORIES.WAV[0m
+[0;32mI (23334) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 304128 bytes[0m
+[0;32mI (23334) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (23354) AUDIO: Starting playback loop...[0m
+[0;32mI (23564) BATTERY: Battery: 0% [----------]  1119 mV  (ADC: 923 mV)[0m
+[0;33mW (23564) BATTERY: Battery alert queued: b1.wav[0m
+[0;33mW (23564) BATTERY: Battery alert queued: b2.wav[0m
+[0;33mW (23564) BATTERY: Battery alert queued: b3.wav[0m
+[0;32mI (27434) NAVIGATION: Forward: HOME -> FOLDER_VIEW[0m
+[0;32mI (27434) SD_CARD: Found subfolder [0]: ADAM[0m
+[0;32mI (27434) SD_CARD: Found subfolder [1]: DAOUD[0m
+[0;32mI (27434) SD_CARD: Found subfolder [2]: IBRAHIM[0m
+[0;32mI (27434) SD_CARD: Found subfolder [3]: ISMAEEL[0m
+[0;32mI (27444) SD_CARD: Found subfolder [4]: ISSA[0m
+[0;32mI (27444) AUDIO: Playback stopped by flag[0m
+[0;32mI (27444) SD_CARD: Found subfolder [5]: MOUSSA[0m
+[0;32mI (27454) SD_CARD: Found subfolder [6]: MUHAMMAD[0m
+[0;32mI (27464) SD_CARD: Found subfolder [7]: NUH[0m
+[0;32mI (27464) SD_CARD: Found subfolder [8]: YAQOOB[0m
+[0;32mI (27464) SD_CARD: Found subfolder [9]: YOUSUF[0m
+[0;32mI (27474) SD_CARD: Total subfolders found: 10[0m
+[0;32mI (27474) AUDIO: Playback finished[0m
+[0;33mW (27474) MAIN: Battery alert notification received[0m
+[0;32mI (27484) NAVIGATION: Forward: FOLDER_VIEW -> SUBFOLDER_VIEW[0m
+[0;32mI (27494) NAVIGATION: Selected subfolder: 0[0m
+[0;32mI (27494) BATTERY: Battery alert dir resolved: /sdcard/ANNOUN~1[0m
+[0;33mW (27504) BATTERY: Playing battery alert: /sdcard/ANNOUN~1/b3.wav[0m
+[0;32mI (27504) AUDIO: Playing: /sdcard/ANNOUN~1/b3.wav[0m
+[0;32mI (27524) AUDIO: WAV Info: 24000 Hz, 16-bit, 1 ch, 26 bytes[0m
+[0;32mI (27524) AUDIO: Format: 24000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (27524) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/ADAM.WAV[0m
+[0;32mI (27534) AUDIO: Starting playback loop...[0m
+[0;32mI (27524) MAIN: Entered STORIES → SUBFOLDER_VIEW (10 sub)[0m
+[0;32mI (29064) AUDIO: End of file reached[0m
+[0;32mI (29064) AUDIO: Playback finished[0m
+[0;32mI (29064) MAIN: Playing announcement: /sdcard/ANNOUN~1/ADAM.WAV[0m
+[0;32mI (29064) AUDIO: Playing: /sdcard/ANNOUN~1/ADAM.WAV[0m
+[0;32mI (29084) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 47616 bytes[0m
+[0;32mI (29084) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (29084) AUDIO: Starting playback loop...[0m
+[0;32mI (30624) AUDIO: End of file reached[0m
+[0;32mI (30624) AUDIO: Playback finished[0m
+[0;33mW (33564) BATTERY: No battery detected (ADC floating) — alerts disabled[0m
+[0;32mI (33564) BATTERY: Battery: 0% [----------]  97 mV  (ADC: 80 mV)  [NO BATTERY][0m
+[0;32mI (34424) NAVIGATION: Next subfolder: 1 (of 10)[0m
+[0;32mI (34714) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/DAOUD.WAV[0m
+[0;32mI (34714) MAIN: Playing announcement: /sdcard/ANNOUN~1/DAOUD.WAV[0m
+[0;32mI (34714) AUDIO: Playing: /sdcard/ANNOUN~1/DAOUD.WAV[0m
+[0;32mI (34734) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 52224 bytes[0m
+[0;32mI (34734) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (34744) AUDIO: Starting playback loop...[0m
+[0;32mI (35764) NAVIGATION: Next subfolder: 2 (of 10)[0m
+[0;32mI (35774) AUDIO: Playback stopped by flag[0m
+[0;32mI (35774) AUDIO: Playback finished[0m
+[0;32mI (36014) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/IBRAHIM.WAV[0m
+[0;32mI (36014) MAIN: Playing announcement: /sdcard/ANNOUN~1/IBRAHIM.WAV[0m
+[0;32mI (36024) AUDIO: Playing: /sdcard/ANNOUN~1/IBRAHIM.WAV[0m
+[0;32mI (36034) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 58368 bytes[0m
+[0;32mI (36034) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (36044) AUDIO: Starting playback loop...[0m
+[0;32mI (37014) NAVIGATION: Next subfolder: 3 (of 10)[0m
+[0;32mI (37074) AUDIO: Playback stopped by flag[0m
+[0;32mI (37074) AUDIO: Playback finished[0m
+[0;32mI (37264) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/ISMAEEL.WAV[0m
+[0;32mI (37264) MAIN: Playing announcement: /sdcard/ANNOUN~1/ISMAEEL.WAV[0m
+[0;32mI (37274) AUDIO: Playing: /sdcard/ANNOUN~1/ISMAEEL.WAV[0m
+[0;32mI (37284) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 58368 bytes[0m
+[0;32mI (37284) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (37294) AUDIO: Starting playback loop...[0m
+[0;32mI (38304) NAVIGATION: Next subfolder: 4 (of 10)[0m
+[0;32mI (38324) AUDIO: Playback stopped by flag[0m
+[0;32mI (38324) AUDIO: Playback finished[0m
+[0;32mI (38554) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/ISSA.WAV[0m
+[0;32mI (38554) MAIN: Playing announcement: /sdcard/ANNOUN~1/ISSA.WAV[0m
+[0;32mI (38564) AUDIO: Playing: /sdcard/ANNOUN~1/ISSA.WAV[0m
+[0;32mI (38574) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 50688 bytes[0m
+[0;32mI (38574) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (38584) AUDIO: Starting playback loop...[0m
+[0;32mI (40184) AUDIO: End of file reached[0m
+[0;32mI (40184) AUDIO: Playback finished[0m
+[0;32mI (40254) NAVIGATION: Previous subfolder: 3 (of 10)[0m
+[0;32mI (40504) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/ISMAEEL.WAV[0m
+[0;32mI (40504) MAIN: Playing announcement: /sdcard/ANNOUN~1/ISMAEEL.WAV[0m
+[0;32mI (40514) AUDIO: Playing: /sdcard/ANNOUN~1/ISMAEEL.WAV[0m
+[0;32mI (40524) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 58368 bytes[0m
+[0;32mI (40524) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (40534) AUDIO: Starting playback loop...[0m
+[0;32mI (41134) NAVIGATION: Next subfolder: 4 (of 10)[0m
+[0;32mI (41174) AUDIO: Playback stopped by flag[0m
+[0;32mI (41174) AUDIO: Playback finished[0m
+[0;32mI (41384) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/ISSA.WAV[0m
+[0;32mI (41384) MAIN: Playing announcement: /sdcard/ANNOUN~1/ISSA.WAV[0m
+[0;32mI (41394) AUDIO: Playing: /sdcard/ANNOUN~1/ISSA.WAV[0m
+[0;32mI (41404) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 50688 bytes[0m
+[0;32mI (41404) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (41414) AUDIO: Starting playback loop...[0m
+[0;32mI (42084) NAVIGATION: Next subfolder: 5 (of 10)[0m
+[0;32mI (42114) AUDIO: Playback stopped by flag[0m
+[0;32mI (42124) AUDIO: Playback finished[0m
+[0;32mI (42344) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/MOUSSA.WAV[0m
+[0;32mI (42344) MAIN: Playing announcement: /sdcard/ANNOUN~1/MOUSSA.WAV[0m
+[0;32mI (42344) AUDIO: Playing: /sdcard/ANNOUN~1/MOUSSA.WAV[0m
+[0;32mI (42354) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 45312 bytes[0m
+[0;32mI (42354) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (42364) AUDIO: Starting playback loop...[0m
+[0;32mI (42894) NAVIGATION: Previous subfolder: 4 (of 10)[0m
+[0;32mI (42944) AUDIO: Playback stopped by flag[0m
+[0;32mI (42944) AUDIO: Playback finished[0m
+[0;32mI (43144) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/ISSA.WAV[0m
+[0;32mI (43144) MAIN: Playing announcement: /sdcard/ANNOUN~1/ISSA.WAV[0m
+[0;32mI (43154) AUDIO: Playing: /sdcard/ANNOUN~1/ISSA.WAV[0m
+[0;32mI (43164) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 50688 bytes[0m
+[0;32mI (43164) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (43174) AUDIO: Starting playback loop...[0m
+[0;32mI (43564) BATTERY: Battery: 62% [######----]  3828 mV  (ADC: 3157 mV)[0m
+[0;32mI (43794) NAVIGATION: Next subfolder: 5 (of 10)[0m
+[0;32mI (43814) AUDIO: Playback stopped by flag[0m
+[0;32mI (43814) AUDIO: Playback finished[0m
+[0;32mI (44054) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/MOUSSA.WAV[0m
+[0;32mI (44054) MAIN: Playing announcement: /sdcard/ANNOUN~1/MOUSSA.WAV[0m
+[0;32mI (44054) AUDIO: Playing: /sdcard/ANNOUN~1/MOUSSA.WAV[0m
+[0;32mI (44064) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 45312 bytes[0m
+[0;32mI (44064) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (44074) AUDIO: Starting playback loop...[0m
+[0;32mI (44964) NAVIGATION: Previous subfolder: 4 (of 10)[0m
+[0;32mI (44974) AUDIO: Playback stopped by flag[0m
+[0;32mI (44974) AUDIO: Playback finished[0m
+[0;32mI (45214) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/ISSA.WAV[0m
+[0;32mI (45214) MAIN: Playing announcement: /sdcard/ANNOUN~1/ISSA.WAV[0m
+[0;32mI (45224) AUDIO: Playing: /sdcard/ANNOUN~1/ISSA.WAV[0m
+[0;32mI (45234) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 50688 bytes[0m
+[0;32mI (45234) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (45244) AUDIO: Starting playback loop...[0m
+[0;32mI (46204) NAVIGATION: Previous subfolder: 3 (of 10)[0m
+[0;32mI (46204) AUDIO: Playback stopped by flag[0m
+[0;32mI (46204) AUDIO: Playback finished[0m
+[0;32mI (46454) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/ISMAEEL.WAV[0m
+[0;32mI (46454) MAIN: Playing announcement: /sdcard/ANNOUN~1/ISMAEEL.WAV[0m
+[0;32mI (46464) AUDIO: Playing: /sdcard/ANNOUN~1/ISMAEEL.WAV[0m
+[0;32mI (46474) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 58368 bytes[0m
+[0;32mI (46474) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (46484) AUDIO: Starting playback loop...[0m
+[0;32mI (47164) NAVIGATION: Next subfolder: 4 (of 10)[0m
+[0;32mI (47194) AUDIO: Playback stopped by flag[0m
+[0;32mI (47194) AUDIO: Playback finished[0m
+[0;32mI (47414) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/ISSA.WAV[0m
+[0;32mI (47414) MAIN: Playing announcement: /sdcard/ANNOUN~1/ISSA.WAV[0m
+[0;32mI (47424) AUDIO: Playing: /sdcard/ANNOUN~1/ISSA.WAV[0m
+[0;32mI (47434) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 50688 bytes[0m
+[0;32mI (47434) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (47444) AUDIO: Starting playback loop...[0m
+[0;32mI (48244) NAVIGATION: Previous subfolder: 3 (of 10)[0m
+[0;32mI (48274) AUDIO: Playback stopped by flag[0m
+[0;32mI (48274) AUDIO: Playback finished[0m
+[0;32mI (48494) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/ISMAEEL.WAV[0m
+[0;32mI (48494) MAIN: Playing announcement: /sdcard/ANNOUN~1/ISMAEEL.WAV[0m
+[0;32mI (48504) AUDIO: Playing: /sdcard/ANNOUN~1/ISMAEEL.WAV[0m
+[0;32mI (48514) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 58368 bytes[0m
+[0;32mI (48514) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (48524) AUDIO: Starting playback loop...[0m
+[0;32mI (49424) NAVIGATION: Next subfolder: 4 (of 10)[0m
+[0;32mI (49484) AUDIO: Playback stopped by flag[0m
+[0;32mI (49484) AUDIO: Playback finished[0m
+[0;32mI (49674) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/ISSA.WAV[0m
+[0;32mI (49674) MAIN: Playing announcement: /sdcard/ANNOUN~1/ISSA.WAV[0m
+[0;32mI (49684) AUDIO: Playing: /sdcard/ANNOUN~1/ISSA.WAV[0m
+[0;32mI (49694) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 50688 bytes[0m
+[0;32mI (49694) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (49704) AUDIO: Starting playback loop...[0m
+[0;32mI (51144) NAVIGATION: Next subfolder: 5 (of 10)[0m
+[0;32mI (51174) AUDIO: Playback stopped by flag[0m
+[0;32mI (51174) AUDIO: Playback finished[0m
+[0;32mI (51404) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/MOUSSA.WAV[0m
+[0;32mI (51404) MAIN: Playing announcement: /sdcard/ANNOUN~1/MOUSSA.WAV[0m
+[0;32mI (51404) AUDIO: Playing: /sdcard/ANNOUN~1/MOUSSA.WAV[0m
+[0;32mI (51414) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 45312 bytes[0m
+[0;32mI (51414) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (51424) AUDIO: Starting playback loop...[0m
+[0;32mI (52904) AUDIO: End of file reached[0m
+[0;32mI (52904) AUDIO: Playback finished[0m
+[0;32mI (53014) NAVIGATION: Next subfolder: 6 (of 10)[0m
+[0;32mI (53274) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/MUHAMMAD.WAV[0m
+[0;32mI (53274) MAIN: Playing announcement: /sdcard/ANNOUN~1/MUHAMMAD.WAV[0m
+[0;32mI (53274) AUDIO: Playing: /sdcard/ANNOUN~1/MUHAMMAD.WAV[0m
+[0;32mI (53284) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 58368 bytes[0m
+[0;32mI (53284) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (53294) AUDIO: Starting playback loop...[0m
+[0;32mI (53564) BATTERY: Battery: 0% [----------]  2989 mV  (ADC: 2465 mV)[0m
+[0;33mW (53564) BATTERY: Battery alert queued: b1.wav[0m
+[0;33mW (53564) BATTERY: Battery alert queued: b2.wav[0m
+[0;33mW (53564) BATTERY: Battery alert queued: b3.wav[0m
+[0;32mI (55154) AUDIO: End of file reached[0m
+[0;32mI (55154) AUDIO: Playback finished[0m
+[0;33mW (55154) MAIN: Battery alert notification received[0m
+[0;33mW (55164) BATTERY: Playing battery alert: /sdcard/ANNOUN~1/b3.wav[0m
+[0;32mI (55164) AUDIO: Playing: /sdcard/ANNOUN~1/b3.wav[0m
+[0;32mI (55174) AUDIO: WAV Info: 24000 Hz, 16-bit, 1 ch, 26 bytes[0m
+[0;32mI (55174) AUDIO: Format: 24000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (55184) AUDIO: Starting playback loop...[0m
+[0;32mI (56004) NAVIGATION: Previous subfolder: 5 (of 10)[0m
+[0;32mI (56714) AUDIO: End of file reached[0m
+[0;32mI (56714) AUDIO: Playback finished[0m
+[0;32mI (56734) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/MOUSSA.WAV[0m
+[0;32mI (56734) MAIN: Playing announcement: /sdcard/ANNOUN~1/MOUSSA.WAV[0m
+[0;32mI (56734) AUDIO: Playing: /sdcard/ANNOUN~1/MOUSSA.WAV[0m
+[0;32mI (56744) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 45312 bytes[0m
+[0;32mI (56744) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (56754) AUDIO: Starting playback loop...[0m
+[0;32mI (58234) AUDIO: End of file reached[0m
+[0;32mI (58234) AUDIO: Playback finished[0m
+[0;32mI (59204) NAVIGATION: Next subfolder: 6 (of 10)[0m
+[0;32mI (59504) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/MUHAMMAD.WAV[0m
+[0;32mI (59504) MAIN: Playing announcement: /sdcard/ANNOUN~1/MUHAMMAD.WAV[0m
+[0;32mI (59504) AUDIO: Playing: /sdcard/ANNOUN~1/MUHAMMAD.WAV[0m
+[0;32mI (59514) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 58368 bytes[0m
+[0;32mI (59514) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (59524) AUDIO: Starting playback loop...[0m
+[0;32mI (61384) AUDIO: End of file reached[0m
+[0;32mI (61384) AUDIO: Playback finished[0m
+[0;32mI (61404) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/MUHAMMAD.WAV[0m
+[0;32mI (61404) MAIN: Playing: /sdcard/ANNOUN~1/MUHAMMAD.WAV[0m
+[0;32mI (61404) AUDIO: Playing: /sdcard/ANNOUN~1/MUHAMMAD.WAV[0m
+[0;32mI (61414) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 58368 bytes[0m
+[0;32mI (61414) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (61424) AUDIO: Starting playback loop...[0m
+[0;32mI (63284) AUDIO: End of file reached[0m
+[0;32mI (63284) AUDIO: Playback finished[0m
+[0;32mI (63294) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/INSMUH.WAV[0m
+[0;32mI (63294) AUDIO: Playing: /sdcard/ANNOUN~1/INSMUH.WAV[0m
+[0;32mI (63304) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 222720 bytes[0m
+[0;32mI (63304) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (63314) AUDIO: Starting playback loop...[0m
+[0;32mI (63564) BATTERY: Battery: 0% [----------]  123 mV  (ADC: 102 mV)[0m
+[0;32mI (70294) AUDIO: End of file reached[0m
+[0;32mI (70294) AUDIO: Playback finished[0m
+[0;32mI (70294) SD_CARD: Scanning WAV files in: /sdcard/STORIES/MUHAMMAD[0m
+[0;32mI (70304) SD_CARD:   [0] /sdcard/STORIES/MUHAMMAD/CRRM1.WAV[0m
+[0;32mI (70304) SD_CARD:   [1] /sdcard/STORIES/MUHAMMAD/CRRM2.WAV[0m
+[0;32mI (70304) SD_CARD:   [2] /sdcard/STORIES/MUHAMMAD/CRRM3.WAV[0m
+[0;32mI (70314) SD_CARD:   [3] /sdcard/STORIES/MUHAMMAD/CRRM4.WAV[0m
+[0;32mI (70314) SD_CARD:   [4] /sdcard/STORIES/MUHAMMAD/CRRM5.WAV[0m
+[0;32mI (70324) SD_CARD:   [5] /sdcard/STORIES/MUHAMMAD/CRRM6.WAV[0m
+[0;32mI (70324) SD_CARD:   [6] /sdcard/STORIES/MUHAMMAD/CRRM7.WAV[0m
+[0;32mI (70334) SD_CARD:   [7] /sdcard/STORIES/MUHAMMAD/M1.WAV[0m
+[0;32mI (70334) SD_CARD:   [8] /sdcard/STORIES/MUHAMMAD/M10.WAV[0m
+[0;32mI (70344) SD_CARD:   [9] /sdcard/STORIES/MUHAMMAD/M2.WAV[0m
+[0;32mI (70344) SD_CARD:   [10] /sdcard/STORIES/MUHAMMAD/M3.WAV[0m
+[0;32mI (70354) SD_CARD:   [11] /sdcard/STORIES/MUHAMMAD/M4.WAV[0m
+[0;32mI (70354) SD_CARD:   [12] /sdcard/STORIES/MUHAMMAD/M5.WAV[0m
+[0;32mI (70364) SD_CARD:   [13] /sdcard/STORIES/MUHAMMAD/M6.WAV[0m
+[0;32mI (70364) SD_CARD:   [14] /sdcard/STORIES/MUHAMMAD/M7.WAV[0m
+[0;32mI (70374) SD_CARD:   [15] /sdcard/STORIES/MUHAMMAD/M8.WAV[0m
+[0;32mI (70384) SD_CARD:   [16] /sdcard/STORIES/MUHAMMAD/M9.WAV[0m
+[0;32mI (70384) SD_CARD:   [17] /sdcard/STORIES/MUHAMMAD/SM1.WAV[0m
+[0;32mI (70384) SD_CARD:   [18] /sdcard/STORIES/MUHAMMAD/SM2.WAV[0m
+[0;32mI (70394) SD_CARD:   [19] /sdcard/STORIES/MUHAMMAD/SM3.WAV[0m
+[0;32mI (70404) SD_CARD:   [20] /sdcard/STORIES/MUHAMMAD/SM4.WAV[0m
+[0;32mI (70404) SD_CARD:   [21] /sdcard/STORIES/MUHAMMAD/SM5.WAV[0m
+[0;32mI (70404) SD_CARD:   [22] /sdcard/STORIES/MUHAMMAD/SM6.WAV[0m
+[0;32mI (70414) SD_CARD:   [23] /sdcard/STORIES/MUHAMMAD/SM7.WAV[0m
+[0;32mI (70424) SD_CARD:   [24] /sdcard/STORIES/MUHAMMAD/WRM1.WAV[0m
+[0;32mI (70424) SD_CARD:   [25] /sdcard/STORIES/MUHAMMAD/WRM2.WAV[0m
+[0;32mI (70434) SD_CARD:   [26] /sdcard/STORIES/MUHAMMAD/WRM3.WAV[0m
+[0;32mI (70434) SD_CARD:   [27] /sdcard/STORIES/MUHAMMAD/WRM4.WAV[0m
+[0;32mI (70444) SD_CARD:   [28] /sdcard/STORIES/MUHAMMAD/WRM5.WAV[0m
+[0;32mI (70444) SD_CARD:   [29] /sdcard/STORIES/MUHAMMAD/WRM6.WAV[0m
+[0;32mI (70454) SD_CARD:   [30] /sdcard/STORIES/MUHAMMAD/WRM7.WAV[0m
+[0;32mI (70454) SD_CARD: Found 31 WAV files[0m
+[0;32mI (70464) NAVIGATION: Forward: SUBFOLDER_VIEW -> FILE_VIEW[0m
+[0;32mI (70464) NAVIGATION: Selected track: 0[0m
+[0;32mI (70464) MAIN: Entered subfolder MUHAMMAD (files=31)[0m
+[0;32mI (73024) NAVIGATION: Previous track: 30 (of 31)[0m
+[0;32mI (73564) BATTERY: Battery: 0% [----------]  98 mV  (ADC: 81 mV)[0m
+[0;32mI (74474) NAVIGATION: Previous track: 29 (of 31)[0m
+[0;32mI (75224) NAVIGATION: Next track: 30 (of 31)[0m
+[0;32mI (75494) NAVIGATION: Next track: 0 (of 31)[0m
+[0;32mI (75864) NAVIGATION: Next track: 1 (of 31)[0m
+[0;32mI (76194) NAVIGATION: Next track: 2 (of 31)[0m
+[0;32mI (77484) NAVIGATION: Next track: 3 (of 31)[0m
+[0;32mI (77744) NAVIGATION: Next track: 4 (of 31)[0m
+[0;32mI (78074) NAVIGATION: Next track: 5 (of 31)[0m
+[0;32mI (78354) NAVIGATION: Next track: 6 (of 31)[0m
+[0;32mI (79364) NAVIGATION: Next track: 7 (of 31)[0m
+[0;32mI (79584) NAVIGATION: Next track: 8 (of 31)[0m
+[0;32mI (79874) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/M10ANN.WAV[0m
+[0;32mI (79874) MAIN: Playing announcement: /sdcard/ANNOUN~1/M10ANN.WAV[0m
+[0;32mI (79884) AUDIO: Playing: /sdcard/ANNOUN~1/M10ANN.WAV[0m
+[0;32mI (79894) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 161280 bytes[0m
+[0;32mI (79894) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (79904) AUDIO: Starting playback loop...[0m
+[0;32mI (80054) NAVIGATION: Next track: 9 (of 31)[0m
+[0;32mI (80094) AUDIO: Playback stopped by flag[0m
+[0;32mI (80094) AUDIO: Playback finished[0m
+[0;32mI (80314) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/M2ANN.WAV[0m
+[0;32mI (80314) MAIN: Playing announcement: /sdcard/ANNOUN~1/M2ANN.WAV[0m
+[0;32mI (80314) AUDIO: Playing: /sdcard/ANNOUN~1/M2ANN.WAV[0m
+[0;32mI (80324) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 42240 bytes[0m
+[0;32mI (80324) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (80334) AUDIO: Starting playback loop...[0m
+[0;32mI (81684) AUDIO: End of file reached[0m
+[0;32mI (81684) AUDIO: Playback finished[0m
+[0;33mW (83564) BATTERY: No battery detected (ADC floating) — alerts disabled[0m
+[0;32mI (83564) BATTERY: Battery: 0% [----------]  97 mV  (ADC: 80 mV)  [NO BATTERY][0m
+[0;32mI (84224) MAIN: Playing announcement: /sdcard/ANNOUN~1/M2ANN.WAV[0m
+[0;32mI (84224) AUDIO: Playing: /sdcard/ANNOUN~1/M2ANN.WAV[0m
+[0;32mI (84224) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/M2ANN.WAV[0m
+[0;32mI (84234) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 42240 bytes[0m
+[0;32mI (84234) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (84244) AUDIO: Starting playback loop...[0m
+[0;32mI (85594) AUDIO: End of file reached[0m
+[0;32mI (85594) AUDIO: Playback finished[0m
+[0;32mI (85594) AUDIO: Playing: /sdcard/STORIES/MUHAMMAD/M2.WAV[0m
+[0;32mI (85604) AUDIO: WAV Info: 44100 Hz, 16-bit, 2 ch, 26 bytes[0m
+[0;32mI (85604) AUDIO: Format: 44100 Hz, 16-bit, 2 channel(s)[0m
+[0;32mI (85614) AUDIO: Starting playback loop...[0m
+[0;32mI (93564) BATTERY: Battery: 63% [######----]  3832 mV  (ADC: 3160 mV)[0m
+[0;32mI (103564) BATTERY: Battery: 0% [----------]  1600 mV  (ADC: 1320 mV)[0m
+[0;33mW (103564) BATTERY: Battery alert deferred (playing): b1.wav[0m
+[0;33mW (103564) BATTERY: Battery alert deferred (playing): b2.wav[0m
+[0;33mW (103564) BATTERY: Battery alert deferred (playing): b3.wav[0m
+[0;32mI (104264) AUDIO: Volume UP (silent) -> 100%[0m
+[0;32mI (104264) AUDIO: Playback stopped by flag[0m
+[0;32mI (104264) AUDIO: Playback finished[0m
+[0;32mI (104264) MAIN: Volume announcement: v10.wav (vol=100%)[0m
+[0;32mI (104274) MAIN: Playing volume wav: /sdcard/ANNOUN~1/v10.wav[0m
+[0;32mI (104274) AUDIO: Playing: /sdcard/ANNOUN~1/v10.wav[0m
+[0;32mI (104294) AUDIO: WAV Info: 24000 Hz, 16-bit, 1 ch, 26 bytes[0m
+[0;32mI (104294) AUDIO: Format: 24000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (104304) AUDIO: Starting playback loop...[0m
+[0;32mI (107034) AUDIO: End of file reached[0m
+[0;32mI (107034) AUDIO: Playback finished[0m
+[0;32mI (113574) BATTERY: Battery: 0% [----------]  95 mV  (ADC: 79 mV)  [ALERT PENDING][0m
+[0;33mW (113574) BATTERY: Flushing deferred battery alert: b3.wav[0m
+[0;33mW (113574) MAIN: Battery alert notification received[0m
+[0;33mW (113624) BATTERY: Playing battery alert: /sdcard/ANNOUN~1/b3.wav[0m
+[0;32mI (113624) AUDIO: Playing: /sdcard/ANNOUN~1/b3.wav[0m
+[0;32mI (113634) AUDIO: WAV Info: 24000 Hz, 16-bit, 1 ch, 26 bytes[0m
+[0;32mI (113634) AUDIO: Format: 24000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (113644) AUDIO: Starting playback loop...[0m
+[0;32mI (115174) AUDIO: End of file reached[0m
+[0;32mI (115174) AUDIO: Playback finished[0m
+[0;33mW (123574) BATTERY: No battery detected (ADC floating) — alerts disabled[0m
+[0;32mI (123574) BATTERY: Battery: 0% [----------]  105 mV  (ADC: 87 mV)  [NO BATTERY][0m
+[0;32mI (133574) BATTERY: Battery: 0% [----------]  104 mV  (ADC: 86 mV)  [NO BATTERY][0m
+[0;32mI (143574) BATTERY: Battery: 0% [----------]  100 mV  (ADC: 83 mV)  [NO BATTERY][0m
+[0;32mI (153574) BATTERY: Battery: 0% [----------]  78 mV  (ADC: 65 mV)  [NO BATTERY][0m
+[0;32mI (163574) BATTERY: Battery: 0% [----------]  95 mV  (ADC: 79 mV)  [NO BATTERY][0m
+[0;32mI (173574) BATTERY: Battery: 0% [----------]  101 mV  (ADC: 84 mV)  [NO BATTERY][0m
+[0;32mI (183574) BATTERY: Battery: 0% [----------]  106 mV  (ADC: 88 mV)  [NO BATTERY][0m
+[0;32mI (193574) BATTERY: Battery: 0% [----------]  86 mV  (ADC: 71 mV)  [NO BATTERY][0m
+[0;32mI (198644) NAVIGATION: Next track: 10 (of 31)[0m
+[0;32mI (198944) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/M3ANN.WAV[0m
+[0;32mI (198944) MAIN: Playing announcement: /sdcard/ANNOUN~1/M3ANN.WAV[0m
+[0;32mI (198944) AUDIO: Playing: /sdcard/ANNOUN~1/M3ANN.WAV[0m
+[0;32mI (198954) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 45312 bytes[0m
+[0;32mI (198954) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (198964) AUDIO: Starting playback loop...[0m
+[0;32mI (200444) AUDIO: End of file reached[0m
+[0;32mI (200444) AUDIO: Playback finished[0m
+[0;32mI (202494) MAIN: Playing announcement: /sdcard/ANNOUN~1/M3ANN.WAV[0m
+[0;32mI (202494) AUDIO: Playing: /sdcard/ANNOUN~1/M3ANN.WAV[0m
+[0;32mI (202494) ANNOUNCE: Announcement requested: /sdcard/ANNOUN~1/M3ANN.WAV[0m
+[0;32mI (202504) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 45312 bytes[0m
+[0;32mI (202504) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (202514) AUDIO: Starting playback loop...[0m
+[0;32mI (203574) BATTERY: Battery: 0% [----------]  369 mV  (ADC: 305 mV)  [NO BATTERY][0m
+[0;32mI (203994) AUDIO: End of file reached[0m
+[0;32mI (203994) AUDIO: Playback finished[0m
+[0;32mI (203994) AUDIO: Playing: /sdcard/STORIES/MUHAMMAD/M3.WAV[0m
+[0;32mI (204004) AUDIO: WAV Info: 44100 Hz, 16-bit, 2 ch, 62 bytes[0m
+[0;32mI (204004) AUDIO: Format: 44100 Hz, 16-bit, 2 channel(s)[0m
+[0;32mI (204014) AUDIO: Starting playback loop...[0m
+[0;32mI (213574) BATTERY: Battery: 0% [----------]  2480 mV  (ADC: 2045 mV)  [NO BATTERY][0m
+[0;32mI (223574) BATTERY: Battery: 63% [######----]  3832 mV  (ADC: 3160 mV)[0m
+[0;32mI (233574) BATTERY: Battery: 0% [----------]  1353 mV  (ADC: 1116 mV)[0m
+[0;33mW (233574) BATTERY: Battery alert deferred (playing): b1.wav[0m
+[0;33mW (233574) BATTERY: Battery alert deferred (playing): b2.wav[0m
+[0;33mW (233574) BATTERY: Battery alert deferred (playing): b3.wav[0m
+[0;32mI (243584) BATTERY: Battery: 0% [----------]  1211 mV  (ADC: 999 mV)  [ALERT PENDING][0m
+[0;33mW (253584) BATTERY: No battery detected (ADC floating) — alerts disabled[0m
+[0;32mI (253584) BATTERY: Battery: 0% [----------]  2149 mV  (ADC: 1772 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (263584) BATTERY: Battery: 63% [######----]  3832 mV  (ADC: 3160 mV)  [ALERT PENDING][0m
+[0;32mI (273584) BATTERY: Battery: 0% [----------]  1184 mV  (ADC: 977 mV)  [ALERT PENDING][0m
+[0;32mI (283584) BATTERY: Battery: 0% [----------]  2133 mV  (ADC: 1759 mV)  [ALERT PENDING][0m
+[0;32mI (293584) BATTERY: Battery: 63% [######----]  3832 mV  (ADC: 3160 mV)  [ALERT PENDING][0m
+[0;32mI (303584) BATTERY: Battery: 0% [----------]  1175 mV  (ADC: 969 mV)  [ALERT PENDING][0m
+[0;32mI (313584) BATTERY: Battery: 0% [----------]  2151 mV  (ADC: 1774 mV)  [ALERT PENDING][0m
+[0;32mI (323584) BATTERY: Battery: 63% [######----]  3832 mV  (ADC: 3160 mV)  [ALERT PENDING][0m
+[0;32mI (333584) BATTERY: Battery: 0% [----------]  1195 mV  (ADC: 986 mV)  [ALERT PENDING][0m
+[0;32mI (343584) BATTERY: Battery: 0% [----------]  2209 mV  (ADC: 1822 mV)  [ALERT PENDING][0m
+[0;32mI (353584) BATTERY: Battery: 63% [######----]  3832 mV  (ADC: 3160 mV)  [ALERT PENDING][0m
+[0;32mI (363584) BATTERY: Battery: 0% [----------]  1211 mV  (ADC: 999 mV)  [ALERT PENDING][0m
+[0;32mI (373584) BATTERY: Battery: 0% [----------]  2260 mV  (ADC: 1864 mV)  [ALERT PENDING][0m
+[0;32mI (383584) BATTERY: Battery: 63% [######----]  3832 mV  (ADC: 3160 mV)  [ALERT PENDING][0m
+[0;32mI (393584) BATTERY: Battery: 0% [----------]  1232 mV  (ADC: 1016 mV)  [ALERT PENDING][0m
+[0;32mI (403584) BATTERY: Battery: 0% [----------]  2207 mV  (ADC: 1820 mV)  [ALERT PENDING][0m
+[0;32mI (413584) BATTERY: Battery: 63% [######----]  3832 mV  (ADC: 3160 mV)  [ALERT PENDING][0m
+[0;32mI (423584) BATTERY: Battery: 0% [----------]  1180 mV  (ADC: 973 mV)  [ALERT PENDING][0m
+[0;32mI (433584) BATTERY: Battery: 0% [----------]  2239 mV  (ADC: 1847 mV)  [ALERT PENDING][0m
+[0;32mI (443584) BATTERY: Battery: 63% [######----]  3832 mV  (ADC: 3160 mV)  [ALERT PENDING][0m
+[0;32mI (453584) BATTERY: Battery: 0% [----------]  1221 mV  (ADC: 1007 mV)  [ALERT PENDING][0m
+[0;32mI (463584) BATTERY: Battery: 0% [----------]  2276 mV  (ADC: 1877 mV)  [ALERT PENDING][0m
+[0;32mI (471954) AUDIO: End of file reached[0m
+[0;32mI (471954) AUDIO: Playback finished[0m
+[0;32mI (471964) QUIZ: Quiz check m3: /sdcard/STORIES/MUHAMMAD/sm3_1.wav -> FOUND[0m
+[0;32mI (471964) MAIN: Quiz starting: /sdcard/STORIES/MUHAMMAD/M3.WAV[0m
+[0;32mI (471964) QUIZ: Quiz begin: prefix=m story=3 dir=/sdcard/STORIES/MUHAMMAD  quiz=1  slot_A=CORRECT(crr)[0m
+[0;32mI (471974) NAVIGATION: State change: 3 -> 4[0m
+[0;32mI (471974) QUIZ: Playing question (prefix=m story=3 quiz=1): /sdcard/STORIES/MUHAMMAD/sm3_1.wav[0m
+[0;32mI (471994) AUDIO: Playing: /sdcard/STORIES/MUHAMMAD/sm3_1.wav[0m
+[0;32mI (472004) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 278016 bytes[0m
+[0;32mI (472004) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (472014) AUDIO: Starting playback loop...[0m
+[0;33mW (473584) BATTERY: No battery detected (ADC floating) — alerts disabled[0m
+[0;32mI (473584) BATTERY: Battery: 0% [----------]  346 mV  (ADC: 286 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (480724) AUDIO: End of file reached[0m
+[0;32mI (480724) AUDIO: Playback finished[0m
+[0;32mI (481124) QUIZ: Options intro: A=/sdcard/STORIES/MUHAMMAD/crrm3_1.wav  B=/sdcard/STORIES/MUHAMMAD/wrm3_1.wav[0m
+[0;32mI (481124) QUIZ: Playing option A: /sdcard/STORIES/MUHAMMAD/crrm3_1.wav[0m
+[0;32mI (481124) AUDIO: Playing: /sdcard/STORIES/MUHAMMAD/crrm3_1.wav[0m
+[0;32mI (481134) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 336384 bytes[0m
+[0;32mI (481134) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (481154) AUDIO: Starting playback loop...[0m
+[0;32mI (483584) BATTERY: Battery: 0% [----------]  100 mV  (ADC: 83 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (491714) AUDIO: End of file reached[0m
+[0;32mI (491714) AUDIO: Playback finished[0m
+[0;32mI (492124) QUIZ: Playing option B: /sdcard/STORIES/MUHAMMAD/wrm3_1.wav[0m
+[0;32mI (492124) AUDIO: Playing: /sdcard/STORIES/MUHAMMAD/wrm3_1.wav[0m
+[0;32mI (492134) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 249600 bytes[0m
+[0;32mI (492134) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (492154) AUDIO: Starting playback loop...[0m
+[0;32mI (493584) BATTERY: Battery: 0% [----------]  567 mV  (ADC: 468 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (499964) AUDIO: End of file reached[0m
+[0;32mI (499964) AUDIO: Playback finished[0m
+[0;32mI (500264) MAIN: Quiz ready — awaiting user selection[0m
+[0;32mI (500264) QUIZ: Announce option A: /sdcard/STORIES/MUHAMMAD/crrm3_1.wav[0m
+[0;32mI (500264) ANNOUNCE: Announcement requested: /sdcard/STORIES/MUHAMMAD/crrm3_1.wav[0m
+[0;32mI (500264) MAIN: Playing announcement: /sdcard/STORIES/MUHAMMAD/crrm3_1.wav[0m
+[0;32mI (500274) AUDIO: Playing: /sdcard/STORIES/MUHAMMAD/crrm3_1.wav[0m
+[0;32mI (500284) AUDIO: WAV Info: 16000 Hz, 16-bit, 1 ch, 336384 bytes[0m
+[0;32mI (500294) AUDIO: Format: 16000 Hz, 16-bit, 1 channel(s)[0m
+[0;32mI (500294) AUDIO: Starting playback loop...[0m
+[0;32mI (503584) BATTERY: Battery: 0% [----------]  1009 mV  (ADC: 832 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (510854) AUDIO: End of file reached[0m
+[0;32mI (510854) AUDIO: Playback finished[0m
+[0;32mI (513584) BATTERY: Battery: 0% [----------]  90 mV  (ADC: 75 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (523584) BATTERY: Battery: 0% [----------]  90 mV  (ADC: 75 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (533584) BATTERY: Battery: 0% [----------]  90 mV  (ADC: 75 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (543584) BATTERY: Battery: 0% [----------]  90 mV  (ADC: 75 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (553584) BATTERY: Battery: 0% [----------]  90 mV  (ADC: 75 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (563584) BATTERY: Battery: 0% [----------]  87 mV  (ADC: 72 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (573584) BATTERY: Battery: 0% [----------]  90 mV  (ADC: 75 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (583584) BATTERY: Battery: 0% [----------]  92 mV  (ADC: 76 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (593584) BATTERY: Battery: 0% [----------]  89 mV  (ADC: 74 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (603584) BATTERY: Battery: 0% [----------]  86 mV  (ADC: 71 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (613584) BATTERY: Battery: 0% [----------]  92 mV  (ADC: 76 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (623584) BATTERY: Battery: 0% [----------]  89 mV  (ADC: 74 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (633584) BATTERY: Battery: 0% [----------]  89 mV  (ADC: 74 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (643584) BATTERY: Battery: 0% [----------]  89 mV  (ADC: 74 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (653584) BATTERY: Battery: 0% [----------]  92 mV  (ADC: 76 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (663584) BATTERY: Battery: 0% [----------]  89 mV  (ADC: 74 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (673584) BATTERY: Battery: 0% [----------]  90 mV  (ADC: 75 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (683584) BATTERY: Battery: 0% [----------]  94 mV  (ADC: 78 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (693584) BATTERY: Battery: 0% [----------]  92 mV  (ADC: 76 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (703584) BATTERY: Battery: 0% [----------]  95 mV  (ADC: 79 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (713584) BATTERY: Battery: 0% [----------]  94 mV  (ADC: 78 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (723584) BATTERY: Battery: 0% [----------]  94 mV  (ADC: 78 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (733584) BATTERY: Battery: 0% [----------]  93 mV  (ADC: 77 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (743584) BATTERY: Battery: 0% [----------]  94 mV  (ADC: 78 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (753584) BATTERY: Battery: 0% [----------]  95 mV  (ADC: 79 mV)  [NO BATTERY]  [ALERT PENDING][0m
+[0;32mI (763584) BATTERY: Battery: 0% [----------]  92 mV  (ADC: 76 mV)  [NO BATTERY]  [ALERT PENDING]
