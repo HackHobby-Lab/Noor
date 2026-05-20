@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+D:/Al noor ver 2.0/Al noor ver 1.1/build/CMakeFiles/bootloader
+D:/Al noor ver 2.0/Al noor ver 1.1/build/CMakeFiles/bootloader.rule
+D:/Al noor ver 2.0/Al noor ver 1.1/build/CMakeFiles/bootloader-complete.rule
+D:/Al noor ver 2.0/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+D:/Al noor ver 2.0/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+D:/Al noor ver 2.0/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+D:/Al noor ver 2.0/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+D:/Al noor ver 2.0/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+D:/Al noor ver 2.0/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+D:/Al noor ver 2.0/Al noor ver 1.1/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
