@@ -332,6 +332,176 @@ TT4.wav  ← Record "Lesson Four"
 TAWID/t4.wav
 ```
 
+##  updated File Structure according to client request
+
+```
+/sdcard/
+│
+├── announcements/                          ← ALL voice feedback files
+│   │
+│   ├── welcome.wav                          Boot greeting ("Welcome to Noor")
+│   ├── rotate.wav                           "Rotate to navigate"
+│   ├── correct.wav                          Quiz correct feedback ("Bravo!")
+│   ├── wrong.wav                            Quiz wrong fallback (used when expt file is missing)
+│   │
+│   ├── v1.wav   v2.wav   v3.wav   v4.wav    Volume level announcements
+│   ├── v5.wav   v6.wav   v7.wav   v8.wav    ("Volume 10%", "Volume 20%" ...)
+│   ├── v9.wav   v10.wav
+│   │
+│   ├── b1.wav   b2.wav   b3.wav             Battery alerts (40%, 20%, 5%)
+│   │
+│   ├── STORIES.WAV                          "Stories of the Prophets"
+│   ├── TEACHINGS.WAV                        "Islamic Teachings" or "Islamic Fundamentals"
+│   ├── INVOCATIONS.WAV                      "Invocations"
+│   │
+│   ├── ADAM.WAV                             Prophet folder name announcements
+│   ├── DAOUD.WAV
+│   ├── IBRAHIM.WAV
+│   ├── ISMAEEL.WAV
+│   ├── ISSA.WAV
+│   ├── MOUSSA.WAV
+│   ├── MUHAMMAD.WAV
+│   ├── NUH.WAV
+│   ├── YAQOOB.WAV
+│   ├── YOUSUF.WAV
+│   │
+│   ├── TAWHID.WAV                           Islamic Fundamentals sub-section names
+│   ├── PRAYER.WAV
+│   ├── RAMADAN.WAV
+│   │
+│   ├── A1ANN.WAV   A2ANN.WAV   A3ANN.WAV   …    Adam story announcements
+│   ├── D1ANN.WAV   D2ANN.WAV   D3ANN.WAV   …    Daoud story announcements
+│   ├── IB1ANN.WAV  IB2ANN.WAV  IB3ANN.WAV  …    Ibrahim
+│   ├── IS1ANN.WAV  IS2ANN.WAV  IS3ANN.WAV  …    Ismaeel
+│   ├── I1ANN.WAV   I2ANN.WAV   I3ANN.WAV   …    Issa
+│   ├── MS1ANN.WAV  MS2ANN.WAV  MS3ANN.WAV  …    Moussa
+│   ├── M1ANN.WAV   M2ANN.WAV   M3ANN.WAV   …    Muhammad
+│   ├── N1ANN.WAV   N2ANN.WAV   N3ANN.WAV   …    Nuh
+│   ├── YQ1ANN.WAV  YQ2ANN.WAV  YQ3ANN.WAV  …    Yaqoob
+│   ├── Y1ANN.WAV   Y2ANN.WAV   Y3ANN.WAV   …    Yousuf
+│   │
+│   ├── T1ANN.WAV   T2ANN.WAV   T3ANN.WAV   …    Lesson announcements (TAWHID, PRAYER, RAMADAN)
+│   │
+│   └── INV1.WAV    INV2.WAV    INV3.WAV    …    Invocation announcements
+│
+│
+├── STORIES/                                 ← Stories of the Prophets (NO QUIZZES)
+│   │
+│   ├── ADAM/
+│   │   ├── a1.wav
+│   │   ├── a2.wav
+│   │   ├── a3.wav
+│   │   └── …  (any number, up to 500 files per folder)
+│   │
+│   ├── DAOUD/
+│   │   ├── d1.wav
+│   │   ├── d2.wav
+│   │   └── …
+│   │
+│   ├── IBRAHIM/
+│   │   ├── ib1.wav
+│   │   ├── ib2.wav
+│   │   └── …
+│   │
+│   ├── ISMAEEL/
+│   │   ├── is1.wav
+│   │   ├── is2.wav
+│   │   └── …
+│   │
+│   ├── ISSA/
+│   │   ├── i1.wav
+│   │   ├── i2.wav
+│   │   └── …
+│   │
+│   ├── MOUSSA/
+│   │   ├── ms1.wav
+│   │   ├── ms2.wav
+│   │   └── …
+│   │
+│   ├── MUHAMMAD/
+│   │   ├── m1.wav
+│   │   ├── m2.wav
+│   │   └── …
+│   │
+│   ├── NUH/
+│   │   ├── n1.wav
+│   │   ├── n2.wav
+│   │   └── …
+│   │
+│   ├── YAQOOB/
+│   │   ├── yq1.wav
+│   │   ├── yq2.wav
+│   │   └── …
+│   │
+│   └── YOUSUF/
+│       ├── y1.wav
+│       ├── y2.wav
+│       └── …
+│
+│
+├── TEACHINGS/                               ← Islamic Fundamentals (QUIZZES ALLOWED)
+│   │
+│   ├── TAWHID/
+│   │   │
+│   │   ├── t1.wav                            Lesson 1: ends with question "Who do we pray to?"
+│   │   ├── crrt1_1.wav                       Correct answer audio ("Allah")
+│   │   ├── wrt1_1.wav                        Wrong answer audio ("Statues")
+│   │   ├── expt1_1.wav                       Optional per-quiz explanation
+│   │   │                                     ("No, we pray to Allah because...")
+│   │   │
+│   │   ├── t2.wav                            Lesson 2
+│   │   ├── crrt2_1.wav                       Quiz files for lesson 2
+│   │   ├── wrt2_1.wav
+│   │   ├── expt2_1.wav                       (optional)
+│   │   │
+│   │   ├── t3.wav                            Lesson 3 (no quiz files = no quiz after this lesson)
+│   │   │
+│   │   ├── t4.wav                            Lesson 4 with TWO quizzes
+│   │   ├── crrt4_1.wav                       Quiz 1 of lesson 4
+│   │   ├── wrt4_1.wav
+│   │   ├── expt4_1.wav                       (optional)
+│   │   ├── crrt4_2.wav                       Quiz 2 of lesson 4
+│   │   ├── wrt4_2.wav
+│   │   ├── expt4_2.wav                       (optional)
+│   │   │
+│   │   └── …
+│   │
+│   ├── PRAYER/
+│   │   │
+│   │   ├── t1.wav                            Lesson 1 about prayer
+│   │   ├── crrt1_1.wav
+│   │   ├── wrt1_1.wav
+│   │   ├── expt1_1.wav                       (optional)
+│   │   │
+│   │   ├── t2.wav
+│   │   ├── crrt2_1.wav
+│   │   ├── wrt2_1.wav
+│   │   └── …
+│   │
+│   └── RAMADAN/
+│       │
+│       ├── t1.wav                            Lesson 1 about Ramadan
+│       ├── crrt1_1.wav
+│       ├── wrt1_1.wav
+│       ├── expt1_1.wav                       (optional)
+│       │
+│       ├── t2.wav
+│       ├── crrt2_1.wav
+│       ├── wrt2_1.wav
+│       └── …
+│
+│
+├── INVOCATIONS/                             ← Invocations (NO QUIZZES)
+│   │
+│   ├── inv1.wav
+│   ├── inv2.wav
+│   ├── inv3.wav
+│   └── …  (any number)
+│
+│
+└── firmware.bin                             (only present when applying a new firmware update —
+                                              device flashes itself on next power cycle and
+                                              automatically deletes this file)
 
 # Instructions
 
