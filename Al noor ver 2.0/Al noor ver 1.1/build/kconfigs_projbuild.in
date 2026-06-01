@@ -1,0 +1,6 @@
+source "C:/Users/HP/esp/v5.4.3/esp-idf/components/bootloader/Kconfig.projbuild"
+source "C:/Users/HP/esp/v5.4.3/esp-idf/components/esp_app_format/Kconfig.projbuild"
+source "C:/Users/HP/esp/v5.4.3/esp-idf/components/esp_rom/Kconfig.projbuild"
+source "C:/Users/HP/esp/v5.4.3/esp-idf/components/esptool_py/Kconfig.projbuild"
+source "C:/Users/HP/esp/v5.4.3/esp-idf/components/partition_table/Kconfig.projbuild"
+source "C:/Users/HP/Downloads/Al noor ver 1.1/Al noor ver 1.1/main/Kconfig.projbuild"
